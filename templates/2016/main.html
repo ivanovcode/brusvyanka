@@ -164,8 +164,8 @@
                   <div class="img">
                     <img src="{% static '2016/images/icon--service-snab.png' %}" width="83" height="81">
                   </div>
-                  <div class="title">Снабжение</div>
-                  <div class="text">полное обеспечение стройки всеми необходимыми материалами</div>
+                  <div class="title">Комплексное обеспечение</div>
+                  <div class="text">Снабжение строительной площадки всем необходимым.</div>
 <!--                   <a href="#">Подробнеее →</a> -->
                 </div>
                 
@@ -190,21 +190,21 @@
                 <div class="title">
                   150
                 </div>
-                успешных проектов
+                реализованных проектов
               </div>
             </div>
             
             <div class="columns small-12 medium-4 large-4">
               <div class="item">
                 <div class="title">35 000</div>
-                м² застроенных площадей
+                м² построенных площадей
               </div>
             </div>
             
             <div class="columns small-12 medium-3 large-3">
               <div class="item">
                 <div class="title">100%</div>
-                довольных клиентов
+                довольных заказчиков
               </div>
             </div>
             
@@ -213,20 +213,20 @@
         
         <div class="block block--pluses">
           <div class="row">
-            <h2 class="block_title">Преимущества работы с нами</h2>
+            <h2 class="block_title">Достоинства сотрудничества с нами:</h2>
             <div class="row">
               <div class="list_item columns small-12 medium-6 large-6">
                 <div class="img"><img src="{% static '2016/images/icon--plus-money.png' %}" alt="icon--plus-money" width="59" height="60"></div>
                 <div class="content">
-                  <div class="title">Вы экономите деньги</div>
-                  потому что строительство дома по профессиональному и продуманному индивидуальному проекту дешевле, чем без него.
+                  <div class="title">Экономия</div>
+                  Построить дом по индивидуальному проекту гораздо дешевле, чем исправлять ошибки неквалифицированных строителей.
                 </div>
               </div>
               <div class="list_item columns small-12 medium-6 large-6">
                 <div class="img"><img src="{% static '2016/images/icon--plus-clock.png' %}" alt="icon--plus-clock" width="58" height="58"></div>
                 <div class="content">
-                  <div class="title">Вы экономите время и нервы</div>
-                  так как вы избавлены от необходимости обращаться в десять разных компаний и координировать их действия
+                  <div class="title">Сохранение нервов и времени</div>
+                  Сотрудничество с одним исполнителем позволит вам лучше контролировать ход возведения и не тратить время на поиск новых подрядчиков.
                 </div>
               </div>
             </div>
@@ -234,15 +234,15 @@
               <div class="list_item columns small-12 medium-6 large-6">
                 <div class="img"><img src="{% static '2016/images/icon--plus-hands.png' %}" alt="icon--plus-hands" width="62" height="61"></div>
                 <div class="content">
-                  <div class="title">Вы страхуете себя от проблем</div>
-                  с дальнейшей эксплуатацией: технические и конструктивные ошибки исключены, когда за результат полностью отвечает одна компания.
+                  <div class="title">Снижение рисков</div>
+                  За результат отвечает одна компания «Брусвянка», поэтому вы страхуете себя от проблем с дальнейшей эксплуатацией дома.
                 </div>
               </div>
               <div class="list_item columns small-12 medium-6 large-6">
                 <div class="img"><img src="{% static '2016/images/icon--plus-home.png' %}" alt="icon--plus-home" width="67" height="61"></div>
                 <div class="content">
-                  <div class="title">Получаете дом, который представляли</div>
-                  Это гарантирует фотореалистичная 3D визуализация и авторский надзор архитектора за строительством.
+                  <div class="title">Совпадение ожиданий и реальности</div>
+                  Понимание нужд и привычек заказчика позволяет нам еще на этапе 3D-моделирования гарантировать безупречный результат.
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@
         
         <div class="block block--grid">
           <div class="row">
-            <div class="block_title">То, что мы любим</div>
+            <div class="block_title">Что мы можем вам предложить?</div>
               {% love_banners as loves %}
               {% for banner in loves %}
               {% if forloop.first %}
@@ -285,11 +285,10 @@
             
             <div class="content small-12 medium-7">
               <div class="left">
-                <div class="title">Хотите дом мечты?</div>
-                <p>Закажите сейчас проект дома который
-                  подойдет именно вам.</p>
+                <div class="title">Мечтаете о собственном комфортабельном доме?</div>
+                <p>Для этого просто оставьте заявку на разработку проекта.</p>
               </div>
-              <button class="btn js__project-order">Заказать проект</button>
+              <button class="btn js__project-order">Заказать</button>
             </div>
             
           </div>
@@ -297,28 +296,28 @@
         
         <div class="block block--scheme block--parralax" style="background-image: url({{ parralaxs.index4.img.url }});" {% include "2016/_parralax_settings.html" %}>
           <div class="row">
-            <h2 class="block_title">Простая и прозрачная схема работы</h2>
+            <h2 class="block_title">Понятная схема сотрудничества</h2>
             
             <div class="row">
               <div class="item columns small-12 medium-2 medium-offset-1">
                 <div class="content"><a href="#" class="js__project-order"><img src="{% static '2016/images/icon--scheme-1.png' %}"/></a>
-                  Вы оставляете<br/>заявку</div>
+                  Заявка<br/>клиента</div>
               </div>
               <div class="item columns small-12 medium-2">
                 <div class="content"><img src="{% static '2016/images/icon--scheme-2.png' %}" />
-                  Мы с вами связываемся <br/>и выясняем<br/> ваши пожелания</div>
+                  Связь с менеджером.<br/>Выявление<br/>предпочтений.</div>
               </div>
               <div class="item columns small-12 medium-2">
                 <div class="content"><img src="{% static '2016/images/icon--scheme-3.png' %}" alt="" />
-                  Договариваемся<br/>о стоимости<br/>и результате работ</div>
+                  Личная встеча.<br/>Обсуждение нюансов.<br/>Согласование бюджета.</div>
               </div>
               <div class="item columns small-12 medium-2">
                 <div class="content"><img src="{% static '2016/images/icon--scheme-4.png' %}" />
-                  Предоплата<br/>и наслаждение<br/>процессом</div>
+                  Внесение предоплаты<br/>и начало<br/>реализации проекта.</div>
               </div>
               <div class="item columns small-12 medium-2 end">
                 <div class="content"><img src="{% static '2016/images/icon--scheme-5.png' %}" />
-                  Вы получаете<br/>шедевр!</div>
+                  Получение<br/>дома мечты.</div>
               </div>
             </div>
           </div>
@@ -326,7 +325,7 @@
         
         <div class="block block--port">
           <div class="row">
-            <h2 class="block_title">Наше портфолио демонстрирует<br/>уровень наших работ</h2>
+            <h2 class="block_title">Убедитесь в нашем профессионализме<br/>и ознакомьтесь с уже реализованными проектами.</h2>
             
             <div class="row">
             {% for project in projects %}
@@ -344,7 +343,7 @@
             {% endfor %}
             </div>
             <div class="controls clearfix">
-                <a class="btn--clear" href="{% url 'projects' %}">Посмотреть остальные проекты</a>
+                <a class="btn--clear" href="{% url 'projects' %}">Ознакомиться с полным портфолио</a>
             </div>
             
           </div>
