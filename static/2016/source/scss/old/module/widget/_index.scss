@@ -1,0 +1,52 @@
+.col2 .widget.widget-grid a.widget-title {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 18px;
+}
+.widget {
+	
+	@include clearfix();
+	margin-bottom: 35px;
+	
+	&-title {
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: 300;
+		margin-bottom: 15px;
+		display: block;
+		color: #303030;
+		
+		strong {
+			display: block;
+			font-weight: 600;
+		}
+	}
+	
+	&.widget-user-page {
+		
+		margin-bottom: 20px;
+		
+		.widget-title {
+			font-size: rem-calc(16);
+			font-weight: 600;
+			//margin-bottom: rem-calc(12);
+			margin-bottom: rem-calc(9);
+			
+			span {
+				font-weight: 400;
+				color: #B2B2B2;
+			}
+			a {
+				color: #B2B2B2;
+				&:hover {
+					text-decoration: underline;
+					color: #60A5EA;
+				}
+			}
+		}
+	}
+}
+
+@import "_grid.scss";
+@import "_list.scss";

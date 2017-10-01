@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'PF DinDisplay Pro';
+	src: url('../fonts/hinted-subset-PFDinDisplayPro-Regular.eot');
+	src: url('../fonts/hinted-subset-PFDinDisplayPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Regular.woff2') format('woff2'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Regular.woff') format('woff'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PF DinDisplay Pro';
+	src: url('../fonts/hinted-subset-PFDinDisplayPro-Thin.eot');
+	src: url('../fonts/hinted-subset-PFDinDisplayPro-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Thin.woff2') format('woff2'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Thin.woff') format('woff'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PF DinDisplay Pro';
+	src: url('../fonts/hinted-subset-PFDinDisplayPro-Bold.eot');
+	src: url('../fonts/hinted-subset-PFDinDisplayPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Bold.woff2') format('woff2'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Bold.woff') format('woff'),
+		url('../fonts/hinted-subset-PFDinDisplayPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

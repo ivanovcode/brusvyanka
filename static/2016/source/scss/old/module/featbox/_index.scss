@@ -1,0 +1,16 @@
+.feat-box {
+	.col3 {
+		font-size: 0;
+		img {
+			& + img {
+				margin-top: 9.5px;
+			}
+		}
+	}
+	
+	.col2 {
+		img {
+			margin-top: 10px;
+		}
+	}
+}

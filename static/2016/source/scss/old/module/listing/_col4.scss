@@ -1,0 +1,38 @@
+#users.listing {
+	.listing_item {		
+		&-details {
+			width: 51.560976%;
+		}
+		&-actions {
+		    float: left;
+		    width: 6%;
+		    button {
+			    cursor: pointer;
+			    margin-top: -(rem-calc(4));
+			    
+			    & + .f-dropdown.tiny {
+				    width: auto;
+			    }
+			    
+			    & + .f-dropdown li {
+				    font-size: rem-calc(13);
+				    &:hover {
+					    background: none;
+					    a {
+						    color: #60A5EA;
+					    }
+				    }
+				    a {
+					    padding-left: rem-calc(10);
+					    padding-right: rem-calc(10);
+					    color: #000000;
+					    font-size: 13px;
+				    }
+			    }
+		    }
+		}
+		&-counter {
+			width: 9.72927241962775%;
+		}	
+	}
+}

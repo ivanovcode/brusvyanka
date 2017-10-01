@@ -1,0 +1,11 @@
+aside.banner {
+	
+	& + aside.banner {
+		margin-top: 20px;
+	}
+	
+	img {
+		min-width: 100%;
+		max-width: 100%;
+	}
+}

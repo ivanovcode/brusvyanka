@@ -1,0 +1,152 @@
+<!-- why-we.html -->
+{% extends "2016/base.html" %}
+{% load thumbnail %}
+{% load banner_list %}
+{% load staticfiles %}
+{% block content %}
+    {% spaceless %}
+    
+        <div class="block block--secret block--parralax" style="background-image: url({{ parralaxs.whywe1.img.url }})" {% include "2016/_parralax_settings.html" %}>
+          <div class="row">
+            <div class="row">
+              <div class="content columns small-12 medium-7">
+                <h1 class="title">{{ page.h1 }}</h1>
+                    {{ page.body|safe }}
+                  {{ page.footer_body|safe }}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="breadcrumbs">
+          <div class="row">
+            <ul>
+              <li><a href="/">Главная</a></li>
+              <li class="current"><span>{{ page.name }}</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="block block--plus block--plus-big">
+          <div class="row">
+            <h2 class="block_title">Так почему же все-таки мы?</h2>
+            <div class="block_sub-title">Всего 3 качества отличают нас от других. Но эти простые 3 качества выделяют нас,<br /> выдвигают вперед, оставляют остальных далеко позади.</div>
+            <div class="row">
+              <div class="columns small-12 medium-4">
+                <div class="list_item">
+                  <div class="img"><img src="{% static '2016/images/icon--camera--blue.png' %}" /></div>
+                  <div class="content"><div class="title">Архитектура мирового уровня</div>
+                    Архитектура, которой вдохновляются по всему миру, подражают, фотографируют и печатают в журналах.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="columns small-12 medium-4">
+                <div class="list_item">
+                  <div class="img"><img src="{% static '2016/images/icon--medal--blue.png' %}" /></div>
+                  <div class="content"><div class="title">Перфекционизм</div>
+                    Мы перфекционисты — делаем упор на очень высокое качество всех работ, достигая наилучших результатов.
+                  </div>
+                </div>
+              </div>
+              <div class="columns small-12 medium-4">
+                <div class="list_item">
+                  <div class="img"><img src="{% static '2016/images/icon--home--blue.png' %}" /></div>
+                  <div class="content"><div class="title">Комплексный подход</div>
+                    Все для воплощения мечты — от проектирования до реализации. Управление проектом внутри одной компании.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="divscrolls">
+      		<div class="scrollingHotSpotLeft" style="opacity: 0.35;">
+      			<svg xmlns="http://www.w3.org/2000/svg" width="24.906" height="46" viewBox="0 0 24.906 46"><path id="left" class="cls-1" d="M408.2,1471.52a1.637,1.637,0,0,0,2.329-2.3l-20.477-20.23,20.477-20.22a1.614,1.614,0,0,0,0-2.3,1.653,1.653,0,0,0-2.329,0l-21.641,21.37a1.612,1.612,0,0,0,0,2.3Z" transform="translate(-386.094 -1426)"/></svg>
+      		</div>
+      		<div class="scrollingHotSpotRight" style="opacity: 0.35;">
+      			<svg xmlns="http://www.w3.org/2000/svg" width="24.906" height="46" viewBox="0 0 24.93 45.99"><path id="left" class="cls-1" d="M2.79.45A1.64,1.64,0,0,0,.46,2.75L20.94,23,.46,43.2a1.61,1.61,0,0,0,0,2.28l0,0a1.65,1.65,0,0,0,2.33,0L24.43,24.13a1.61,1.61,0,0,0,0-2.28l0,0Z" transform="translate(0.02 0.01)"/></svg>
+      		</div>
+      		<div class="scrollWrapper">
+          	<div class="scrollableArea" style="width: 10800px;">
+              {% for slider in sliders %}
+                    {% thumbnail slider.img "706x500"  quality=70 crop="center" as photo %}
+                    <div title="{{ slider.title }}">
+                        <img src="{{ photo.url }}" alt="{{ slider.alt }}"/>
+                    </div>
+                    {% endthumbnail %}
+                {% endfor %}
+            </div>
+      		</div>
+        </div>
+        
+        <div class="block block--order block--order-m">
+          <div class="row">
+            
+            <div class="img columns small-12 medium-5">
+              <img src="{% static '2016/images/img--order.png' %}" alt="">
+            </div>
+            
+            
+            <div class="content columns small-12 medium-7">
+              <div class="left">
+                <div class="title">{{ chunks.whywe1.h2 }}</div>
+                {{ chunks.whywe1.body|safe }}
+              </div>
+              <button class="btn js__project-order">Заказать</button>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="block block--team">
+          <div class="row">
+            <h2 class="block_title">У нас собрались лучшие<br/>специалисты</h2>
+            <div class="block_sub-title">каждый профессионал своего дела, и объединились в одну команду</div>
+          {% staff_list page.pk as staffs %}
+            <div class="row">
+            {% for staff in staffs %}
+              <div class="item columns small-12 medium-4">
+                <div class="img" style="background-image: url({{ staff.photo.url }})">&nbsp;</div>
+                <div class="title">{{ staff.name }}</div>
+                <div class="sub-title">{{ staff.position }}</div>
+                <div class="text">{{ staff.descr }}</div>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--ban block--ban-v2 block--parralax" style="background-image: url({{ parralaxs.whywe2.img.url }})" {% include "2016/_parralax_settings.html" %}>
+          
+          <div class="wrapper">
+            <div class="block-title">{{ chunks.whywe2.body|safe }}</div>
+          </div>
+        
+        </div>
+        
+        <div class="block block--tests">
+          <div class="row">
+            <h2 class="block_title">Отзывы наших клиентов<br/> говорят сами за себя</h2>
+            {% feedback_list as feedbacks %}
+              <div class="row">
+              {% for feedback in feedbacks %}
+              <div class="columns small-12 medium-6">
+                <div class="item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ feedback.iframe_hash }}" frameborder="0" allowfullscreen></iframe>
+                  <div class="title">{{ feedback.title }}</div>
+                </div>
+              </div>
+              {% endfor %}
+              </div>
+            
+            <div class="controls">
+              <a href="/otzyvi/" class="btn--clear">Посмотреть все отзывы</a>
+            </div>
+          </div>
+        </div>
+        
+    {% endspaceless %}
+{% endblock content %}
+{% block head_title %}{{ page.title }}{% endblock %}

@@ -1,0 +1,9 @@
+.row {
+	@media #{$medium-only} {
+		width: rem-calc(880); 
+	}
+}
+
+@import "_content";
+@import "_sodagrid";
+@import "_modal";

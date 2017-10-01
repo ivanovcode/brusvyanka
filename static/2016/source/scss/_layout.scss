@@ -1,0 +1,31 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+html,
+body {
+  @media #{$medium} {
+  	min-width: 1024px;
+  }
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+  box-sizing: content-box;
+  @include clearfix();
+  
+  @media #{$small-only} {
+    padding: 0 12px;
+  }
+}
+
+@media only screen and (min-width: 45.78571em) {
+  .columns.medium-6:nth-child(2n+1) {
+    clear: left;
+  }
+}

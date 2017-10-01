@@ -1,0 +1,43 @@
+.soda-chat_title {
+	height: 50px;
+	line-height: 50px;
+	font-size: 0;
+	background-color: #1B7CBF;
+	position: relative;
+	.soda-chat_chat-with {
+		display: inline-block;
+		margin-left: 20px;
+	    color: #FFFFFF;
+	    text-align: left;
+	    font-size: 18px;
+	    line-height: 18px;
+	    vertical-align: middle;
+	}
+	.soda-chat_close {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background: transparent;
+		cursor: pointer;
+		text-align: center;
+		
+		@include single-transition(background, 300ms);
+		
+		.icon {
+			fill: #146399;
+			@include single-transition(fill, 300ms);
+		}
+		
+		&:hover {
+			background: rgba(0,0,0,0.05);
+			
+			.icon {
+				fill: #115686;
+			}
+		}
+		
+		
+	}
+}

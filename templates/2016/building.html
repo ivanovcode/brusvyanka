@@ -1,0 +1,212 @@
+<!-- building.html -->
+{% extends "2016/base.html" %}
+{% load thumbnail %}
+{% load banner_list %}
+{% load staticfiles %}
+{% load humanize %}
+{% block content %}
+    {% spaceless %}
+    
+        <div class="block block--page-header block--parralax" style="background-image: url({{ parralaxs.stroitelstvo1.img.url }})" {% include "2016/_parralax_settings.html" %}>
+          <div class="wrapper">
+            <div class="content">
+              <div class="img"><img src="{% static '2016/images/icon--service-stroi--white.png' %}" alt="Строительство домов и коттеджей" /></div>
+              <h1 class="title"><span>{{ page.h1 }}</span></h1>
+              {{ page.body|safe }}
+              <button class="btn btn--trans js__call-order">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="breadcrumbs">
+          <div class="row">
+            <ul>
+              <li><a href="/">Главная</a></li>
+              {% comment %}<li><a href="#">Услуги и цены</a></li>{% endcomment %}
+              <li class="current"><span>Строительство</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="block block--qq" style="background-image: url({{ parralaxs.sie.img.url }})">
+          <div class="row">
+            
+            <div class="row">
+              
+              <div class="content medium-8 small-12 columns">
+                <h2 class="title">{{ chunks.stroitelstvo1.h2 }}</h2>
+                {{ chunks.stroitelstvo1.body|safe }}
+                <div class="controls">
+                  <button class="btn js__project-order">Заказать</button>
+                  <span>Закажите сейчас строительство дома который<br/> подойдет именно вам.</span>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="block block--text--v3 block--parralax" style="background-image: url({{ parralaxs.stroitelstvo2.img.url }})" {% include "2016/_parralax_settings.html" %}>
+          <div class="wrapper">
+            <h2 class="title">{{ chunks.stroitelstvo2.h2 }}</h2>
+            <div class="content">{{ chunks.stroitelstvo2.body|safe }}</div>
+          </div>
+        </div>
+        
+        <div class="block block--text--v4 block--text--v42">
+          <div class="wrapper">
+            <h2 class="title">{{ chunks.stroitelstvo3.h2 }}</h2>
+            <div class="content">{{ chunks.stroitelstvo3.body|safe }}</div>
+            <div class="controls"><button class="btn js__project-order">Заказать строительство дома</button></div>
+          </div>
+        </div>
+        
+        <div id="divscrolls">
+      		<div class="scrollingHotSpotLeft" style="opacity: 0.35;">
+      			<svg xmlns="http://www.w3.org/2000/svg" width="24.906" height="46" viewBox="0 0 24.906 46"><path id="left" class="cls-1" d="M408.2,1471.52a1.637,1.637,0,0,0,2.329-2.3l-20.477-20.23,20.477-20.22a1.614,1.614,0,0,0,0-2.3,1.653,1.653,0,0,0-2.329,0l-21.641,21.37a1.612,1.612,0,0,0,0,2.3Z" transform="translate(-386.094 -1426)"/></svg>
+      		</div>
+      		<div class="scrollingHotSpotRight" style="opacity: 0.35;">
+      			<svg xmlns="http://www.w3.org/2000/svg" width="24.906" height="46" viewBox="0 0 24.93 45.99"><path id="left" class="cls-1" d="M2.79.45A1.64,1.64,0,0,0,.46,2.75L20.94,23,.46,43.2a1.61,1.61,0,0,0,0,2.28l0,0a1.65,1.65,0,0,0,2.33,0L24.43,24.13a1.61,1.61,0,0,0,0-2.28l0,0Z" transform="translate(0.02 0.01)"/></svg>
+      		</div>
+      		<div class="scrollWrapper">
+          	<div class="scrollableArea" style="width: 10800px;">
+                {% for slider in sliders %}
+                    {% thumbnail slider.img "706x500"  quality=70 crop="center" as photo %}
+                    <div title="{{ slider.title }}">
+                        <img src="{{ photo.url }}" alt="{{ slider.alt }}"/>
+                    </div>
+                    {% endthumbnail %}
+                {% endfor %}
+            </div>
+      		</div>
+        </div>
+        
+        <div class="block block--price">
+          <div class="row">
+            <h2 class="block_title">Варианты строительства и цены</h2>
+            <div class="prices row">
+                {% for price in prices %}
+              <div class="price columns small-12 medium-4">
+                <div class="title">«{{ price.name }}»
+                  <div class="subtitle">{{ price.descr }}</div>
+                </div>
+                <div class="cost">от <span>{{ price.price|intcomma }}</span> ₽/м²</div>
+                <button class="btn js__project-order">Заказать</button>
+              </div>
+                {% endfor %}
+            {% comment %}
+              <div class="price columns small-12 medium-4">
+                <div class="title">«Теплый контур»
+                  <div class="subtitle">«коробка» + окна, двери, отделка фасадов, электрика, отопление</div>
+                </div>
+                <div class="cost">от <span>45 000</span> ₽/м²</div>
+                <button class="btn js__project-order">Заказать</button>
+              </div>
+              <div class="price columns small-12 medium-4">
+                <div class="title">«ПОД КЛЮЧ»
+                  <div class="subtitle">«Теплый контур» + внутренняя отделка черновая и чистовая, светильники, мебель</div>
+                </div>
+                <div class="cost">от <span>60 000</span> ₽/м²</div>
+                <button class="btn js__project-order">Заказать</button>
+              </div>
+              {% endcomment %}
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--text block--text--v5 block--parralax" style="background-image: url({{ parralaxs.stroitelstvo3.img.url }})" {% include "2016/_parralax_settings.html" %}>
+          <div class="wrapper">
+            <div class="content">{{ chunks.stroitelstvo4.body|safe }}</div>
+          </div>
+        </div>
+        
+        <div class="block block--bonuses block--bonuses-v2">
+          <div class="row">
+            <h2 class="block_title">Бонусы при строительстве</h2>
+            <div class="block_sub-title">Мы очень ценим наших клиентов, поэтому приготовили для вас<br/> много приятных бонусов, скидок и подарков.</div>
+            <div class="row">
+              <div class="columns small-12 medium-4 item">
+                <div class="img"><img src="{% static '2016/images/icon--bonus-box.png' %}" alt="icon--bonus-box" width="80" height="85"></div>
+                <div class="text">При заказе строительства —</div>
+                <div class="sub">готовый проект БЕСПЛАТНО!</div>
+              </div>
+              <div class="columns small-12 medium-4 item">
+                <div class="img"><img src="{% static '2016/images/icon--bonus-perc.png' %}" alt="icon--bonus-perc" width="110" height="72"></div>
+                <div class="text">При заказе строительства —</div>
+                <div class="sub">50% СКИДКА на индивидуальное проектирование!</div>
+              </div>
+              <div class="columns small-12 medium-4 item">
+                <div class="img"><img src="{% static '2016/images/icon--bonus-otop.png' %}" alt="icon--bonus-otop" width="83" height="81"></div>
+                <div class="sub">Проект на отопление, водо-снабжение и канализацию БЕСПЛАТНО!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--steps block--steps-v2 block--parralax" style="background-image: url({{ parralaxs.stroitelstvo4.img.url }})" {% include "2016/_parralax_settings.html" %}>
+          
+          <div class="row">
+            <h2 class="block_title">Преимущества работы с нами</h2>
+            <div class="content">
+              <div class="row">
+                <div class="columns small-12 medium-4 item">
+                  <div class="img"><img src="{% static '2016/images/icon--medal--blue.png' %}" alt="icon--medal--blue" width="68" height="80"></div>
+                  <div class="title">Качество</div>
+                  <ul>
+                    <li>Большой опыт реализации</li>
+                    <li>Собственный авторский и технический надзор</li>
+                    <li>Соблюдение строительных технологий </li>
+                    <li>Используем только качественные материалы</li>
+                  </ul>
+                </div>
+                <div class="columns small-12 medium-4 item">
+                  <div class="img"><img src="{% static '2016/images/icon--rules--blue.png' %}" alt="icon--rules--blue" width="71" height="71"></div>
+                  <div class="title">Реальная смета</div>
+                  <ul>
+                    <li>Не занижаем объемы</li>
+                    <li>Подробная и прозрачная смета</li>
+                  </ul>
+                </div>
+                <div class="columns small-12 medium-4 item">
+                  <div class="img"><img src="{% static '2016/images/icon--home--blue.png' %}" alt="icon--home--blue" width="78" height="78"></div>
+                  <div class="title">Комплексный подход</div>
+                  <ul>
+                    <li>Полное ведение строительства дома</li>
+                    <li>За результат отвечает одна компания</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--team block--team-v2">
+          <div class="row">
+            <h2 class="block_title">Наши заслуженные строители</h2>
+            
+          {% staff_list page.pk as staffs %}
+            {% for staff in staffs %}
+                  {% if forloop.first %}
+            <div class="row">
+                {% endif %}
+              <div class="item columns small-12 medium-4">
+                <div class="img" style="background-image: url({{ staff.photo.url }})">&nbsp;</div>
+                <div class="title">{{ staff.name }}</div>
+                <div class="sub-title">{{ staff.position }}</div>
+                <div class="text">{{ staff.descr }}</div>
+              </div>
+                {% if forloop.counter|divisibleby:'3' and not forloop.last %}
+            </div><div class="row">
+                {% endif %}
+                {% if forloop.last %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            
+          </div>
+        </div>
+        
+    {% endspaceless %}
+{% endblock content %}
+{% block head_title %}{{ page.title }}{% endblock %}

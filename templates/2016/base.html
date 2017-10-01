@@ -1,0 +1,465 @@
+{% spaceless %}
+{% load staticfiles %}
+{% load banner_list %}
+{% load thumbnail %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <link type="image/x-icon" href="http://brusvyanka.ru/templates/protostar/favicon.ico?1" rel="shortcut icon">
+  	<meta name="msapplication-TileColor" content="#ffffff">
+  	<meta name="msapplication-TileImage" content="/static/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="wb6rjVjfYG0nelQDgQcVCECdPPCISDd0aCOHM-g_MvQ"/>
+    <meta name="cmsmagazine" content="8e288ad6b5bd5c89f67d49590d260492"/>
+    <meta name='yandex-verification' content='40d1ab63511b8a08'/>
+    <title>{% block head_title %}{% endblock %}</title>
+    
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <script type="text/javascript">
+      var viewport = document.getElementById('viewport');
+      var ww = document.documentElement.clientWidth || document.body.clientWidth;
+      if ( ww > 640 ) {
+        var content = 'width=1024';
+      } else {
+        var content = 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no';
+      }
+      viewport.setAttribute('content', content);
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,600i,700&subset=cyrillic" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold,bolditalic" rel="stylesheet" type="text/css" />
+    <link href="{% static '2016/css/style.css' %}?19.11.2016" rel="stylesheet" type="text/css">
+    <style>
+        .block.block--parralax  {
+            background-position: center calc(50% + {% get_settings '11.2653px' '-100px' %});
+        }
+        .top-menu, .top-menu ul li>ul {
+           background-color: #80c462;
+        }
+        .top-menu ul li.active a {
+           background-color: #5b9442;
+        }
+        .btn, .button {
+           background-color: #80c462;
+        }
+        .btn:hover, .button:hover{
+           background-color: #5b9442;
+        }
+        .top-menu ul li:hover>a {
+           background-color: #57c427;
+        }
+        .breadcrumbs ul li a {
+           color: #5b9442;
+         }
+    </style>
+    {% block meta_headers %}{% endblock %}
+    {% block css_js %}{% endblock %}
+    {% if page.keyword %}<meta content="{{ page.keyword }}" name="keywords"/>{% endif %}
+    {% if page.description %}<meta content="{{ page.description }}" name="description"/>{% endif %}
+  	{% if page.is_index == False or page.index_option == False %}<meta NAME="robots" CONTENT="NOINDEX,NOFOLLOW">{% endif %}
+  </head>
+  <body>
+    <div id="icons-sprite">
+  		{% include "inc_svg.html" %}
+  	</div>
+  	
+  	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+
+			<nav class="mobile-nav-bar sticky show-for-small-only">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle" href="#">
+						<svg class="icon icon-mobile-menu">
+							<use xlink:href="#icon-mobile-menu"></use>
+						</svg>
+					</a>
+				</section>
+			
+				<section class="middle tab-bar-section">
+					<a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %} class="logo" title="Брусвянка">
+						<img src="{% static 'images/logo.png' %}" alt="Брусвянка">
+					</a>
+				</section>
+				
+				<section class="right-small">
+					<a class="right-off-canvas-toggle" href="#">
+						<svg class="icon icon-mobile-phone">
+							<use xlink:href="#icon-mobile-phone"></use>
+						</svg>
+					</a>
+				</section>
+			
+			</nav>
+
+			<aside class="left-off-canvas-menu show-for-small-only">
+				<ul>
+					<li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+					<li {% class_active page.url 'proektirovanie-domov' %}><a {% href_active page.url '/proektirovanie-domov/' %}>Архитектурное проектирование</a></li>
+					<li {% class_active page.url 'stroitelstvo' %}><a {% href_active page.url '/stroitelstvo/' %}>Строительство</a></li>
+					<li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
+					<li {% class_active page.url 'why-we' %}><a {% href_active page.url '/why-we/' %}>Почему мы</a></li>
+					<li {% if page_projects %}class="active"{% endif %} ><a {% if not page_projects %}href="{% url 'projects' %}"{% endif %}>Проекты домов</a></li>
+					<li {% if page_builds %}class="active"{% endif %}><a {% if not page_builds %}href="{% url 'builds' %}"{% endif %}>Строительство домов</a></li>
+					<li {% if page_interior %}class="active"{% endif %}><a {% if not page_interior %}href="{% url 'interior' %}"{% endif %}>Реконструкция домов</a></li>
+					<li {% class_active page.url 'otzyvi' %}><a {% href_active page.url '/otzyvi/' %}>Отзывы</a></li>
+					<li {% if page_contacts %}class="active"{% endif %}><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
+					<li {% class_active page.url 'sitemap' %}><a {% href_active page.url '/sitemap/' %}>Карта сайта</a></li>
+				</ul>
+
+				<div class="header-search">
+					<form action="/search" method="post">{% csrf_token %}
+						<input type="text" placeholder="Поиск" name="art"/>
+						<button class="button button-clear button-search">
+							<svg class="icon icon-search">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
+						<button class="button button-clear button-search-hide">
+							<svg class="icon icon-close">
+								<use xlink:href="#icon-close"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+		    </aside>
+		    
+		    <aside class="right-off-canvas-menu show-for-small-only">
+		    	<h4 id="modal_call-order_title">Отправить заявку на звонок</h4>
+				 <p>оставьте заявку и мы перезвоним <br />вам в ближайшее время</p>
+				 <form action="" class="form_recall" data-goal="besplatnyjzvonok">{% csrf_token %}
+					<div class="field">
+						<input type="text" placeholder="Как к Вам обращаться" name="name"/>
+					</div>
+					<div class="field">
+						<input type="text" required="required" placeholder="Контактный телефон" name="phone"/>
+					</div>
+					<div class="field field-submit">
+						<input class="button" type="submit" value="Оставить заявку" />
+					</div>
+				</form>
+		    </aside>
+  	
+  	
+    <div class="header">
+      <div class="wrapper">
+        <a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %} class="header-logo">
+          <img src="{% static '2016/images/logo.png' %}" style="width: 179px; margin-left: 12px;"/>
+          <span class="header-desc">
+            Архитектурно-строительная<br/>
+            компания &laquo;Брусвянка&raquo;
+          </span>
+        </a>
+
+        <div class="header-contacts">
+          <a href="tel:+74957227111" class="header-phone">+7 (495) 722-71-11</a>
+          <button class="js__call-order">Заказать звонок</button>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="top-menu">
+      <div class="wrapper">
+        
+        <ul>
+          <li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+          <li class="has-child">
+            <a href="#" onclick="return false;">Услуги и цены</a>
+            <ul>
+              <li {% class_active page.url 'proektirovanie-domov' %}><a {% href_active page.url '/proektirovanie-domov/' %}>Архитектурное проектирование</a></li>
+              <li {% class_active page.url 'stroitelstvo' %}><a {% href_active page.url '/stroitelstvo/' %}>Строительство</a></li>
+              <li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
+               {% comment %}
+              <li><a href="#constructive-decisions.html">Конструктивные решения</a></li>
+              <li><a href="#engineering-communication.html">Инженерные коммуникации</a></li>
+              <li><a href="#landscaping.html">Ландшафтный дизайн</a></li>
+              <li><a href="#finishing-work.html">Отделочные работы</a></li>
+              <li><a href="#supply.html">Снабжение</a></li>
+              {% endcomment %}
+            </ul>
+          </li>
+          <li {% class_active page.url 'why-we' %}><a {% href_active page.url '/why-we/' %}>Почему мы</a></li>
+          <li class="has-child">
+              <a href="#" onclick="return false;">Портфолио</a>
+              <ul>
+                <li {% if page_projects %}class="active"{% endif %} ><a{% if not page_projects or not page.url == 'proekty-domov' %} href="{% url 'projects' %}"{% endif %}>Проекты домов</a></li>
+                <li {% if page_builds %}class="active"{% endif %}><a {% if not page_builds %}href="{% url 'builds' %}"{% endif %}>Строительство домов</a></li>
+                <li {% if page_interior %}class="active"{% endif %}><a {% if not page_interior %}href="{% url 'interior' %}"{% endif %}>Реконструкция домов</a></li>
+              </ul>
+          </li>
+          <li {% if page_contacts %}class="active"{% endif %}><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
+        </ul>
+        
+{% comment %}
+        <ul>
+        <li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+        <li {% if page.url == 'ceny' %}class='active'{% endif %}><a {% if not page.url == 'ceny' %}href="/ceny/"{% endif %}>Услуги и цены</a></li>
+        <li ><a href="#">Почему мы</a></li>
+        <li {% if page_projects %}class="active"{% endif %}><a {% if not 'proekty-domov' == page.url %}href="{% url 'projects' %}"{% endif %}>Портфолио</a></li>
+        <li {% if page_contacts %}class="active"{% endif %}><a {% if not page.url == 'kontakty' %}href="/kontakty/"{% endif %}>Контакты</a></li>
+        </ul>
+{% endcomment %}
+        
+        <div class="search">
+          <form action="/search" method="post">{% csrf_token %}
+            <input type="submit" value=""/>
+            <input type="text" placeholder="Поиск" name="art"/>
+          </form>
+          <span class="close"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-inner">
+    
+      
+        {% block content %}
+        {% endblock %}
+      
+      <div class="block block--feedback block--parralax" style="background-image: url({% get_parralax 'feedback' %});" data-bottom-top="background-position:center calc(50% + 80px);" data-top-bottom="background-position:center calc(50% + -200px);">
+        <div class="row">
+          <div class="row-mobile-fix">
+          <div class="row">
+            <div class="columns medium-6 large-6 desc">
+              <div class="title">Остались вопросы?</div>
+              <p>Оставьте заявку и мы скоро свяжемся с вами</p>
+            </div>
+            <div class="columns medium-6 large-6 form">
+              <form action="" class="form_feedback">{% csrf_token %}
+                <div class="input">
+                  <input type="text" placeholder="Ваше имя" name="name"/>
+                    <input type="hidden" name="proj" value="Арт. {{project.articul}} {{ project.name }}"/>
+                </div>
+                <div class="input">
+                  <input type="tel" required="required" placeholder="Контактный телефон" name="phone"/>
+                </div>
+                <div class="input">
+                  <input type="text" placeholder="Электронная почта" name="email"/>
+                </div>
+                <div class="textarea">
+                  <textarea name="text" placeholder="Текст сообщения"></textarea>
+                </div>
+                <div class="controls">
+                  <input type="submit" class="btn" value="Оставить заявку" />
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer">
+    <div class="wrapper">
+      <div class="row">
+        <div class="columns medium-3 large-3">
+          <ul>
+            <li><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+            <li><a {% href_active page.url '/proektirovanie-domov/' %}>Проектирование домов</a></li>
+            <li><a {% href_active page.url '/stroitelstvo/' %}>Строительство домов</a></li>
+            <li><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция домов</a></li>
+          </ul>
+        </div>
+        
+        <div class="columns medium-3 large-3">
+          <ul>
+            <li><a {% href_active page.url '/why-we/' %}>Почему мы</a></li>
+            <li><a href="{% url 'projects' %}">Проекты домов</a></li>
+            <li><a href="{% url 'builds' %}">Строительство фото</a></li>
+            <li><a href="{% url 'interior' %}">Реконструкция</a></li>
+          </ul>
+        </div>
+        
+        <div class="columns medium-3 large-3">
+          <ul>
+            <ul>
+              <li><a {% href_active page.url '/otzyvi/' %}>Отзывы</a></li>
+              <li><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
+              <li><a {% href_active page.url '/sitemap/' %}>Карта сайта</a></li>
+            </ul>
+          </ul>
+        </div>
+        
+        <div class="columns medium-3 large-3">
+          <div class="contacts">
+            <a href="tel:" class="footer-phone">+7 (495) 722-71-11</a><br/>
+            <button class="btn--clear js__call-order">Заказать звонок</button>
+            <a class="mailto" href="mailto:info@brusvyanka.ru">info@brusvyanka.ru</a>
+            
+            <div class="social">
+              <a href="https://vk.com/arhitektor_ilyaeliseev" class="social--vk" target="_blank">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 304.36 304.36" style="enable-background:new 0 0 304.36 304.36;" xml:space="preserve">
+                  <path id="XMLID_807_" style="fill-rule:evenodd;clip-rule:evenodd;" d="M261.945,175.576c10.096,9.857,20.752,19.131,29.807,29.982 c4,4.822,7.787,9.798,10.684,15.394c4.105,7.955,0.387,16.709-6.746,17.184l-44.34-0.02c-11.436,0.949-20.559-3.655-28.23-11.474 c-6.139-6.253-11.824-12.908-17.727-19.372c-2.42-2.642-4.953-5.128-7.979-7.093c-6.053-3.929-11.307-2.726-14.766,3.587
+                		c-3.523,6.421-4.322,13.531-4.668,20.687c-0.475,10.441-3.631,13.186-14.119,13.664c-22.414,1.057-43.686-2.334-63.447-13.641
+                		c-17.422-9.968-30.932-24.04-42.691-39.971C34.828,153.482,17.295,119.395,1.537,84.353C-2.01,76.458,0.584,72.22,9.295,72.07
+                		c14.465-0.281,28.928-0.261,43.41-0.02c5.879,0.086,9.771,3.458,12.041,9.012c7.826,19.243,17.402,37.551,29.422,54.521
+                		c3.201,4.518,6.465,9.036,11.113,12.216c5.142,3.521,9.057,2.354,11.476-3.374c1.535-3.632,2.207-7.544,2.553-11.434
+                		c1.146-13.383,1.297-26.743-0.713-40.079c-1.234-8.323-5.922-13.711-14.227-15.286c-4.238-0.803-3.607-2.38-1.555-4.799
+                		c3.564-4.172,6.916-6.769,13.598-6.769h50.111c7.889,1.557,9.641,5.101,10.721,13.039l0.043,55.663 c-0.086,3.073,1.535,12.192,7.07,14.226c4.43,1.448,7.35-2.096,10.008-4.905c11.998-12.734,20.561-27.783,28.211-43.366 c3.395-6.852,6.314-13.968,9.143-21.078c2.096-5.276,5.385-7.872,11.328-7.757l48.229,0.043c1.43,0,2.877,0.021,4.262,0.258 c8.127,1.385,10.354,4.881,7.844,12.817c-3.955,12.451-11.65,22.827-19.174,33.251c-8.043,11.129-16.645,21.877-24.621,33.072 C252.26,161.544,252.842,166.697,261.945,175.576L261.945,175.576z M261.945,175.576"/></svg>
+              </a>
+              <a href="https://www.facebook.com/arhitektorilyaeliseev/" class="social--fb" target="_blank">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="430.113px" height="430.114px" viewBox="0 0 430.113 430.114" style="enable-background:new 0 0 430.113 430.114;"
+                	 xml:space="preserve">
+                	<path id="Facebook" d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+                		c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+                		c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/ilyaeliseev_architect/" class="social--ig" target="_blank">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="97.395px" height="97.395px" viewBox="0 0 97.395 97.395" style="enable-background:new 0 0 97.395 97.395;"
+                	 xml:space="preserve">
+                	<path d="M12.501,0h72.393c6.875,0,12.5,5.09,12.5,12.5v72.395c0,7.41-5.625,12.5-12.5,12.5H12.501C5.624,97.395,0,92.305,0,84.895
+                		V12.5C0,5.09,5.624,0,12.501,0L12.501,0z M70.948,10.821c-2.412,0-4.383,1.972-4.383,4.385v10.495c0,2.412,1.971,4.385,4.383,4.385
+                		h11.008c2.412,0,4.385-1.973,4.385-4.385V15.206c0-2.413-1.973-4.385-4.385-4.385H70.948L70.948,10.821z M86.387,41.188h-8.572
+                		c0.811,2.648,1.25,5.453,1.25,8.355c0,16.2-13.556,29.332-30.275,29.332c-16.718,0-30.272-13.132-30.272-29.332
+                		c0-2.904,0.438-5.708,1.25-8.355h-8.945v41.141c0,2.129,1.742,3.872,3.872,3.872h67.822c2.13,0,3.872-1.742,3.872-3.872V41.188
+                		H86.387z M48.789,29.533c-10.802,0-19.56,8.485-19.56,18.953c0,10.468,8.758,18.953,19.56,18.953
+                		c10.803,0,19.562-8.485,19.562-18.953C68.351,38.018,59.593,29.533,48.789,29.533z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copy">
+        &copy; 2009–2017 «Строительная компания Брусвянка»
+      </div>
+      
+    </div>
+  </div>
+      
+    </div><!-- content--inner -->
+    <a class="exit-off-canvas"></a>
+
+	</div>
+</div>
+
+<div class="modal" id="project-order">
+  <div class="modal_content">
+    <button class="modal_close">&nbsp;</button>
+    <div class="modal_title">Оставить заявку</div>
+    <div class="modal_subtitle">Заполните форму ниже, и мы свяжемся<br />с вами в ближайшее время.</div>
+    <form action="" class="form_order" data-goal="zakazatproekt">{% csrf_token %}
+      <input type="hidden" name="proj" value="Арт. {{project.articul}} {{ project.name }}"/>
+      <div class="input"><input type="text" placeholder="Ваше имя" name="name"/></div>
+      <div class="input"><input type="tel" required="required" placeholder="Контактный телефон" name="phone"/></div>
+      <div class="input"><input type="email" placeholder="Электронная почта" name="email"/></div>
+      <div class="controls"><input class="btn" type="submit" value="Оставить заявку" /></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="call-order">
+  <div class="modal_content">
+    <button class="modal_close">&nbsp;</button>
+    <div class="modal_title">Обратный звонок</div>
+    <div class="modal_subtitle">Заполните форму ниже, и мы свяжемся<br />с вами в ближайшее время.</div>
+    <form action="" class="form_recall" data-goal="besplatnyjzvonok">{% csrf_token %}
+      <input type="hidden" name="proj" value="Арт. {{project.articul}} {{ project.name }}"/>
+      <div class="input"><input type="text" placeholder="Ваше имя" name="name"/></div>
+      <div class="input"><input type="tel" required="required" placeholder="Контактный телефон" name="phone"/></div>
+      <div class="controls"><input class="btn" type="submit" value="Заказать звонок" /></div>
+    </form>
+  </div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+  {% block js_footer %}{% endblock %}
+  <script src="{% static '2016/js/application.js' %}" type="text/javascript"></script>
+  
+   <script>
+        $(document).ready(function(){
+          
+          function checkRequared(form) {
+            ret = true;
+            form.find('input[required="required"]').each(function(){
+              if ( $(this).val() === '' ) {
+                $(this).focus();
+                ret = false;
+                return ret;
+              }
+            });
+            return ret;
+          }
+          
+            $('.form_recall').submit(function() {
+                if ( !checkRequared( $(this) ) ) {
+                  return false;
+                } else {
+                  var data = $(this).serializeArray();
+                var goal = $(this).data('goal');
+                $.post('/recall', data, function(response){
+                    alert(response.result);
+                    $('.form_recall').find('input[type="text"]').val("");
+                    $('.form_recall').find('input[type="email"]').val("");
+                    $('body').removeClass('opened-modal');
+                    $('.modal').fadeOut();
+                    
+                    if(goal) {
+                      yaCounter9636880.reachGoal(goal);
+                    } 
+                    else {
+                      yaCounter9636880.reachGoal('other_goal');
+                    }
+                });
+                return false;
+                }
+                
+            });
+
+
+            $('.form_order').submit(function() {
+              if ( !checkRequared( $(this) ) ) {
+                  return false;
+                } else {
+                  var data = $(this).serializeArray();
+                var goal = $(this).data('goal');
+                $.post('/order', data, function(response){
+                    alert(response.result);
+                    $('.form_order').find('input[type="text"]').val("");
+                    $('.form_order').find('input[type="email"]').val("");
+                    $('body').removeClass('opened-modal');
+                    $('.modal').fadeOut();
+                    if(goal) {
+                      yaCounter9636880.reachGoal(goal);
+                    }
+                    else { 
+                      yaCounter9636880.reachGoal('other_goal');
+                    }
+                });
+                return false;
+                }
+                
+            });
+            
+            $('.form_feedback').submit(function() {
+                if ( !checkRequared( $(this) ) ) {
+                  return false;
+                } else {
+                  var data = $(this).serializeArray();
+                  var goal = $(this).data('goal');
+                  $.post('/order', data, function(response){
+                      alert(response.result);
+                      $('.form_order').find('input[type="text"]').val("");
+                      $('.form_order').find('input[type="email"]').val("");
+                      if(goal) {
+                        yaCounter9636880.reachGoal(goal);
+                      }
+                      else { 
+                        yaCounter9636880.reachGoal('other_goal');
+                      }
+                  });
+                  return false;
+                }
+            });
+        });
+    </script>
+
+  {% include 'inc_counters.html' %}
+  </body>
+</html>
+{% endspaceless %}

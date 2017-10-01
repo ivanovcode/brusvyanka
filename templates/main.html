@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+
+{% block content %}
+{% spaceless %}
+{% load banner_list %}
+<div class="content row" xmlns="http://www.w3.org/1999/html">
+
+		<div id="divscrolls" class="hide-for-small">
+			<div class="scrollingHotSpotLeft" style="opacity: 0.35;">
+				<svg class="scroll-to-left">
+					<use xlink:href="#scroll-to-left"></use>
+				</svg>
+			</div>
+			<div class="scrollingHotSpotRight" style="opacity: 0.35;">
+				<svg class="scroll-to-right">
+					<use xlink:href="#scroll-to-right"></use>
+				</svg>
+			</div>
+			<div class="scrollWrapper">
+            	<div class="scrollableArea" style="width: 10800px;">
+                {% for project in projects %}
+                    {% thumbnail project.mainphoto "440x310"  quality=70 crop="center" as photo %}
+                    <a href="{{ project.get_absolute_url }}" title="{{ project.title }}" rel="nofollow">
+                        <img src="{{ photo.url }}" width="440" height="310" {% if forloop.first %}id="startAtMe"{% endif %} {% if forloop.last %}class="last"{% endif %} alt="{{ project.alt }}"/>
+                    </a>
+                    {% endthumbnail %}
+                {% endfor %}
+            	</div>
+			</div>
+			<div id="consult-order" class="consult-order">
+				<div class="consult-order_title">
+					Оставьте заявку на <div>БЕСПЛАТНУЮ</div> консультацию архитектора
+				</div>
+				<form action="" class="form_recall" data-goal="main_goal">{% csrf_token %}
+					<div class="field">
+						<input type="text" placeholder="Как к Вам обращаться" name="name"/>
+					</div>
+					<div class="field">
+						<input type="text" placeholder="Контактный телефон"  name="phone"/>
+					</div>
+					<div class="field field-submit">
+						<input class="button" type="submit" value="Оставить заявку" />
+					</div>
+				</form>
+				<div class="consult-order_hint">
+					Ваши контактные данные в безопасности и не используются для спама
+				</div>
+			</div>
+		</div>
+
+		<div class="soda-grid_row soda-grid_row-main">
+			
+			<div class="col2">
+                {% show_banner_list %}
+			</div><!-- col2 -->
+			<div class="col1">
+				<div class="post-item">
+					<div class="post-item_header">
+						<div class="post-item_details">
+							<h1 class="post-item_title">
+								{{ page.h1 }}
+							</h1>
+						</div>
+					</div>
+
+					<div class="post-item_body">
+
+						<div class="post-item_ext">
+                            {{ page.body|safe }}
+						</div>
+					</div>
+
+				</div><!-- post-item -->
+
+			</div><!-- col1 -->
+			<div class="col3">
+                {% show_banner_list_left %}
+			</div><!-- col3 -->
+			
+			
+
+		</div>
+	</div>
+{% endspaceless %}
+{% endblock %}
+
+{% block head_title %}{{ page.title }}{% endblock %}

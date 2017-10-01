@@ -1,0 +1,1821 @@
+Internal Server Error: /g/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 53, in create
+    self.save(must_create=True)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 86, in save
+    obj.save(force_insert=must_create, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: attempt to write a readonly database
+Internal Server Error: /g/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 53, in create
+    self.save(must_create=True)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 86, in save
+    obj.save(force_insert=must_create, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: unable to open database file
+Internal Server Error: /g/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 53, in create
+    self.save(must_create=True)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 86, in save
+    obj.save(force_insert=must_create, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 323, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: unable to open database file
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /admin/pages/page/5/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/5/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/5/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/5/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/5/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/5/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/3/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/1/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/1/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/1/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/1/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/1/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/1/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 69, in view_page
+    return render(request, template, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'rekonstrukciya-domov' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /admin/pages/page/4/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /admin/pages/page/4/change/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/utils/decorators.py", line 184, in inner
+    return func(*args, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1377, in changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 451, in all_valid
+    if not formset.is_valid():
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 316, in is_valid
+    self.errors
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 290, in errors
+    self.full_clean()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 337, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 116, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/forms/formsets.py", line 98, in management_form
+    code='missing_management_form',
+ValidationError: [u'\u0414\u0430\u043d\u043d\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0438 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u044b']
+Internal Server Error: /otzyvi/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 153, in view_url
+    ret = view(request, url.split('/')[-1])
+  File "/home/brusvyanka/pages/views.py", line 69, in view_page
+    return render(request, template, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: feedbacks.html
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /rekonstrukciya-domov/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/interior/views.py", line 41, in view_projects
+    return render(request, "interiors.html", response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag_interior' with arguments '(u'\u0438\u0437 \u0433\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d\u04302',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['rekonstrukciya-domov/([\\w\\d_-]+)/$']
+Internal Server Error: /rekonstrukciya-domov/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/interior/views.py", line 41, in view_projects
+    return render(request, "interiors.html", response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag_interior' with arguments '(u'\u0438\u0437 \u0433\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d\u04302',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['rekonstrukciya-domov/([\\w\\d_-]+)/$']
+Internal Server Error: /rekonstrukciya-domov/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/interior/views.py", line 41, in view_projects
+    return render(request, "interiors.html", response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag_interior' with arguments '(u'\u0438\u0437 \u0433\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d\u04302',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['rekonstrukciya-domov/([\\w\\d_-]+)/$']
+Internal Server Error: /rekonstrukciya-domov/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/interior/views.py", line 41, in view_projects
+    return render(request, "interiors.html", response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag_interior' with arguments '(u'\u0438\u0437 \u0433\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d\u04302',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['rekonstrukciya-domov/([\\w\\d_-]+)/$']
+Internal Server Error: /rekonstrukciya-domov/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/interior/views.py", line 41, in view_projects
+    return render(request, "interiors.html", response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag_interior' with arguments '(u'\u0438\u0437 \u0433\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d\u04302',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['rekonstrukciya-domov/([\\w\\d_-]+)/$']
+Internal Server Error: /rekonstrukciya-domov/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/interior/views.py", line 41, in view_projects
+    return render(request, "interiors.html", response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'tag_interior' with arguments '(u'\u0438\u0437 \u0433\u0430\u0437\u043e\u0431\u0435\u0442\u043e\u043d\u04302',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['rekonstrukciya-domov/([\\w\\d_-]+)/$']
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /likes/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 80, in get_likes
+    result = requests.get('https://api.facebook.com/method/links.getStats?urls=%s&format=json' % url)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='api.facebook.com', port=443): Max retries exceeded with url: /method/links.getStats?urls=http://test.brusvyanka.ru/proekty-domov/02-03/&format=json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fe9d8910e10>: Failed to establish a new connection: [Errno 101] Network is unreachable',))

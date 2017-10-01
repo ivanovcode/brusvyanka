@@ -1,0 +1,135 @@
+{% extends "2016/base.html" %}
+{% load thumbnail %}
+{% load banner_list %}
+
+{% block content %}
+{% spaceless %}
+
+<div class="breadcrumbs">
+  <div class="row">
+    <ul>
+      <li><a href="/">Главная</a></li>
+        <li><a href="{% url 'builds' %}">{{ page.name }}</a></li>
+        <li class="current"><span>{{ tag_cur }}</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="content row">
+
+    <div class="orbit_cats_wrap">
+		<ul class="orbit_cats" style="list-style:none;margin-left:0;margin-left:-10px;">
+            {% for tag in tags %}
+                <li class="item {% if page.url == tag.url %} current {% endif %}">
+					<a href="{{ tag.get_absolute_url }}" >
+	                    {% thumbnail tag.img "130x130"  crop="center" as thumb  %}
+							<img src="{{ thumb.url }}" alt="{{ tag.h1 }}" />
+                        {% empty %}
+	                        <img src="http://dummyimage.com/130x130/000/00ffd5.png" alt="" />
+	                    {% endthumbnail %}
+	                </a>
+					<a href="{{ tag.get_absolute_url }}" >
+						<span class="item-name">{{ tag.name }}</span>
+					</a>
+				</li>
+            {% endfor %}
+		</ul>
+		<a id="prev" style="display:none;"></a>
+		<a id="next" style="display:none;"></a>
+	</div>
+	
+	<div class="orbit-mobile_cats_wrap show-for-small-only">
+		<select name="project_cats" onchange="window.location.href=this.value">
+  		{% with has_selected=false %}
+    		{% for tag in tags %}
+    		  {% if page.url == tag.url %}
+    		    {% with has_selected=true %}{% endwith %}
+    		  {% endif %}
+        {% endfor %}
+      
+      
+        {% if has_selected == true %}
+  		    <option value="/proekty-domov/">Все типы</option>
+  		  {% else %}
+  		    <option value="/proekty-domov/" selected="selected">Все типы</option>
+  		  {% endif %}
+    		
+  			{% for tag in tags %}
+  				<option {% if page.url == tag.url %}selected="selected"{% endif %} value="{{ tag.get_absolute_url }}">{{ tag.name }}</option>
+  			{% endfor %}
+			{% endwith %}
+		</select>
+	</div>
+	
+	<div class="block block--port">
+          <div class="row">
+            <h1 class="listing_title">{{ page.h1 }}</h1>
+            
+            <div class="row">
+        {% for project in projects %}                
+          <div class="item columns small-12 medium-4 large-3">
+            {% thumbnail project.mainphoto "271x192" quality=70 crop="center" as photo %}
+              <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
+            {% endthumbnail %}
+              <a href="{{ project.get_absolute_url }}" class="title">{{ project.name }}</a>
+            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}</div>
+          </div>
+        {% endfor %}
+      </div>
+        
+            
+          </div>
+        </div>
+
+
+    <hr/>
+    <br/><br/>
+
+    <div class="soda-grid_row projects-cont row">
+        <div class="col3">
+            {% show_article_tag_build tag_id %}
+        </div>
+        <!-- col3 -->
+
+        <div class="col1">
+            <div class="post-item">
+                <div class="post-item_body">
+
+                    <div class="post-item_ext" style="margin-top: 3px;">
+                        {{ page.body|safe }}
+                    </div>
+                </div>
+
+            </div>
+            <!-- post-item -->
+
+        </div>
+        <!-- col1 -->
+
+        <div class="col2">
+            <div class="order-form">
+                <h3>Заказать звонок</h3>
+
+                <p>оставьте заявку и мы перезвоним вам в ближайшее время</p>
+
+                <form action="" class="form_recall" data-goal="builds_tag_goal">{% csrf_token %}
+                    <div class="field">
+                        <input type="text" placeholder="Как к Вам обращаться" name="name"/>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Контактный телефон" name="phone"/>
+                    </div>
+                    <div class="field field-submit">
+                        <input class="button" type="submit" value="Оставить заявку"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- col2 -->
+
+    </div>
+
+</div>
+{% endspaceless %}
+{% endblock %}
+{% block head_title %}{{page.title}}{% endblock %}

@@ -1,0 +1,174 @@
+.post-item_comments {
+
+    &-create {
+
+        margin-bottom: 30px;
+
+        .row {
+            margin-left: rem-calc(-5);
+            margin-right: rem-calc(-5);
+
+            .column, .columns {
+                padding-left: rem-calc(5);
+                padding-right: rem-calc(5);
+            }
+
+            .large-10 {
+                width: 80%;
+            }
+            .large-2 {
+                width: 20%;
+            }
+        }
+
+        .field-comment {
+
+            position: relative;
+
+            input[type=text] {
+                height: 34px;
+                margin-bottom: 0;
+
+                font-size: rem-calc(13);
+
+                box-shadow: none;
+            }
+
+            &-file {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                cursor: pointer;
+                text-align: center;
+
+                .icon {
+                    position: relative;
+                    z-index: 1;
+                    cursor: pointer;
+                }
+
+                input[type=file] {
+                    cursor: pointer;
+                    opacity: 0;
+                    position: absolute;
+                    z-index: 2;
+                    margin: 0;
+                    width: 24px;
+                    height: 24px;
+                    top:0;
+                    left: 0;
+                }
+            }
+        }
+
+        button.button {
+            height: 34px;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &-list {
+
+        .comment {
+
+            & + .comment {
+                margin-top: 25px;
+            }
+
+            &.comment__answer {
+                padding-left: 30px;
+
+                .comment-body {
+                    border-left: solid 4px #1276C2;
+                    padding-left: 10px;
+                }
+            }
+
+            &:not(.comment__rating-null),
+            &:not(.comment__rating-low) {
+
+                .comment-header {
+                    .comment-rating {
+                        &-count {
+                            color: #60A5EA;
+                        }
+                    }
+                }
+            }
+            &.comment__rating-null {
+                .comment-header {
+                    .comment-rating {
+                        &-count {
+                            color: #303030;
+                        }
+                    }
+                }
+            }
+            &.comment__rating-low {
+                .comment-header {
+                    .comment-rating {
+                        &-count {
+                            color: #d5504c;
+                        }
+                    }
+                }
+            }
+
+            &-header {
+                font-size: 0;
+                margin-bottom: 12px;
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    &.comment-user-pic {
+                        margin-right: 8px;
+                    }
+
+                    &.comment-user-name {
+                        color: #60A5EA;
+                        font-size: 14px;
+                        line-height: 14px;
+                        margin-right: 8px;
+                    }
+                    &.comment-date {
+                        color: #B2B2B2;
+                        font-size: 12px;
+                        line-height: 14px;
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+
+                .comment-rating {
+                    white-space: nowrap;
+                    &-count {
+                        font-size: 15px;
+                        margin-right: 5px;
+                    }
+                    &-up {
+                        cursor: pointer;
+                        margin-left: 8px;
+                    }
+                    &-down {
+                        cursor: pointer;
+                        margin-left: 8px;
+                    }
+                }
+
+            }
+
+            &-body {
+                color: #333333;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+    }
+
+}

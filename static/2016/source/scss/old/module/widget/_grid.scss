@@ -1,0 +1,40 @@
+.widget.widget-grid {
+	margin-left: -1px;
+	margin-right: -1px;
+	
+	.widget-title {
+		margin-left: 1px;
+		text-transform: uppercase;
+	}
+	
+	& > a {
+		display: inline-block;
+		float: left;
+		margin-left: 1px;
+		margin-right: 1px;
+		margin-bottom: 2px;
+		width: rem-calc(100);
+		height: rem-calc(100);
+		
+		img {
+			opacity: 1;
+			
+			@include single-transition(opacity, 100ms);
+		}
+		&.widget-grid-bigitem {
+			width: 100%;
+			height: auto;
+			min-width: 100%;
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&:hover {
+			img {
+				opacity: 0.95;
+			}
+		}
+	} 
+}

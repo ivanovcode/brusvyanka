@@ -1,0 +1,186 @@
+#divscrolls {
+	position: relative;
+	height: 310px;
+    margin-bottom: 20px;
+
+/* You can alter this CSS in order to give SmoothDivScroll your own look'n'feel */
+
+/* Invisible left hotspot */
+div.scrollingHotSpotLeft
+{
+	background-color: rgba(255,255,255,1);
+	width: 48px;
+	height: 100%;
+	position: absolute;
+	z-index: 200;
+	left: 0;
+	cursor: pointer;
+	
+	@include single-transition(opacity, 300ms);
+	
+	&:hover {
+		opacity: 0.5 !important;
+	}
+	
+	svg.scroll-to-left {
+		width: 48px;
+		height: 48px;
+		top: 50%;
+		position: absolute;
+		margin-top: -24px;
+	}
+	
+}
+
+/* Visible left hotspot */
+div.scrollingHotSpotLeftVisible
+{
+	opacity: 0.45; /* Standard CSS3 opacity setting */
+	zoom: 1; /* Trigger "hasLayout" in Internet Explorer 6 or older versions */
+}
+
+/* Invisible right hotspot */
+div.scrollingHotSpotRight
+{
+	background-color: rgba(255,255,255,1);
+	width: 48px;
+	height: 100%;
+	position: absolute;
+	z-index: 200;
+	right: 0;
+	cursor: pointer;
+	
+	@include single-transition(opacity, 300ms);
+	
+	&:hover {
+		opacity: 0.5 !important;
+	}
+	
+	svg.scroll-to-right {
+		width: 48px;
+		height: 48px;
+		top: 50%;
+		position: absolute;
+		margin-top: -24px;
+	}
+}
+
+/* Visible right hotspot */
+div.scrollingHotSpotRightVisible
+{
+	opacity: 0.45;
+	zoom: 1;
+}
+
+/* The scroll wrapper is always the same width and height as the containing element (div).
+   Overflow is hidden because you don't want to show all of the scrollable area.
+*/
+div.scrollWrapper
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+
+div.scrollableArea
+{
+	position: relative;
+	width: auto;
+	height: 100%;
+    margin-left: -460px;
+	
+	a {
+		display: block;
+		float: left;
+		margin: 0 10px;
+	}
+}
+
+.consult-order {
+	width: 310px;
+	background-color: rgba(2, 119, 189, 0.88);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.528);
+    padding: 19px 20px 11px;
+    position: absolute;
+    top: 0;
+    max-height: 100%;
+    height: 100%;
+    right: 48px;
+    text-align: center;
+    
+    .consult-order_title {
+	    line-height: 22px;
+		font-size: 18px;
+		font-weight: 600;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 20px;
+		div {
+			text-transform: uppercase;
+		}
+    }
+    
+    .consult-order_hint {
+	    opacity: 0.4;
+	    color: white;
+	    font-size: rem-calc(12);
+	    line-height: rem-calc(17);
+    }
+    
+    form {
+	    display: block;
+	    width: 250px;
+	    margin: 0 auto;
+	    
+	    input[type=text] {
+		    height: 36px;
+		    width: 250px;
+		    border: none;
+		    background-color: rgba(255,255,255,0.5);
+		    
+		    &:focus {
+			    background-color: rgba(255,255,255,1);
+			    
+			    &::-webkit-input-placeholder {
+			    	color: #4F4F4F;
+			    }
+			    &:-moz-placeholder { /* Firefox 18- */
+			    	color: #4F4F4F;  
+			    }
+			    &::-moz-placeholder {  /* Firefox 19+ */
+			    	color: #4F4F4F;  
+			    }
+			    &:-ms-input-placeholder {  
+			    	color: #4F4F4F;  
+			    }
+		    }
+		    
+		    &::-webkit-input-placeholder {
+		    	color: #0178BC;
+		    }
+		    &:-moz-placeholder { /* Firefox 18- */
+		    	color: #0178BC;  
+		    }
+		    &::-moz-placeholder {  /* Firefox 19+ */
+		    	color: #0178BC;  
+		    }
+		    &:-ms-input-placeholder {  
+		    	color: #0178BC;  
+		    }
+	    }
+	    
+	    .button {
+		    background-color: #2DA5E7;
+		    margin-bottom: rem-calc(14);
+		    padding: 0.5rem 1.6rem 0.6333333333rem;
+		    
+		    &:active {
+			    background-color: #2B9EDD;
+			    padding: 0.6rem 1.6rem 0.5333333333rem
+		    }
+	    }
+    }
+}
+
+}

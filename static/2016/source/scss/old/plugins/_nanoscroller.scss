@@ -1,0 +1,113 @@
+//
+// nanoScrollerJS (Sass)
+// --------------------------------------------------
+/** initial setup **/
+$nanoClass: "nano" !default;
+$paneClass: "nano-pane" !default;
+$sliderClass: "nano-slider" !default;
+$contentClass: "nano-content" !default;
+
+.#{$nanoClass} {
+    width: 100%;
+    //height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    .#{$contentClass} {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &:focus {
+            outline: thin dotted;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+	> .#{$paneClass} {
+        width: 10px;
+        background: rgba(178, 178, 178, 0.5);
+        position: absolute;
+        top: 0px;
+	    right: 0px;
+	    bottom: 0px;
+        -webkit-transition: .2s;
+           -moz-transition: .2s;
+             -o-transition: .2s;
+                transition: .2s;
+	
+	    > .#{$sliderClass} {
+            background: rgba(2, 119, 189, 0.4);
+            position: relative;
+            -webkit-transition: .2s;
+               -moz-transition: .2s;
+                 -o-transition: .2s;
+                    transition: .2s;
+                    
+            cursor: pointer;
+        }
+        
+        &:hover {
+	        background: rgba(178, 178, 178, 0.7);
+	        > .#{$sliderClass} {
+		        background: rgba(2, 119, 189, 1);
+	        }
+        }
+    }
+    
+    &#chat-lasts {
+		> .#{$paneClass} {
+			bottom: -30px;
+		}
+	}
+	
+	&#chat-contacts,
+	&#chat-lasts {
+		.#{$contentClass} {
+			
+		}
+		> .#{$paneClass} {
+			background: #606060;
+			
+			> .#{$sliderClass} {
+				background: #818181;
+			}
+			&:hover {
+				background: #5B5B5B;
+				
+				> .#{$sliderClass} {
+					background: #989898;
+				}
+			}
+		}
+	}
+	
+	&.soda-chat_msgs {
+	    height: 496px;
+	    
+	    .#{$contentClass} {
+		    padding: 20px;
+	    }
+	   
+	}
+}
+
+.has-scrollbar > .#{$contentClass}::-webkit-scrollbar {
+    display: block;
+}
+
+.#{$paneClass} {
+    .#{$nanoClass}:hover > &,
+    &.active,
+    &.flashed {
+        visibility: visible\9; // Target only IE7 and IE8 with this hack
+        opacity: 0.99;
+    }
+}

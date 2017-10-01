@@ -1,0 +1,39 @@
+.soda-chat {
+	@include clearfix();
+	
+    display: none;
+    position: absolute;
+    visibility: hidden;
+    width: 1000px;
+    z-index: 1005;
+    left: 50%;
+    margin-left: -500px;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	
+	height: 600px;
+	
+	border-radius: 0;
+	
+	.soda-chat_sidebar {
+		width: 30%;
+		width: calc(300/1000 * 100%);
+		float: left;
+		height: 100%;
+		
+		background-color: #686868;
+	}
+	.soda-chat_mainbar {
+		position: relative;
+		
+		width: 70%;
+		width: calc(700/1000 * 100%);
+		float: left;
+		height: 100%;
+		
+		background-color: #CCCCCC;
+	}
+	&:focus {
+		outline: none;
+	}
+}

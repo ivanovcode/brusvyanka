@@ -1,0 +1,96 @@
+.signin-form {
+	
+	> .column + .column {
+		border-left: solid 2px #E0E0E0;
+	}
+	> .large-5 {
+		padding-top: 12px;
+		padding-bottom: 6px;
+		width: 470px;
+		.large-4 {
+			width: 150px;
+		}
+		.large-1 {
+			width: 0px;
+			padding: rem-calc(0 6); 
+		}
+		.large-6 {
+		    width: 267px;
+		}
+		.large-2 {
+			width: 38px;
+		}
+	}
+	> .large-7 {
+		padding-top: 12px;
+		padding-bottom: 6px;
+		width: 742px;
+		> .row {
+			height: 38px;
+			& + .row {
+				margin-top: 17px;
+			}
+		}
+		.large-1 {
+			width: 0;
+			padding: rem-calc(0 20);
+		}
+		.large-2 {
+			width: 0;
+			padding: rem-calc(0 5);
+		}
+		.large-5 {
+			width: 250px;
+		}
+		.column + .column:last-child {
+			width: 440px;
+		}
+		.fieldset.sign-up {
+			padding-left: 40px;
+		    margin-top: 119px;
+			.text-large {
+			    margin-bottom: 7px;
+			}
+		}
+	}
+	
+	form {
+		.row {
+			height: 38px;
+			> .column {
+				height: 38px;
+			}
+			& + .row {
+				margin-top: 17px;
+			}
+		}
+		label {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: rem-calc(14);
+			line-height: rem-calc(17);
+		}
+		input[type=text],
+		input[type=password] {
+			height: 38px;
+		}
+		.fieldset.remember-me {
+		    margin-top: 50px;
+		}
+		.fieldset + .fieldset {
+			margin-top: 17px;
+		}
+		button.button {
+			margin-bottom: 0;
+			width: rem-calc(140);
+			font-size: rem-calc(14);
+		}
+	}
+	
+}
+
+.password-reset-form {
+	.fieldset {
+		    margin-top: 50px;
+		}
+}

@@ -1,0 +1,45 @@
+{% spaceless %}
+{% load thumbnail %}
+
+{% if page.url == 'otzyvi' %}
+	<div class="order-form order-form-dubl">
+		<h3>Заказать консультацию</h3>
+		<p>оставьте заявку и мы перезвоним вам в ближайшее время</p>
+		<form action="" class="form_order">{% csrf_token %}
+			<div class="field">
+				<input type="text" placeholder="Как к Вам обращаться" name="name"/>
+			</div>
+			<div class="field">
+				<input type="text" placeholder="Электронная почта" name="email"/>
+			</div>
+			<div class="field">
+				<input type="text" placeholder="Контактный телефон" name="phone"/>
+			</div>
+			<div class="field field-submit">
+				<input class="button" type="submit" value="Оставить заявку" />
+			</div>
+            <input type="hidden" name="proj" value="Метка: {{ tag.name }}"/>
+		</form>
+	</div>
+{% else %}
+	<aside class="widget widget-list" id="interesting-posts">
+		<a class="widget-title" href="/otzyvi/">ПУБЛИКАЦИИ И<strong>ОТЗЫВЫ</strong></a>
+    {% for banner in banner_list %}
+        {% thumbnail banner.img "188x130" crop="center" as thumb %}
+					<div class="post-item">
+						<a href="{{ banner.url }}" class="post-item_details">
+							<div class="post-item_pic">
+								<img src="{{ thumb.url }}" alt />
+							</div>
+							<span class="post-item_title">
+								{{ banner.title }}
+							</span>
+						</a>
+					</div><!-- post-item -->
+        {% endthumbnail %}
+    {% endfor %}
+	</aside>
+{% endif %}
+
+
+{% endspaceless %}

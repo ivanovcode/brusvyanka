@@ -1,0 +1,1 @@
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/themes/advanced/langs/id_dlg.js

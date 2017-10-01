@@ -1,0 +1,11 @@
+.emoji {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  margin-bottom: -0.25em;
+  background-size: contain;
+}
+#soda-chat .emoji {
+	margin-top: -0.15em;
+	margin-bottom: 0;
+}

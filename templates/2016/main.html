@@ -1,0 +1,356 @@
+{% extends "2016/base.html" %}
+{% load thumbnail %}
+{% load banner_list %}
+{% load staticfiles %}
+{% block content %}
+    {% spaceless %}
+    
+        <div class="block block--first block--parralax" style="background-image: url({{ parralaxs.index1.img.url }});" {% include "2016/_parralax_settings.html" %}>
+          <div class="wrapper">
+            <div class="content">
+              <h1 class="title">{{ page.h1|safe }}</h1>
+              <p>Закажите дом вашей мечты <br/>
+              </p>
+              <button class="btn js__call-order">Заказать</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--plus">
+          <div class="row">
+            <div class="row">
+              <div class="small-12 medium-4 large-4 columns">
+                <div class="list_item">
+                  <div class="img"><img src="{% static '2016/images/icon--camera.png' %}" /></div>
+                  <div class="content"><div class="title">Колоритная архитектура</div>
+                    Архитектура, которой вдохновляются по всему миру, подражают, фотографируют и печатают в журналах.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="small-12 medium-4 large-4 columns">
+                <div class="list_item">
+                  <div class="img"><img src="{% static '2016/images/icon--medal.png' %}" /></div>
+                  <div class="content"><div class="title">Высокое качество</div>
+                    Мы перфекционисты — делаем упор на очень высокое качество всех работ, достигая наилучших результатов.
+                  </div>
+                </div>
+              </div>
+              <div class="small-12 medium-4 large-4 columns">
+                <div class="list_item">
+                  <div class="img"><img src="{% static '2016/images/icon--home.png' %}" /></div>
+                  <div class="content"><div class="title">Комплексный подход</div>
+                    Все для воплощения мечты — от проектирования до реализации. Управление проектом внутри одной компании.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--qq" style="background-image: url({{ parralaxs.ie.img.url }})">
+          <div class="row">
+            
+            <div class="row">
+              
+              <div class="content columns small-12 medium-8 large-8">
+                <h2 class="title">Создание вашего дома на всех этапах курирует лично основатель компании Ульяна Фомина</h2>
+                <p>Уровень архитектуры — то, что отличает нас от большинства. Нас, как и вас, не интересуют серые, однотипные, унылые коробки. Мы создаем современные дома, в которых много света и воздуха. Дома, которые становятся предметом гордости своих хозяев. Если это тот уровень который нужен вам — закажите проектирование вашего дома прямо сейчас.</p>
+                <div class="controls">
+                  <button class="btn js__project-order">Заказать</button>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="block block--services">
+          <div class="row">
+            
+            <h2 class="block_title">Весь спектр услуг<br/> для создания вашего дома</h2>
+            
+            <div class="row">
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-arh.png' %}" width="91" height="91">
+                  </div>
+                  <div class="title">Архитектурное
+                    проектирование</div>
+                  <div class="text">проектирование домов и коттеджей на самом высоком уровне</div>
+                  <a href="/proektirovanie-domov/">Подробнеее →</a>
+                </div>
+                
+              </div>
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-int.png' %}" width="81" height="81">
+                  </div>
+                  <div class="title">Дизайн <br/>интерьера</div>
+                  <div class="text">проектирование внутреннего пространства вашего дома</div>
+                </div>
+                
+              </div>
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-cons.png' %}" width="86" height="83">
+                  </div>
+                  <div class="title">Конструктивные <br/>решения</div>
+                  <div class="text">расчет нагрузок, материалов, схем армирования, фундаментов...</div>
+<!--                   <a href="#">Подробнеее →</a> -->
+                </div>
+                
+              </div>
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-inj.png' %}" width="83" height="81">
+                  </div>
+                  <div class="title">Инженерные <br/>коммуникации</div>
+                  <div class="text">отопление, водоснабжение, канализация, электроснабжение...</div>
+<!--                   <a href="#">Подробнеее →</a> -->
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-stroi.png' %}" width="80" height="80">
+                  </div>
+                  <div class="title">Строительство</div>
+                  <div class="text">идеальная реализация проекта дома вашей мечты</div>
+                  <a href="/stroitelstvo/">Подробнеее →</a>
+                </div>
+                
+              </div>
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-land.png' %}" width="82" height="82">
+                  </div>
+                  <div class="title">Ландшафтный дизайн</div>
+                  <div class="text">проектирование благоустройства и озеленения внешнего пространства</div>
+<!--                   <a href="#">Подробнеее →</a> -->
+                </div>
+                
+              </div>
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-otd.png' %}" width="83" height="83">
+                  </div>
+                  <div class="title">Отделочные работы</div>
+                  <div class="text">качественное воплощение всех задумок архитектора и дизайнера</div>
+<!--                   <a href="#">Подробнеее →</a> -->
+                </div>
+                
+              </div>
+              <div class="columns small-12 medium-3 large-3">
+                
+                <div class="list_item">
+                  <div class="img">
+                    <img src="{% static '2016/images/icon--service-snab.png' %}" width="83" height="81">
+                  </div>
+                  <div class="title">Снабжение</div>
+                  <div class="text">полное обеспечение стройки всеми необходимыми материалами</div>
+<!--                   <a href="#">Подробнеее →</a> -->
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="block block--couters block--parralax" style="background-image: url({{ parralaxs.index2.img.url }});" {% include "2016/_parralax_settings.html" %}>
+          <div class="row">
+            
+            <div class="columns small-12 medium-2 large-2">
+              <div class="item">
+                <div class="title">5</div>
+                лет работы
+              </div>
+            </div>
+            
+            <div class="columns small-12 medium-3 large-3">
+              <div class="item">
+                <div class="title">
+                  150
+                </div>
+                успешных проектов
+              </div>
+            </div>
+            
+            <div class="columns small-12 medium-4 large-4">
+              <div class="item">
+                <div class="title">35 000</div>
+                м² застроенных площадей
+              </div>
+            </div>
+            
+            <div class="columns small-12 medium-3 large-3">
+              <div class="item">
+                <div class="title">100%</div>
+                довольных клиентов
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="block block--pluses">
+          <div class="row">
+            <h2 class="block_title">Преимущества работы с нами</h2>
+            <div class="row">
+              <div class="list_item columns small-12 medium-6 large-6">
+                <div class="img"><img src="{% static '2016/images/icon--plus-money.png' %}" alt="icon--plus-money" width="59" height="60"></div>
+                <div class="content">
+                  <div class="title">Вы экономите деньги</div>
+                  потому что строительство дома по профессиональному и продуманному индивидуальному проекту дешевле, чем без него.
+                </div>
+              </div>
+              <div class="list_item columns small-12 medium-6 large-6">
+                <div class="img"><img src="{% static '2016/images/icon--plus-clock.png' %}" alt="icon--plus-clock" width="58" height="58"></div>
+                <div class="content">
+                  <div class="title">Вы экономите время и нервы</div>
+                  так как вы избавлены от необходимости обращаться в десять разных компаний и координировать их действия
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="list_item columns small-12 medium-6 large-6">
+                <div class="img"><img src="{% static '2016/images/icon--plus-hands.png' %}" alt="icon--plus-hands" width="62" height="61"></div>
+                <div class="content">
+                  <div class="title">Вы страхуете себя от проблем</div>
+                  с дальнейшей эксплуатацией: технические и конструктивные ошибки исключены, когда за результат полностью отвечает одна компания.
+                </div>
+              </div>
+              <div class="list_item columns small-12 medium-6 large-6">
+                <div class="img"><img src="{% static '2016/images/icon--plus-home.png' %}" alt="icon--plus-home" width="67" height="61"></div>
+                <div class="content">
+                  <div class="title">Получаете дом, который представляли</div>
+                  Это гарантирует фотореалистичная 3D визуализация и авторский надзор архитектора за строительством.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--ban block--parralax" style="background-image: url({{ parralaxs.index3.img.url }});" {% include "2016/_parralax_settings.html" %}>
+          <div class="wrapper">
+            <h2 class="block-title">Красивые дома,<br/> построенные с душой!</h2>
+          </div>
+        </div>
+        
+        <div class="block block--grid">
+          <div class="row">
+            <div class="block_title">То, что мы любим</div>
+              {% love_banners as loves %}
+              {% for banner in loves %}
+              {% if forloop.first %}
+            <div class="row">
+                {% endif %}
+              <a href="{{ banner.url }}" class="list_item columns small-12 medium-4 large-4">
+                <span class="thumb" style="background: url({{ banner.img.url }}) center center no-repeat;"><span class="title">{{ banner.title }}</span></span>
+              </a>
+              {% if forloop.counter|divisibleby:'3' and not forloop.last %}
+                      </div><div class="row">
+              {% endif %}
+              {% if forloop.last %}</div>{% endif %}
+          {% endfor %}
+
+          </div>
+        </div>
+        
+        <div class="block block--order">
+          <div class="wrapper">
+            
+            <div class="img small-12 medium-5">
+              <img src="{% static '2016/images/img--order.png' %}" alt="" />
+            </div>
+            
+            
+            <div class="content small-12 medium-7">
+              <div class="left">
+                <div class="title">Хотите дом мечты?</div>
+                <p>Закажите сейчас проект дома который
+                  подойдет именно вам.</p>
+              </div>
+              <button class="btn js__project-order">Заказать проект</button>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="block block--scheme block--parralax" style="background-image: url({{ parralaxs.index4.img.url }});" {% include "2016/_parralax_settings.html" %}>
+          <div class="row">
+            <h2 class="block_title">Простая и прозрачная схема работы</h2>
+            
+            <div class="row">
+              <div class="item columns small-12 medium-2 medium-offset-1">
+                <div class="content"><a href="#" class="js__project-order"><img src="{% static '2016/images/icon--scheme-1.png' %}"/></a>
+                  Вы оставляете<br/>заявку</div>
+              </div>
+              <div class="item columns small-12 medium-2">
+                <div class="content"><img src="{% static '2016/images/icon--scheme-2.png' %}" />
+                  Мы с вами связываемся <br/>и выясняем<br/> ваши пожелания</div>
+              </div>
+              <div class="item columns small-12 medium-2">
+                <div class="content"><img src="{% static '2016/images/icon--scheme-3.png' %}" alt="" />
+                  Договариваемся<br/>о стоимости<br/>и результате работ</div>
+              </div>
+              <div class="item columns small-12 medium-2">
+                <div class="content"><img src="{% static '2016/images/icon--scheme-4.png' %}" />
+                  Предоплата<br/>и наслаждение<br/>процессом</div>
+              </div>
+              <div class="item columns small-12 medium-2 end">
+                <div class="content"><img src="{% static '2016/images/icon--scheme-5.png' %}" />
+                  Вы получаете<br/>шедевр!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="block block--port">
+          <div class="row">
+            <h2 class="block_title">Наше портфолио демонстрирует<br/>уровень наших работ</h2>
+            
+            <div class="row">
+            {% for project in projects %}
+                
+                    <div class="item columns small-12 medium-4 large-3">
+                        {% thumbnail project.mainphoto "271x192" quality=70 crop="center" as photo %}
+                            <a href="{{ project.get_absolute_url }}" class="img"
+                               style="background: url({{ photo.url }}) center center no-repeat;"
+                               title="{{ project.title }}"></a>
+                        {% endthumbnail %}
+                        <a href="{{ project.get_absolute_url }}" class="title">{{ project.name }}</a>
+                        <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}</div>
+                    </div>
+                
+            {% endfor %}
+            </div>
+            <div class="controls clearfix">
+                <a class="btn--clear" href="{% url 'projects' %}">Посмотреть остальные проекты</a>
+            </div>
+            
+          </div>
+        </div>
+        
+    {% endspaceless %}
+{% endblock content %}
+{% block head_title %}{{ page.title }}{% endblock %}

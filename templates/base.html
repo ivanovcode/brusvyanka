@@ -1,0 +1,313 @@
+{% spaceless %}
+{% load staticfiles %}
+{% load thumbnail %}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>{% block head_title %}{% endblock %}</title>
+	{% comment %}
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/static/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/static/favicons/manifest.json">
+	{% endcomment %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" href="/favicon.ico?7" rel="shortcut icon">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/static/favicons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="google-site-verification" content="wb6rjVjfYG0nelQDgQcVCECdPPCISDd0aCOHM-g_MvQ" />
+    <meta name="cmsmagazine" content="8e288ad6b5bd5c89f67d49590d260492" />
+    <meta name='yandex-verification' content='40d1ab63511b8a08' />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="{% static 'css/app.css' %}" rel="stylesheet" type="text/css">
+    {% block meta_headers %}{% endblock %}
+    {% block css_js %}{% endblock %}
+    {% if page.keyword %}<meta content="{{ page.keyword }}" name="keywords"/>{% endif %}
+    {% if page.description %}<meta content="{{ page.description }}" name="description"/>{% endif %}
+	{% if page.is_index == False or page.index_option == False %}<meta NAME="robots" CONTENT="NOINDEX,NOFOLLOW">{% endif %}
+</head>
+<body>
+	<div id="icons-sprite">
+		{% include "inc_svg.html" %}
+	</div>
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+
+			<nav class="mobile-nav-bar sticky show-for-small-only">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle" href="#">
+						<svg class="icon icon-mobile-menu">
+							<use xlink:href="#icon-mobile-menu"></use>
+						</svg>
+					</a>
+				</section>
+			
+				<section class="middle tab-bar-section">
+					<a href="/" class="logo" title="Илья Елисеев">
+						<img src="{% static 'images/logo.jpg' %}" alt="Илья Елисеев">
+					</a>
+				</section>
+				
+				<section class="right-small">
+					<a class="right-off-canvas-toggle" href="#">
+						<svg class="icon icon-mobile-phone">
+							<use xlink:href="#icon-mobile-phone"></use>
+						</svg>
+					</a>
+				</section>
+			
+			</nav>
+
+		    <aside class="left-off-canvas-menu show-for-small-only">
+		        <ul>
+					<li  {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+					<li {% if page_projects %}class="active"{% endif %} ><a {% if not 'proekty-domov' == page.url %}href="{% url 'projects' %}"{% endif %}>Проекты домов</a></li>
+					<li {% if page_builds %}class="active"{% endif %} ><a {% if not 'stroitelstvo-domov' == page.url %}href="{% url 'builds' %}"{% endif %}>Строительство</a></li>
+					<li {% if page_interior %}class="active"{% endif %}><a {% if not 'interior' == page.url %}href="{% url 'interior' %}"{% endif %}>Дизайн интерьера</a></li>
+					<li {% if page.url == 'ceny' %}class='active'{% endif %}><a {% if not page.url == 'ceny' %}href="/ceny/"{% endif %}>Цены</a></li>
+					<li {% if page.url == 'arhitektor' %}class='active'{% endif %}><a {% if not page.url == 'arhitektor' %}href="/arhitektor/"{% else %}{% if page.404 %}href="/arhitektor/"{% endif %}{% endif %}>О компании</a></li>
+					<li {% if page.url == 'otzyvi' %}class='active'{% endif %}><a {% if not page.url == 'otzyvi' %}href="/otzyvi/"{% endif %}>Отзывы</a></li>
+					<li {% if page_contacts %}class="active"{% endif %}><a {% if not page.url == 'kontakty' %}href="/kontakty/"{% endif %}>Контакты</a></li>
+				</ul>
+
+				<div class="header-search">
+					<form action="/search" method="post">{% csrf_token %}
+						<input type="text" placeholder="Поиск" name="art"/>
+						<button class="button button-clear button-search">
+							<svg class="icon icon-search">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
+						<button class="button button-clear button-search-hide">
+							<svg class="icon icon-close">
+								<use xlink:href="#icon-close"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+		    </aside>
+		    
+		    <aside class="right-off-canvas-menu show-for-small-only">
+		    	<h4 id="modal_call-order_title">Отправить заявку на звонок</h4>
+				 <p>оставьте заявку и мы перезвоним <br />вам в ближайшее время</p>
+				 <form action="" class="form_recall" data-goal="besplatnyjzvonok">{% csrf_token %}
+					<div class="field">
+						<input type="text" placeholder="Как к Вам обращаться" name="name"/>
+					</div>
+					<div class="field">
+						<input type="text" placeholder="Контактный телефон" name="phone"/>
+					</div>
+					<div class="field field-submit">
+						<input class="button" type="submit" value="Оставить заявку" />
+					</div>
+				</form>
+		    </aside>
+	<header class="header">
+		<div class="row">
+			<a href="/" class="logo left">
+				<img src="{% static 'images/logo.jpg' %}" alt="Илья Елисеев">
+			</a>
+			<p class="logo-description left">
+				<strong>Архитектурно-строительная <br />компания Ильи Елисеева</strong><br />
+				Проектирование и строительство домов
+			</p>
+
+			<div class="right text-right">
+				<div class="header-phone">
+					<a href="tel:+74957962628">+7 (495) 796-26-28</a>
+				</div>
+				<button class="button button-light js-call-order" data-reveal-id="modal_call-order">заказать звонок</button>
+			</div>
+		</div>
+		<div class="contain-to-grid sticky" data-magellan-expedition="fixed">
+			<nav class="top-bar hide-for-small" data-topbar role="navigation">
+				<div class="row">
+					<div class="top-bar-section">
+						<ul class="left">
+							<li  {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+							<li {% if page_projects %}class="active"{% endif %} ><a {% if not 'proekty-domov' == page.url %}href="{% url 'projects' %}"{% endif %}>Проекты домов</a></li>
+							<li {% if page_builds %}class="active"{% endif %} ><a {% if not 'stroitelstvo-domov' == page.url %}href="{% url 'builds' %}"{% endif %}>Строительство</a></li>
+							<li {% if page_interior %}class="active"{% endif %}><a {% if not 'interior' == page.url %}href="{% url 'interior' %}"{% endif %}>Дизайн интерьера</a></li>
+							<li {% if page.url == 'ceny' %}class='active'{% endif %}><a {% if not page.url == 'ceny' %}href="/ceny/"{% endif %}>Цены</a></li>
+							<li {% if page.url == 'arhitektor' %}class='active'{% endif %}><a {% if not page.url == 'arhitektor' %}href="/arhitektor/"{% else %}{% if page.404 %}href="/arhitektor/"{% endif %}{% endif %}>О компании</a></li>
+							<li {% if page.url == 'otzyvi' %}class='active'{% endif %}><a {% if not page.url == 'otzyvi' %}href="/otzyvi/"{% endif %}>Отзывы</a></li>
+							<li {% if page_contacts %}class="active"{% endif %}><a {% if not page.url == 'kontakty' %}href="/kontakty/"{% endif %}>Контакты</a></li>
+						</ul>
+
+						<div class="right">
+							<div class="header-search">
+								<form action="/search" method="post">{% csrf_token %}
+									<input type="text" placeholder="Поиск" name="art"/>
+									<button class="button button-clear button-search">
+										<svg class="icon icon-search">
+											<use xlink:href="#icon-search"></use>
+										</svg>
+									</button>
+									<button class="button button-clear button-search-hide">
+										<svg class="icon icon-close">
+											<use xlink:href="#icon-close"></use>
+										</svg>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<div class="content-inner">
+		{% block content %}
+		{% endblock %}
+		
+		<footer class="footer">
+		<div class="row">
+			<div class="col1 column">
+				&copy; 2009–{% now "Y" %} «Aрхитектурно-строительная <br />
+компания Ильи Елисеева»
+			</div>
+			<div class="col2 column large-4">
+				Электронная почта: <a href="mailto:mailbox@ilyaeliseev.ru">mailbox@ilyaeliseev.ru</a><br/>
+				Телефон в Москве: <a href="tel:+74957962628">+7 (495) 796-26-28</a>
+			</div>
+			<div class="col3 column">
+<!--
+				Мы в соц. сетях:
+				<div class="social">
+					<ul class="post-full_social-share text-right">
+						<li class="vk">
+							<a href="#">
+								<span>
+									<svg class="icon icon-vk">
+										<use xlink:href="#icon-vk"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li class="fb">
+							<a href="#">
+								<span>
+									<svg class="icon icon-fb">
+										<use xlink:href="#icon-fb"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li class="od">
+							<a href="#">
+								<span>
+									<svg class="icon icon-od">
+										<use xlink:href="#icon-od"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<br/>
+-->
+				<a href="/sitemap/">Карта сайта</a>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	
+	
+	<a class="exit-off-canvas"></a>
+
+	</div>
+</div>
+	
+	<div id="modal_call-order" class="reveal-modal" data-reveal aria-labelledby="modal_call-order_title" aria-hidden="true" role="dialog">
+		 <h2 id="modal_call-order_title">Отправить заявку на звонок</h2>
+		 <p>оставьте заявку и мы перезвоним <br />вам в ближайшее время</p>
+		 <form action="" class="form_recall" data-goal="besplatnyjzvonok">{% csrf_token %}
+			<div class="field">
+				<input type="text" placeholder="Как к Вам обращаться" name="name"/>
+			</div>
+			<div class="field">
+				<input type="text" placeholder="Контактный телефон" name="phone"/>
+			</div>
+			<div class="field field-submit">
+				<input class="button" type="submit" value="Оставить заявку" />
+			</div>
+		</form>
+		<a class="close-reveal-modal" aria-label="Close">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"></use>
+			</svg>
+		</a>
+	</div>
+
+	
+	<script src="{% static 'js/jquery.min.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/foundation.min.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/foundation.reveal.min.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/foundation.offcanvas.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/caroufredsel.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/foundation.magellan.min.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/jquery.divscroll.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/app.js' %}" charset="utf-8"></script>
+	<script src="{% static 'js/jquery.maskedinput.min.js' %}" charset="utf-8"></script>
+<!-- 	<script src="{% static 'js/min/app-min.js' %}" charset="utf-8"></script> -->
+
+
+    <script>
+        $(document).ready(function(){
+            $('.form_recall').submit(function() {
+                var data = $(this).serializeArray();
+                if(!$(this).find('input[name="phone"]').val()) {
+                    return false;
+                }
+                var goal = $(this).data('goal');
+                $.post('/recall', data, function(response){
+                    alert(response.result);
+                    $('.form_recall').find('input[type="text"]').val("");
+                    $('.form_recall').find('input[type="email"]').val("");
+                    $('#modal_call-order').foundation('reveal', 'close');
+                    if(goal) yaCounter9636880.reachGoal(goal);
+                    else yaCounter9636880.reachGoal('other_goal');
+                });
+                return false;
+            });
+
+
+             $('.form_order').submit(function() {
+                var data = $(this).serializeArray();
+                if(!$(this).find('input[name="phone"]').val() && !$(this).find('input[name="email"]').val()) {
+                    return false;
+                }
+                var goal = $(this).data('goal');
+                $.post('/order', data, function(response){
+                    alert(response.result);
+                    $('.form_order').find('input[type="text"]').val("");
+                    $('.form_order').find('input[type="email"]').val("");
+                    if(goal) yaCounter9636880.reachGoal(goal);
+                    else yaCounter9636880.reachGoal('other_goal');
+                });
+                return false;
+            });
+           jQuery('input[name="phone"]').mask('+7 (999) 999 99 99');
+        });
+    </script>
+
+{% block js_footer %}{% endblock %}
+
+{% include 'inc_counters.html' %}
+</body>
+</html>
+{% endspaceless %}

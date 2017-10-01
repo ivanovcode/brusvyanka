@@ -1,0 +1,81 @@
+.listing.listing-grid {
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-top: 10px;
+	
+	@media #{$medium-only} {
+		//width: rem-calc(994);
+		//margin-left: auto;
+		//margin-right: auto;
+	}
+	
+	
+	@include clearfix();
+	.listing_item {
+		padding: 0 10px 0;
+		width: 24.958402662229616%;
+		float: left;
+		margin: 0 0 20px;
+		
+		@media #{$medium-only} {
+			width: 33.3333333333%;
+		}
+		@media #{$small-only} {
+			width: 100%;
+		}
+		
+		&:nth-child(4n+1) {
+			clear: left;
+		}
+		.listing_item-pic {
+			width: 100%;
+			padding: 0;
+			float: none;
+			
+			img {
+				width: 100%;
+			}
+		}
+		.listing_item-name {
+			padding-top: 5px;
+			font-size: 13px;
+			line-height: 17px;
+			a {
+				color: #000;				
+			}
+		}
+		&:hover {
+			.listing_item-name {
+				a {
+					color: #60A5EA;					
+				}
+			}
+		}
+	}
+	
+	&.projects {
+		padding-top: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+		position: relative;
+		
+		> .listing_title {
+			padding: rem-calc(0 10 10);
+			margin-top: 0;
+			font-weight: 600;
+			font-size: rem-calc(24);
+		}
+		.listing_item {
+			min-height: 260px;
+		}
+		.listing_item:nth-child(4n+1) {
+			clear: none;
+		}
+		
+		& + hr {
+			border: 0;
+			border-top: solid 1px #E5E5E5;
+			margin: 0;
+		}
+	}
+}

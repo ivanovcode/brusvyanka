@@ -1,0 +1,44 @@
+<!-- why-we.html -->
+{% extends "2016/base.html" %}
+{% load thumbnail %}
+{% load banner_list %}
+{% load staticfiles %}
+{% block content %}
+    {% spaceless %}
+        <div class="breadcrumbs">
+          <div class="row">
+            <ul>
+              <li><a href="/">Главная</a></li>
+              <li class="current"><span>{{ page.name }}</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+        <div class="block block--tests">
+          <div class="row">
+            <h1 class="block_title">Отзывы наших клиентов<br/> говорят сами за себя</h1>
+            
+            <div class="block_sub-title">
+              Вся правда об Архитектурно-строительной компании «Брусвянка» в отзывах и видео-отзывах. Только настоящие отзывы могут рассказать о компании и о результатах ее работы. Мы предлагаем ознакомиться с отзывами наших клиентов, еще до того, как вы к нам обратились и просим чтобы вы в свою очередь записали видео-отзыв о нашем сотрудничестве. Может быть именно ваш отзыв поможет будущим клиентам сделать правильный выбор и стать обладателем дома своей мечты!
+            </div>
+            
+            <div class="row">
+             
+            {% feedback_list '' as feedbacks %}
+              {% for feedback in feedbacks %}
+            
+              <div class="columns small-12 medium-6">
+                <div class="item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ feedback.iframe_hash }}" frameborder="0" allowfullscreen></iframe>
+                  <div class="title">{{ feedback.title }}</div>
+                </div>
+              </div>
+              
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        </div>
+    {% endspaceless %}
+{% endblock content %}
+{% block head_title %}{{ page.title }}{% endblock %}

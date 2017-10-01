@@ -1,0 +1,138 @@
+.orbit-container {
+	position: relative;
+	padding-bottom: 25px;
+	min-height: 196px;
+}
+.orbit-mobile_cats_wrap {
+	@media #{$small-only} {
+		padding-bottom: rem-calc(20);
+		padding-top: rem-calc(10);
+	}
+}
+
+.orbit_cats {
+	max-height: 200px;
+	overflow: hidden;
+	margin-left: 0;
+	list-style: none;
+	
+	li {
+		margin: 0 10px 50px;
+		width: 130px;
+	    display: block;
+	    float: left;
+	    font-weight: bold;
+	    
+	    a {
+		    line-height: 1.2;
+		    color: black;
+		    @include single-transition(color, 300ms);
+	    }
+        img {
+		    width: 130px;
+		    height: 130px;
+		    opacity: 0.5;
+		    @include single-transition(opacity, 300ms);
+	    }
+	    span {
+		    opacity: 0.5;
+		    line-height: 1.2;
+		    display: inline-block;
+	        vertical-align: top;
+	        padding-top: 4px;
+		    @include single-transition(opacity, 300ms);
+	    }
+	    
+	    &.hover {
+		    a {
+				color: #666;
+	    	}
+	    	img {
+		    	opacity: 1;
+	    	}
+	    	span {
+		    	opacity: 1;
+	    	}
+	    }
+	    
+	    &.current {
+	    	a {
+		    	color: #60A5EA;
+	    	}
+	    	img {
+		    	opacity: 1;
+	    	}
+	    	span {
+		    	opacity: 1;
+	    	}
+	    }
+	}
+}
+.orbit_cats_wrap {
+	position: relative;
+	overflow: hidden;
+	height: rem-calc(200);
+	
+	@media #{$medium-only} {
+	    width: rem-calc(880);
+		margin-left: auto;
+	    margin-right: auto;
+	}
+	@media #{$small-only} {
+		display: none;
+	}
+	.orbit_cats {
+		min-width: 2000px;
+	}
+	.caroufredsel_wrapper {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		@media #{$medium-only} {
+		    width: rem-calc(880) !important;
+		}
+	}
+}
+:root:root .orbit_cats_wrap #prev,
+:root:root .orbit_cats_wrap #next {
+	position: absolute;
+	width: rem-calc(30);
+	height: rem-calc(130);
+	top: 0;
+	background-color: rgba(255,255,255,0.6);
+	margin-top: 0;
+	
+	&:hover {
+		background-color: rgba(255,255,255,0.7);
+	}
+	
+	span {
+		margin-top: -15px;
+		left: 50%;
+		margin-left: -15px;
+	}
+}
+	
+:root:root .orbit_cats_wrap #prev {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 48 48'><path d='M32,48L20,24L32,0h-5.042L14,24l12,24H32z'/></svg>");
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 0;
+	width: 30px;
+	height: 130px;
+	left: 0;
+	&.disabled {
+		opacity: 0;
+	}
+}
+:root:root .orbit_cats_wrap #next {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 48 48'><path d='M22,48l12-24L21.042,0H16l12,24L16,48H22z'/></svg>");
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 0;
+	width: 30px;
+	height: 130px;
+	right: 0;
+	&.disabled {
+		opacity: 0;
+	}
+}

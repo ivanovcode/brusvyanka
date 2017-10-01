@@ -1,0 +1,87 @@
+:root #ya-site-form0 {
+    margin-top: 22px !important;
+}
+:root td.ya-site-form__search-wrap {
+    padding: 0;
+}
+:root #ya-site-form0 .ya-site-form__search {
+	margin-bottom: 0;
+}
+:root #ya-site-form0 .ya-site-form__wrap {
+	margin-bottom: 0;
+}
+:root .b-head__l {
+    vertical-align: inherit;
+}
+:root .b-head__r {
+    padding: 1em 0 1em 1em;
+}
+:root #ya-site-form0 .ya-site-form__search-input-layout,
+:root #ya-site-form0 .ya-site-form__search-input-layout {
+	margin-bottom: 0;
+}
+:root:root:root #ya-site-form0 .ya-site-form__submit {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 0 6px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9333333333rem;
+    background-color: #1277BD;
+    border-color: #1171B2;
+    color: #FFFFFF;
+    -webkit-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+	background: #1E9DE5;
+    padding: 0.6rem 2.8rem 0.6333333333rem;
+    display: inline-block;
+    color: white !important;
+    
+}
+
+
+.search {
+	form {
+		.field.field-search {
+			position: relative;
+			
+			input[type=text] {
+				border: solid 1px #B2B2B2;
+				box-shadow: none;
+				height: 30px;
+				padding: 0 8px 0 30px;
+				
+				color: #303030;
+				font-size: 13px;
+				
+				&::-webkit-input-placeholder {
+				   color: #7F7F7F;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+				   color: #7F7F7F;  
+				}
+				&::-moz-placeholder {  /* Firefox 19+ */
+				   color: #7F7F7F;  
+				}
+				&:-ms-input-placeholder {  
+				   color: #7F7F7F;  
+				}
+			}
+			button[type=submit] {
+				line-height: 0.7;
+				position: absolute;
+				top: rem-calc(5);
+				left: rem-calc(5);
+			}
+		}
+	}
+}

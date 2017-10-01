@@ -1,0 +1,202 @@
+.soda-form {
+	> .row {
+		> .large-8 {
+			width: 354px;
+		}
+		> .large-1 {
+			display: none;
+		}
+	}
+}
+
+.soda-form {
+	input:not([type]), input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+		margin-bottom: 0;
+	}
+	label {
+		margin-bottom: 0;
+	    margin-right: -(rem-calc(20));
+	}
+	.row + .row {
+		margin-top: rem-calc(17);
+	}
+	.profile-image-wrap {
+		@include clearfix();
+		
+	    padding: rem-calc(7);
+		border: dashed 3px #CCCCCC;		
+		width: 324px;
+		
+		&.filled {
+			
+			#profile-image {
+				span.hint {
+					opacity: 0;
+					transform: scale(1.2);
+				}
+				&:hover {
+					span.hint {
+						opacity: 1;
+					    transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+	#profile-image {
+		width: 304px;
+		height: 304px;
+		
+		position: relative;
+		margin-right: 0;
+		
+	    @include single-transition(opacity, 300ms);
+	    
+	    .profile-image-preview {
+		    background-color: #C6C6C6;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    
+		    opacity: 1;
+		    
+		    background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+	        z-index: 2;
+	        
+	        @include single-transition(opacity, 300ms);
+	    }
+	    svg.default-avatar {
+		    width: 304px;
+		    height: 304px;
+		    fill: #E2E2E2;
+	        z-index: 3;
+	        position: relative;
+	        
+	        @include single-transition(fill, 300ms);
+		}
+		&:hover {
+		    .profile-image-preview {
+			    opacity: 0.5;
+		    }
+		    svg.default-avatar {
+			    fill: #EFEFEF;
+		    }
+	    }
+		
+		span.hint {
+		    color: #000000;
+		    font-size: 18px;
+		    text-transform: uppercase;
+		    line-height: 25px;
+		    text-align: center;
+		    font-weight: 600;
+		    display: block;
+		    position: absolute;
+		    top: 129px;
+		    left: 50%;
+		    white-space: nowrap;
+		    width: 172px;
+		    margin-left: -86px;
+	        z-index: 4;
+	        
+	        -webkit-transition: all 300ms ease-out 0s;
+	        -moz-transition: all 300ms ease-out 0s;
+	        -o-transition: all 300ms ease-out 0s;
+	        transition: all 300ms ease-out 0s;
+		}
+		
+		input[type=file] {
+			position: absolute;
+			display: block;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			opacity: 0;
+			margin: 0;
+			cursor: pointer;
+			z-index: 10;
+		}
+		
+		& + .user-name {
+			padding-top: 3px;
+			line-height: 13px;
+			color: #60A5EA;
+			font-size: 13px;
+			white-space: nowrap;
+			svg {
+				fill: #60A5EA;
+			}
+		}
+	}
+	.radio {
+		display: inline-block;
+	    margin-top: 5px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.fieldset {
+		padding-top: 30px;
+	}
+	textarea#id_name {
+		color: #000;
+		font-size: rem-calc(18);
+	    line-height: rem-calc(18);
+	    padding-left: rem-calc(9);
+	    padding-right: rem-calc(9);
+	    font-weight: 600;
+	    width: 324px;
+	    min-height: 0;
+	    max-width: none;
+	}
+	textarea#id_name,
+	textarea#id_about,
+	textarea#id_short_about {
+		resize: none;
+		overflow: hidden;
+	}
+	
+	#id_day + .selectize-control input,
+	#id_month + .selectize-control input,
+	#id_year + .selectize-control input {
+    	
+	}
+	#id_day + .selectize-control.single .selectize-input.input-active,
+	#id_month + .selectize-control.single .selectize-input.input-active,
+	#id_year + .selectize-control.single .selectize-input.input-active {
+		cursor: pointer;
+	}
+	
+	#id_month + .selectize-control.single .selectize-dropdown {
+		width: 125px !important;
+	}
+	#id_year + .selectize-control.single .selectize-dropdown {
+		width: 98px !important;
+	}
+	
+	#id_city + .selectize-control.single .selectize-input:after {
+		content: none;
+	}
+	
+	.selectize-control.single .selectize-input {
+	    transition: border-color 0.15s linear;
+		border-color: #E0E0E0;
+		&.dropdown-active {
+			border-color: #999;
+		}
+		&.focus {
+			border-color: #999;	
+		}
+	}
+	
+	.fieldset-legend {
+		font-size: rem-calc(12);
+		line-height:1.5;
+		display:inline-block;
+	}
+}

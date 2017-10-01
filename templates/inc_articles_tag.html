@@ -1,0 +1,38 @@
+{% spaceless %}
+{% load thumbnail %}
+
+	<aside class="widget widget-list" id="interesting-posts">
+		<a class="widget-title" href="/otzyvi/">ПУБЛИКАЦИИ И<strong>ОТЗЫВЫ</strong></a>
+    {% for article in article_list %}
+        {% thumbnail article.img "188x130" crop="center" as thumb %}
+					<div class="post-item">
+						<a href="{{ article.get_absolute_url }}" class="post-item_details">
+							<div class="post-item_pic">
+								<img src="{{ thumb.url }}" alt="{{ article.title }}" />
+							</div>
+							<span class="post-item_title">
+								{{ article.h1 }}
+							</span>
+						</a>
+					</div><!-- post-item -->
+        {% endthumbnail %}
+    {% endfor %}
+
+{% for banner in banner_list %}
+        {% thumbnail banner.img "188x130" crop="center" as thumb %}
+					<div class="post-item">
+						<a href="{{ banner.url }}" class="post-item_details">
+							<div class="post-item_pic">
+								<img src="{{ thumb.url }}" alt="{{ banner.title }}" />
+							</div>
+							<span class="post-item_title">
+								{{ banner.title }}
+							</span>
+						</a>
+					</div><!-- post-item -->
+        {% endthumbnail %}
+    {% endfor %}
+	</aside>
+
+
+{% endspaceless %}

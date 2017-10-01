@@ -1,0 +1,27 @@
+{% spaceless %}
+{% load banner_list %}
+
+{% for banner in banner_list %}
+                <aside class="widget widget-grid" id="popular-companies">
+					<a class="widget-title" href="{{ banner.url }}" >
+{% if forloop.first %}{{ banner.title }}{% endif %} {% if banner.title2 %}<strong>{{ banner.title2 }}</strong>{% endif %}</a>
+					<a href="{{ banner.url }}" class="widget-grid-bigitem"><img src="{{ media_url }}{{ banner.img }}" alt="{{ banner.title2 }}"/></a>
+				</aside>
+{% endfor %}
+{% comment %}
+				<aside class="widget widget-grid" id="popular-users">
+					<a class="widget-title">ПРОЕКТЫ ДОМОВ <strong>С ПЛОСКОЙ КРЫШЕЙ</strong></a>
+					<a href="#" class="widget-grid-bigitem"><img src="http://dummyimage.com/305x305/001/00ffd1.png" /></a>
+				</aside>
+
+				<aside class="widget widget-grid" id="popular-community">
+					<a class="widget-title">ПРОЕКТЫ ДОМОВ <strong>В СОВРЕМЕННОМ СТИЛЕ</strong></a>
+					<a href="#" class="widget-grid-bigitem"><img src="http://dummyimage.com/305x305/001/00ffd1.png" /></a>
+				</aside>
+
+				<aside class="widget widget-grid" id="popular-projects">
+					<a class="widget-title">ПРОЕКТЫ ДОМОВ <strong>ИЗ КЛЕЕНОГО БРУСА</strong></a>
+					<a href="#" class="widget-grid-bigitem"><img src="http://dummyimage.com/305x305/001/00ffd1.png" /></a>
+				</aside>
+{% endcomment %}
+{% endspaceless %}

@@ -1,0 +1,28 @@
+.calendar {
+	position: relative;
+	input[type=date] {
+		appearance: none;
+		
+		&::-webkit-clear-button {
+			-webkit-appearance: none;
+		    display: none;
+		}
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		    display: none;
+		}
+		&::-webkit-calendar-picker-indicator {
+			-webkit-appearance: none;
+		    display: none;
+		}
+	}
+	.icon.icon-calendar {
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		fill: #C0C0C0;
+		right: 7px;
+		top: 7px;
+		cursor: pointer;
+	}
+}

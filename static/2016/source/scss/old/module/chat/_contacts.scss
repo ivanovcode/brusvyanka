@@ -1,0 +1,128 @@
+.soda-chat_sidebar {
+	> ul.tabs {
+		background-color: #777777;
+		display: table;
+		width: 100%;
+		> li {
+			display: table-cell;
+			float: left;
+		    list-style: none;
+		    margin-bottom: 0 !important;
+		    position: relative;
+			> a {
+				padding: rem-calc(10 11);
+				background-color: transparent;
+				color: #B2B2B2;
+				text-align: left;
+				font-size: rem-calc(13);
+				text-transform: uppercase;
+				font-weight: 600;
+				display: block;
+				
+				@include transition(all, 100ms, ease-out);
+				&:hover {
+				    background-color: rgba(255,255,255,0.1);
+				    color: #d0d0d0;
+				}
+			}
+			&.active {
+				> a {
+					color: white;
+					background-color: transparent;
+				}
+			}
+			&.soda-chat_tab-new {
+				float: right;
+				> a {
+					color: white;
+				    padding-right: 21px;
+				}
+			}
+		}
+	}
+	> .tabs-content {
+		margin-bottom: 0;
+		> .content {
+			padding: 0;
+		}
+	}
+}
+
+
+.soda-chat_sidebar {
+	.soda-chat_contact {
+		padding: 10px;
+		height: 70px;
+		
+		cursor: pointer;
+		
+		&:hover {
+			background-color: #777777;
+		}
+		
+		&.selected {
+			background-color: #868686;
+			&:hover {
+				background-color: #868686;
+			}
+		}
+		
+		&-pic {
+			width: 50px;
+			float: left;
+		}
+		&-name {
+		    padding-left: 65px;
+		    color: #FFFFFF;
+		    text-align: left;
+		    font-size: 15px;
+		    line-height: 18px;
+		    padding-top: 4px;
+		    font-weight: 400;
+		}
+		&-details {
+			color: #B2B2B2;
+		    font-size: 13px;
+		    padding-left: 65px;
+		    padding-top: 5px;
+		    
+			.icon {
+				width: 14px;
+				height: 14px;
+				fill: #B2B2B2;
+				margin-right: 4px;
+			}
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 10px;
+			}
+		}
+		&.online {
+			.icon {
+				fill: #57D229;
+			}
+		}
+		&.new-messages {
+			.soda-chat_contact-name {
+				color: #FFBB00;
+				span.new-messages-counter {
+					float: right;
+				    padding-right: 10px;
+				    display: inline-block;
+				}
+			}
+		}
+	}
+	.soda-chat_contact-list {
+		&-legend {
+			line-height: 12px;
+			color: #B2B2B2;
+			font-size: 12px;
+		    padding-left: 10px;
+		    padding-right: 10px;
+		    padding-bottom: 4px;
+		    padding-top: 10px;
+		}
+	}
+}

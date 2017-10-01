@@ -1,0 +1,23 @@
+image: valtechcanada/python-postgres
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          script: # Modify the commands below to build your repository.
+            - /etc/init.d/postgresql start # starting the service
+            - sudo -u postgres psql -c "CREATE USER pipeline WITH ENCRYPTED PASSWORD 'pipeline' SUPERUSER;" # create superuser
+            - sudo -u postgres psql -c "CREATE DATABASE ilya OWNER pipeline;" # create database
+            - pip install -r requirements.txt
+            - python manage.py makemigrations --settings ilya.pipeline_settings  thumbnail
+            - python manage.py test --settings ilya.pipeline_settings
+            - mkdir -p ~/.ssh
+            - (umask  077 ; echo $key_dev_deploy | base64 --decode > ~/.ssh/id_rsa)
+            - pip install Fabric==1.12.0
+            - fab -D develop deploy
+  custom:
+    deploy-to-prod:
+      - step:
+          script:
+            - pip install Fabric==1.12.0
+            - fab -D master deploy
