@@ -8,6 +8,10 @@
   <div class="row">
     <ul>
       <li><a href="/">Главная</a></li>
+      {% if 'novosti/' in page.url %}<li><a href="/novosti/">Новости</a></li>
+      {% elif 'o-nas/' in page.url %}<li><a href="/o-nas/">О нас</a></li>
+      {% elif 'stati' in page.url %}<li><a href="/stati/">Статьи</a></li>
+      {% endif %}
       <li class="current"><span>{{ page.name }}</span></li>
     </ul>
   </div>
