@@ -212,3 +212,9 @@ def o_nas_list():
 def get_articles():
     articles = Page.objects.filter(url__contains='stati/')
     return articles
+
+
+@register.simple_tag
+def get_news():
+    articles = Page.objects.filter(url__contains='o-nas/novosti/')
+    return articles

@@ -171,6 +171,7 @@
               {% for p in o_nas_pages %}
               <li {% class_active page.url p.url %}><a href='/{{ p.url }}/'>{{ p.name }}</a></li>
               {% endfor %}
+              <li {% class_active page.url 'novosti' %}><a href='/novosti/'>Новости</a></li>
             </ul>
           </li>
           <li class="has-child">

@@ -1,0 +1,77 @@
+{% extends "2016/base.html" %}
+{% load thumbnail %}
+
+{% block content %}
+{% load banner_list %}
+
+<div class="breadcrumbs">
+  <div class="row">
+    <ul>
+      <li><a href="/">Главная</a></li>
+      <li class="current"><span>{{ page.name }}</span></li>
+    </ul>
+  </div>
+</div>
+  
+	<div class="content row">
+	  <div class="soda-grid_row row">
+  	  
+    	 <div class="col3 ">
+        {% if page.url == 'otzyvi' %}
+          <div class="order-form order-form-dubl">
+            <h3>Заказать консультацию</h3>
+            <p>оставьте заявку и мы перезвоним вам в ближайшее время</p>
+            <form action="" class="form_order" data-goal="feedback_goal">{% csrf_token %}
+             <div class="field">
+              <input type="text" placeholder="Как к Вам обращаться" name="name"/>
+             </div>
+             <div class="field">
+              <input type="text" placeholder="Электронная почта" name="email"/>
+             </div>
+             <div class="field">
+              <input type="text" placeholder="Контактный телефон" name="phone"/>
+             </div>
+             <div class="field field-submit">
+              <input class="button" type="submit" value="Оставить заявку" />
+             </div>
+                      <input type="hidden" name="proj" value="страница отзывы"/>
+            </form>
+           </div>
+        {% else %}
+          {% show_banner_list_left %}
+        {% endif %}
+			</div><!-- col3 -->
+
+			<div class="col1">
+				<div class="post-item">
+					<div class="post-item_header">
+						<div class="post-item_details">
+							<h1 class="post-item_title">
+								{{ page.h1 }}
+							</h1>
+						</div>
+					</div>
+
+					<div class="post-item_body">
+						<div class="post-item_ext">
+              {% get_news as articles %}
+              {% for a in articles %}
+                 <p><a href='{{ a.get_absolute_url }}'>{{ a.name }}</a></p>
+              {% endfor %}
+							{{ page.footer_body|safe }}
+						</div>
+					</div>
+
+				</div><!-- post-item -->
+
+			</div><!-- col1 -->
+
+			<div class="col2">
+                {% show_banner_list %}
+			</div><!-- col2 -->
+      
+		</div>
+	</div>
+{% endblock %}
+
+{% block head_title %}{{ page.title }}{% endblock %}
