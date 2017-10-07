@@ -8,6 +8,7 @@ from pages.models import (
     Feedback,
     Staff,
     Settings,
+    Page
 )
 from django.conf import settings
 from projects.models import ArticleTag, Project
