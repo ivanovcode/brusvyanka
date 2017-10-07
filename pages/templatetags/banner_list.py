@@ -194,8 +194,9 @@ def href_active(current, url, t='1'):
     res = link_pattern.search(url)
     if res:
         url_ = res.group(1)
-    if not current == url_:
-        return mark_safe('href="{}"'.format(url, url_))
+        if not current == url_:
+            return mark_safe('href="{}"'.format(url, url_))
+    return ''
 
 
 @register.simple_tag
