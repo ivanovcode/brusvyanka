@@ -222,5 +222,7 @@ def get_news():
 
 @register.simple_tag
 def get_peredelka():
-    articles = Page.objects.filter(url__contains='peredelka/')
-    return articles
+    for a in Page.objects.filter(url__contains='peredelka/')
+        yield a
+    for a in Page.objects.filter(url__contains='rekonstrukciya/'):
+        yield a
