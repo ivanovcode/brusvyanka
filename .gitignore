@@ -13,3 +13,4 @@ dumpdata.json
 test_emails
 .DS_Store
 .env
+settings.json

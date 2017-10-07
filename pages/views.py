@@ -150,7 +150,10 @@ def view_url(request, url):
     url_site = get_object_or_404(Url_Site, url="/%s/" % url)
     m = importlib.import_module(url_site.content_object.module)
     view = getattr(m, url_site.content_object.view)
-    ret = view(request, url.split('/')[-1])
+    if 'page' in url_site.content_object.view:
+        ret = view(request, url)
+    else:
+        ret = view(request, url.split('/')[-1])
     return ret
 
 
