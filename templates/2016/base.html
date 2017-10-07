@@ -167,7 +167,9 @@
           <li class="has-child">
             <a href="/o-nas/">О нас</a>
             <ul>
-              <li {% class_active page.url '/o-nas/garantii' %}><a {% href_active page.url '/o-nas/garantii/' %}>Гарантии</a></li>
+              {% for p in o_nas_list }
+              <li {% class_active page.url p.url %}><a {% href_active page.url p.url 2 %}>{{ p.name }}</a></li>
+              {% endfor %}
             </ul>
           </li>
           <li class="has-child">

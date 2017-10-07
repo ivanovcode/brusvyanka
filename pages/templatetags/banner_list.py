@@ -187,9 +187,20 @@ def class_active(current, urls):
 
 
 @register.simple_tag
-def href_active(current, url):
+def href_active(current, url, t='1'):
+    if t == '2':
+        url = '/%s/' % url
     res = link_pattern.search(url)
     if res:
         url_ = res.group(1)
     if not current == url_:
         return mark_safe('href="{}"'.format(url, url_))
+
+
+@register.simple_tag
+def o_nas_list():
+    try:
+        pages = Page.objects.filter(url__contains='o-nas/')
+    except:
+        return []
+    return pages
