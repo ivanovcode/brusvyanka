@@ -206,3 +206,9 @@ def o_nas_list():
     except:
         return []
     return pages
+
+
+@register.simple_tag
+def get_articles():
+    articles = Page.objects.filter(url__contains='stati/')
+    return articles
