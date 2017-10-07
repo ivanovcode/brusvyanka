@@ -202,7 +202,7 @@ def href_active(current, url, t='1'):
 @register.simple_tag
 def o_nas_list():
     try:
-        pages = Page.objects.filter(url__contains='o-nas/')
+        pages = Page.objects.filter(url__contains='o-nas/').exlude(url__contains='novosti')
     except:
         return []
     return pages
