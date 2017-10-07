@@ -169,7 +169,7 @@
             <ul>
               {% o_nas_list as o_nas_pages %}
               {% for p in o_nas_pages %}
-              <li {% class_active page.url p.url %}><a {% href_active page.url p.url 2 %}>{{ p.name }}</a></li>
+              <li {% class_active page.url p.url %}><a href='/{{ p.url }}/'>{{ p.name }}</a></li>
               {% endfor %}
             </ul>
           </li>
