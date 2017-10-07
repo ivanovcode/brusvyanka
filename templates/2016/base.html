@@ -165,20 +165,20 @@
         <ul>
           <li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
           <li class="has-child">
+            <a href="/o-nas/">О нас</a>
+            <ul>
+              <li {% class_active page.url '/o-nas/garantii' %}><a {% href_active page.url '/o-nas/garantii/' %}>Гарантии</a></li>
+            </ul>
+          </li>
+          <li class="has-child">
             <a href="#" onclick="return false;">Услуги и цены</a>
             <ul>
               <li {% class_active page.url 'proektirovanie-domov' %}><a {% href_active page.url '/proektirovanie-domov/' %}>Архитектурное проектирование</a></li>
               <li {% class_active page.url 'stroitelstvo' %}><a {% href_active page.url '/stroitelstvo/' %}>Строительство</a></li>
               <li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
-               {% comment %}
-              <li><a href="#constructive-decisions.html">Конструктивные решения</a></li>
-              <li><a href="#engineering-communication.html">Инженерные коммуникации</a></li>
-              <li><a href="#landscaping.html">Ландшафтный дизайн</a></li>
-              <li><a href="#finishing-work.html">Отделочные работы</a></li>
-              <li><a href="#supply.html">Снабжение</a></li>
-              {% endcomment %}
             </ul>
           </li>
+          <li {% class_active page.url 'stati' %}><a {% href_active page.url '/stati/' %}>Статьи</a></li>
           <li {% class_active page.url 'why-we' %}><a {% href_active page.url '/why-we/' %}>Почему мы</a></li>
           <li class="has-child">
               <a href="#" onclick="return false;">Портфолио</a>
