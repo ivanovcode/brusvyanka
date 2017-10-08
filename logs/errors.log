@@ -1819,3 +1819,228 @@ Traceback (most recent call last):
   File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 504, in send
     raise ConnectionError(e, request=request)
 ConnectionError: HTTPSConnectionPool(host='api.facebook.com', port=443): Max retries exceeded with url: /method/links.getStats?urls=http://test.brusvyanka.ru/proekty-domov/02-03/&format=json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fe9d8910e10>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+Internal Server Error: /g/callback
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/googleauth/views.py", line 46, in callback
+    code=request.GET.get('code'),
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 221, in fetch_token
+    verify=verify, proxies=proxies)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 549, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests_oauthlib/oauth2_session.py", line 360, in request
+    headers=headers, data=data, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:504: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 69, in view_page
+    return render(request, template, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 151, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 148, in get_parent
+    return self.find_template(parent, context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 128, in find_template
+    template_name, skip=history,
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 514, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 172: 'endfor', expected 'endspaceless'. Did you forget to register or load this tag?
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 69, in view_page
+    return render(request, template, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 151, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 148, in get_parent
+    return self.find_template(parent, context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 128, in find_template
+    template_name, skip=history,
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 514, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 173: 'endfor', expected 'endspaceless'. Did you forget to register or load this tag?
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 69, in view_page
+    return render(request, template, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/library.py", line 201, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/brusvyanka/pages/templatetags/banner_list.py", line 197, in href_active
+    if not current == url_:
+UnboundLocalError: local variable 'url_' referenced before assignment
+Internal Server Error: /proekty-domov/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/projects/views.py", line 38, in view_projects
+    return render(request, "projects.html", response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 441, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 988, in render
+    bit = node.render_annotated(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/base.py", line 955, in render_annotated
+    return self.render(context)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/library.py", line 201, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/brusvyanka/pages/templatetags/banner_list.py", line 197, in href_active
+    if not current == url_:
+UnboundLocalError: local variable 'url_' referenced before assignment
+Internal Server Error: /peredelka/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 154, in view_url
+    ret = view(request, url)
+  File "/home/brusvyanka/pages/views.py", line 69, in view_page
+    return render(request, template, response)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 26, in get_template
+    engines = _engine_list(using)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/loader.py", line 143, in _engine_list
+    return engines.all() if using is None else [engines[using]]
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/utils.py", line 110, in all
+    return [self[alias] for alias in self]
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/utils.py", line 101, in __getitem__
+    engine = engine_cls(params)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 31, in __init__
+    options['libraries'] = self.get_templatetag_libraries(libraries)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 49, in get_templatetag_libraries
+    libraries = get_installed_libraries()
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 131, in get_installed_libraries
+    for name in get_package_libraries(pkg):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/template/backends/django.py", line 144, in get_package_libraries
+    module = import_module(entry[1])
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/brusvyanka/pages/templatetags/banner_list.py", line 225
+    for a in Page.objects.filter(url__contains='peredelka/')
+                                                           ^
+SyntaxError: invalid syntax
