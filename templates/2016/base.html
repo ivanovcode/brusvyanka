@@ -183,7 +183,6 @@
               <li {% class_active page.url 'peredelka' %}><a {% href_active page.url '/peredelka/' %}>Переделка недвижимости</a></li>
             </ul>
           </li>
-          <li {% class_active page.url 'stati' %}><a {% href_active page.url '/stati/' %}>Статьи</a></li>
           <li {% class_active page.url 'why-we' %}><a {% href_active page.url '/why-we/' %}>Почему мы</a></li>
           <li class="has-child">
               <a href="#" onclick="return false;">Портфолио</a>
@@ -193,6 +192,7 @@
                 <li {% if page_interior %}class="active"{% endif %}><a {% if not page_interior %}href="{% url 'interior' %}"{% endif %}>Реконструкция домов</a></li>
               </ul>
           </li>
+          <li {% class_active page.url 'stati' %}><a {% href_active page.url '/stati/' %}>Статьи</a></li>
           <li {% if page_contacts %}class="active"{% endif %}><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
         </ul>
         
