@@ -138,6 +138,11 @@ class Options(AdminImageMixin, admin.ModelAdmin):
               '/static/js/sortable_list_b.js')
 
 
-@admin.register(Url_Site, Feedback, Settings, ParralaxImage)
+@admin.register(Url_Site, Settings, ParralaxImage)
 class StubAdmin(AdminImageMixin, admin.ModelAdmin):
     pass
+
+
+@admin.register(Feedback)
+class FeedbackOption(admin.ModelAdmin):
+    list_display = ('title', 'video_url', 'date')

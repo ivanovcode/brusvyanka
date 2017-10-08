@@ -191,7 +191,7 @@ class Feedback(models.Model):
     class Meta:
         verbose_name = u'Отзыв'
         verbose_name_plural = u'Отзывы'
-        ordering = ('sort',)
+        ordering = ('-date',)
 
 
 class Price(models.Model):
