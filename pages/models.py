@@ -172,8 +172,8 @@ class Staff(models.Model):
 
 
 class Feedback(models.Model):
-    title = models.TextField(u'Описание', blank=True)
-    video_url = models.CharField(u'Ссылка на видео', max_length=255)
+    video_url = models.CharField(u'Имя', max_length=255)
+    title = models.TextField(u'Текст', blank=True)
     sort = models.IntegerField("Сортировка", default=200)
 
     def iframe_hash(self):
