@@ -226,3 +226,9 @@ def get_peredelka():
         yield a
     for a in Page.objects.filter(url__contains='rekonstrukciya/'):
         yield a
+
+
+@register.simple_tag
+def get_stroitelstvo():
+    articles = Page.objects.filter(url__contains='stroitelstvo/')
+    return articles
