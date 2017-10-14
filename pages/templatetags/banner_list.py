@@ -77,6 +77,15 @@ def show_article_tag_build(tag_id, article_id=None):
 
 
 @register.inclusion_tag('inc_articles_tag.html')
+def show_article_tag_interior(tag_id, article_id=None):
+    article_list = IArticleTag.objects.filter(tag__url=tag_id)
+    if article_id:
+        article_list = article_list.exclude(id=int(article_id))
+    banner_list = Banner.objects.filter(position='left')
+    return {'article_list': article_list, 'media_url': settings.MEDIA_URL, 'banner_list': banner_list, }
+
+
+@register.inclusion_tag('inc_articles_tag.html')
 def show_articles(article_id=None):
     article_list = ArticleTag.objects.filter(tag__isnull=True)
     if article_id:
