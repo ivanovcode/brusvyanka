@@ -170,4 +170,4 @@ def view_article(request, url):
         response['page'].name = page.name
     except:
         response['page'].name = u"Реконструкция"
-    return render(request, "barticle.html", response)
+    return render(request, "iarticle.html", response)
