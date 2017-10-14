@@ -9,7 +9,7 @@
   <div class="row">
     <ul>
       <li><a href="/">Главная</a></li>
-      <li><a href="{% url 'projects' %}">{{ page.name }}</a></li>
+      <li><a href="{% url 'interior' %}">{{ page.name }}</a></li>
       {% if tag %}<li><a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a></li>{% endif %}
       <li class="current"><span>{{ article.name }}</span></li>
     </ul>
