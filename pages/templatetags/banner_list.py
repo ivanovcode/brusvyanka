@@ -13,7 +13,7 @@ from pages.models import (
 from django.conf import settings
 from projects.models import ArticleTag, Project
 from buildhouse.models import ArticleTag as BArticleTag, Project as BProject
-from interior.models import Project as IProject
+from interior.models import Project as IProject, ArticleTag as IArticleTag
 from django.utils.safestring import mark_safe
 register = template.Library()
 link_pattern = re.compile(r'/(.*?)/')
@@ -88,6 +88,15 @@ def show_articles(article_id=None):
 @register.inclusion_tag('inc_articles_tag.html')
 def show_articles_build(article_id=None):
     article_list = BArticleTag.objects.filter(tag__isnull=True)
+    if article_id:
+        article_list = article_list.exclude(id=int(article_id))
+    banner_list = Banner.objects.filter(position='left')
+    return {'article_list': article_list, 'media_url': settings.MEDIA_URL, 'banner_list': banner_list, }
+
+
+@register.inclusion_tag('inc_articles_tag.html')
+def show_articles_interior(article_id=None):
+    article_list = IArticleTag.objects.filter(tag__isnull=True)
     if article_id:
         article_list = article_list.exclude(id=int(article_id))
     banner_list = Banner.objects.filter(position='left')

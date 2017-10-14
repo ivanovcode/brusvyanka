@@ -120,6 +120,47 @@ class ProjectSitemap(Sitemap):
         return Project.objects.filter(is_index=True)
 
 
+class ArticleTag(models.Model):
+    tag = models.ForeignKey(Tag, verbose_name="тег", blank=True, null=True,
+                            help_text="Если не выбрать тег, то статья появится в проектах")
+    title = models.CharField(u"Title", max_length=255)
+    h1 = models.CharField('h1', max_length=255)
+    name = models.CharField('Наименование', max_length=255)
+    img = ImageField(u"Картинка", upload_to="articles/", blank=True, null=True)
+    text = HTMLField(u"Текст")
+    keyword = models.CharField(max_length=255, blank=True)
+    description = models.CharField(max_length=255, blank=True)
+    url = models.CharField(max_length=255, blank=True)
+    order = models.IntegerField("Сортировка", default=0)
+    is_index = models.BooleanField(u"Индексировать?", default=True)
+    module = "interior.views"
+    view = "view_article"
+
+    class Meta:
+        ordering = ('order',)
+        verbose_name_plural = u"Статьи"
+        verbose_name = u"Статья"
+
+    def __unicode__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        if self.url:
+            if self.tag:
+                return "/stroitelstvo-domov/%s/%s/" % (self.tag.url, self.url)
+            else:
+                return "/stroitelstvo-domov/%s/" % self.url
+        else:
+            return "/articles/%s/" % self.pk
+
+
+class ArticleSitemap(Sitemap):
+    changefreq = "always"
+
+    def items(self):
+        return ArticleTag.objects.filter(is_index=True)
+
+
 def add_url(sender, instance, created, **kwargs):
     url = Url_Site.objects.filter(content_id=instance.pk, content_type=ContentType.objects.get_for_model(instance))
     if not url:
@@ -132,8 +173,8 @@ def add_url(sender, instance, created, **kwargs):
     else:
         url.save()
 
-post_save.connect(add_url, sender=Project)
-post_save.connect(add_url, sender=Tag)
+for model in (Project, Tag, ArticleTag):
+    post_save.connect(add_url, sender=model)
 
 
 def del_url(sender, instance, **kwargs):
@@ -141,5 +182,5 @@ def del_url(sender, instance, **kwargs):
     if url:
         url.delete()
 
-post_delete.connect(del_url, sender=Project)
-post_delete.connect(del_url, sender=Tag)
+for model in (Project, Tag, ArticleTag):
+    post_delete.connect(del_url, sender=model)

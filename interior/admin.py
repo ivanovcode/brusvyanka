@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-from .models import Project
-from .models import Tag, TagProject
-from .models import PhotoProject, PlanProject
+from .models import Project, PhotoProject, PlanProject, Tag, TagProject, ArticleTag
 from django.contrib import admin
 from sorl.thumbnail.admin import AdminImageMixin
 from sorl.thumbnail import get_thumbnail
@@ -33,9 +31,35 @@ class ProjectInline(admin.TabularInline):
     preview_url.short_description = 'Фото'
 
 
+class ArticleTagInline(AdminImageMixin, admin.TabularInline):
+    model = ArticleTag
+    fields = ('preview_image_url', 'title', 'name', 'h1', 'order', 'edit_link')
+    readonly_fields = ('preview_image_url', 'edit_link')
+    extra = 0
+    # show_change_link = True
+
+    def preview_image_url(self, obj):
+        try:
+            if not obj.img:
+                return ""
+            image_path = "%s" % obj.img.file
+            t = get_thumbnail(image_path, '120x120')
+            return u'<img src="%s%s" alt=""/>' % (settings.MEDIA_URL, t)
+        except:
+            return "Нету изображения"
+
+    preview_image_url.short_description = 'Фото'
+    preview_image_url.allow_tags = True
+
+    def edit_link(self, obj):
+        return mark_safe(u'<a href="/admin/interior/articletag/%s/" target="_blank">Редактировать</a>' % obj.pk)
+
+    edit_link.short_description = 'Ссылка'
+
+
 @admin.register(Tag)
 class TagOptions(AdminImageMixin, admin.ModelAdmin):
-    inlines = [ProjectInline]
+    inlines = [ProjectInline, ArticleTagInline]
     list_display = ('preview_image_url', 'name', 'sort')
     list_editable = ('sort',)
 
@@ -106,3 +130,27 @@ class ProjectOptions(AdminImageMixin, admin.ModelAdmin):
               '/static/js/sortable_list.js', '/static/js/sortable_list_inline_n.js', '/static/js/admin.js')
         css = {'all': ('/static/css/admin.css?2',)}
         # '/static/js/sortable_list_inline.js'
+
+
+@admin.register(ArticleTag)
+class ArticleOptions(AdminImageMixin, admin.ModelAdmin):
+    list_display = ('preview_image_url', 'title', 'name', 'h1', 'order')
+    list_editable = ('order',)
+
+    def preview_image_url(self, obj):
+        try:
+            if not obj.img:
+                return ""
+            image_path = "%s" % obj.img.file
+            t = get_thumbnail(image_path, '120x120')
+            return u'<img src="%s%s" alt=""/>' % (settings.MEDIA_URL, t)
+        except:
+            return "Нету изображения"
+
+    preview_image_url.short_description = 'Фото'
+    preview_image_url.allow_tags = True
+
+
+    class Media:
+        css = {'all': ('/static/css/admin.css',)}
+        js = ('/static/js/admin.js', )

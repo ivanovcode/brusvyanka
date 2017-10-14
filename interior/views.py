@@ -6,7 +6,8 @@ from django.shortcuts import (
 )
 from .models import (
     Project,
-    Tag
+    Tag,
+    ArticleTag
 )
 from pages.models import Page
 from django.http import (
@@ -147,3 +148,26 @@ def view_project(request, id):
         rollbar.report_message('Unknown error view project: %s' % e.message, 'error')
         response['page'] = u"Интерьер"
     return render(request, "project.html", response)
+
+
+def view_article(request, url):
+    try:
+        article_id = int(url)
+    except:
+        article_id = 0
+    if article_id:
+        article = get_object_or_404(ArticleTag, pk=article_id)
+    else:
+        article = get_object_or_404(ArticleTag, url=url)
+    response = {'article': article, "tag": article.tag, 'url_s': url}
+    response['page'] = copy.copy(article)
+    response['page_interior'] = 1
+    tags = Tag.objects.all()
+    response['tags'] = tags
+    try:
+        url = reverse('interior')
+        page = Page.objects.get(url=url.replace('/', ''))
+        response['page'].name = page.name
+    except:
+        response['page'].name = u"Реконструкция"
+    return render(request, "barticle.html", response)
