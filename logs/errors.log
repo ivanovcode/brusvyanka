@@ -2044,3 +2044,22 @@ Traceback (most recent call last):
     for a in Page.objects.filter(url__contains='peredelka/')
                                                            ^
 SyntaxError: invalid syntax
+Internal Server Error: /likes/
+Traceback (most recent call last):
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/brusvyanka/pages/views.py", line 85, in get_likes
+    result = requests.get('http://ok.ru/dk?st.cmd=extOneClickLike&uid=odklocs0&ref=%s' % url)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='ok.ru', port=80): Max retries exceeded with url: /dk?st.cmd=extOneClickLike&uid=odklocs0&ref=http://test.brusvyanka.ru/proekty-domov/01-53/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe9d7dad990>: Failed to establish a new connection: [Errno -5] No address associated with hostname',))
