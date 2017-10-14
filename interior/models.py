@@ -147,9 +147,9 @@ class ArticleTag(models.Model):
     def get_absolute_url(self):
         if self.url:
             if self.tag:
-                return "/stroitelstvo-domov/%s/%s/" % (self.tag.url, self.url)
+                return "/rekonstrukciya-domov/%s/%s/" % (self.tag.url, self.url)
             else:
-                return "/stroitelstvo-domov/%s/" % self.url
+                return "/rekonstrukciya-domov/%s/" % self.url
         else:
             return "/articles/%s/" % self.pk
 
