@@ -9,7 +9,6 @@ from buildhouse.models import (
     Project as Bproject,
     Tag as BTag,
 )
-from interior.models import Project as IProject
 from interior.models import (
     Project as Iproject,
     Tag as ITag,
