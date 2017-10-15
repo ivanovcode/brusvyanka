@@ -125,27 +125,33 @@
           </div>
         
         </div>
-        {% comment %}
+        
         <div class="block block--tests">
           <div class="row">
             <h2 class="block_title">Отзывы наших клиентов<br/> говорят сами за себя</h2>
             {% feedback_list as feedbacks %}
             {% for feedback in feedbacks %}
+            <div class="columns small-6 medium-4">
               <div class="row">
-              <div class="columns small-12 medium-10">
+                  <div class="columns small-6 medium-4">
+                    {% thumbnail feedback.img '200x200' crop="center" as thumb%}
+                       <img src="{{ thumb.url }}" alt/>
+                    {% endthumbnail %}
+                  </div>
+              <div class="columns small-6 medium-8">
                 <div class="item">
                   <div class="title">{{ feedback.video_url }} <span style="font-weight: normal; font-size: 13px;">{{ feedback.date }}</span></div>
                   <div>{{ feedback.title }}</div>
                 </div>
               </div>
               </div>
+            </div>  
               {% endfor %}
             <div class="controls">
               <a href="/otzyvi/" class="btn--clear">Посмотреть все отзывы</a>
             </div>
           </div>
         </div>
-        {% endcomment %}
         
     {% endspaceless %}
 {% endblock content %}
