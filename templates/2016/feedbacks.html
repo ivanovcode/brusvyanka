@@ -28,7 +28,7 @@
             {% feedback_list '' as feedbacks %}
             {% for feedback in feedbacks %}
             <div class="row">
-                <div class="columns small-4 medium-4">
+                <div class="columns small-4 medium-2">
                     {% thumbnail feedback.img '130x130' crop="center" as thumb%}
                        <img src="{{ thumb.url }}" alt style="max-width: 99%;padding-bottom: 15px;"/>
                     {% endthumbnail %}
