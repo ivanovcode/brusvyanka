@@ -28,7 +28,12 @@
             {% feedback_list '' as feedbacks %}
             {% for feedback in feedbacks %}
             <div class="row">
-            <div class="columns small-12 medium-10">
+                <div class="columns small-4 medium-4">
+                    {% thumbnail feedback.img '200x200' crop="center" as thumb%}
+                       <img src="{{ thumb.url }}" alt style="max-width: 99%;"/>
+                    {% endthumbnail %}
+                  </div>
+            <div class="columns small-8 medium-8">
               <div class="item">
                 <div class="title">{{ feedback.video_url }}  <span style="font-weight: normal; font-size: 13px;">{{ feedback.date|date:'d.m.Y' }}</span></div>
                 <div>{{ feedback.title }}</div>
