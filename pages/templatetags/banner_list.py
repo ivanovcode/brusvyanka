@@ -182,7 +182,7 @@ def love_banners():
 
 
 @register.simple_tag
-def feedback_list(l=4):
+def feedback_list(l=3):
     if l:
         feedbacks = Feedback.objects.all()[:int(l)]
     else:
