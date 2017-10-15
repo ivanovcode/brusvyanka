@@ -172,7 +172,7 @@ class Staff(models.Model):
 
 
 class Feedback(models.Model):
-    img = ImageField(u'Картинка', upload_to='images_feedback/')
+    img = ImageField(u'Картинка', upload_to='images_feedback/', blank=True)
     video_url = models.CharField(u'Имя', max_length=255)
     title = models.TextField(u'Текст', blank=True)
     date = models.DateTimeField(u'Дата', blank=True)
