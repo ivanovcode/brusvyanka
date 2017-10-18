@@ -14,6 +14,8 @@ class Page(models.Model):
     h1 = models.CharField('h1', max_length=255)
     name = models.CharField('Наименование', max_length=255)
     body = HTMLField('Текст')
+    form_header = models.CharField('Заголовок около формы', blank=True, max_length=500)
+    form_text = models.TextField('Текст около формы', blank=True)
     footer_body = models.TextField(blank=True)
     url = models.CharField(max_length=255)
     keyword = models.CharField(max_length=255, blank=True)

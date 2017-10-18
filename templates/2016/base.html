@@ -229,11 +229,16 @@
           <div class="row">
             <div class="columns medium-6 large-6 desc">
               <div class="title">
+                {% if page.form_header %}
+                {{ page.form_header }}
+                {% else %}
                 {% if 'proektirovanie-domov' in page.url %}Интересует проектирование домов? {% elif 'stroitelstvo' in page.url %}Интересует строительство домов? {% elif 'rekonstrukciya' in page.url  %}
                 Появились вопросы?
                 {% else %}Хотите начать сотрудничество?
-                {% endif %}</div>
-              <p>Заполните форму заявки и ждите звонка от менеджера фирмы «Брусвянка».</p>
+                {% endif %}
+                {% endif %}
+              </div>
+              <p>{% if page.form_body %}{{ page.form_body }}{% else %}Заполните форму заявки и ждите звонка от менеджера фирмы «Брусвянка».{% endif %}</p>
             </div>
             <div class="columns medium-6 large-6 form">
               <form action="" class="form_feedback">{% csrf_token %}
