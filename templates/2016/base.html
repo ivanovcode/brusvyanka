@@ -238,7 +238,7 @@
                 {% endif %}
                 {% endif %}
               </div>
-              <p>{% if page.form_body %}{{ page.form_body }}{% else %}Заполните форму заявки и ждите звонка от менеджера фирмы «Брусвянка».{% endif %}</p>
+              <p>{% if page.form_text %}{{ page.form_text }}{% else %}Заполните форму заявки и ждите звонка от менеджера фирмы «Брусвянка».{% endif %}</p>
             </div>
             <div class="columns medium-6 large-6 form">
               <form action="" class="form_feedback">{% csrf_token %}
