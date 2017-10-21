@@ -25,7 +25,7 @@ SECRET_KEY = '7+@(nmwrml%4tz7_+=7_31rcy0cja*k$$=k91@oyboh4tm117%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.ilyaeliseev.ru', 'ilyaeliseev.ru', 'test.brusvyanka.ru']
+ALLOWED_HOSTS = ['.ilyaeliseev.ru', 'ilyaeliseev.ru', 'test.brusvyanka.ru', '151.248.112.108']
 
 
 # Application definition

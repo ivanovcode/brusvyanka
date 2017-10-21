@@ -2063,3 +2063,4 @@ Traceback (most recent call last):
   File "/home/brusvyanka/.env/lib/python2.7/site-packages/requests/adapters.py", line 504, in send
     raise ConnectionError(e, request=request)
 ConnectionError: HTTPConnectionPool(host='ok.ru', port=80): Max retries exceeded with url: /dk?st.cmd=extOneClickLike&uid=odklocs0&ref=http://test.brusvyanka.ru/proekty-domov/01-53/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe9d7dad990>: Failed to establish a new connection: [Errno -5] No address associated with hostname',))
+Invalid HTTP_HOST header: '151.248.112.108'. You may need to add u'151.248.112.108' to ALLOWED_HOSTS.

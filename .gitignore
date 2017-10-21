@@ -14,3 +14,4 @@ test_emails
 .DS_Store
 .env
 settings.json
+logs
