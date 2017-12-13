@@ -1,0 +1,47 @@
+- name: Fixed permissions
+  file:
+    path: /opt/
+    owner: 1000
+    group: 1000
+  become: true
+
+
+- name: clone repo
+  git:
+    repo: git@gitlab.com:Gasoid/brusvyanka.git
+    dest: /opt/brusvyanka/
+    accept_hostkey: yes
+
+
+- name: install python packages
+  pip:
+    requirements: /opt/brusvyanka/requirements.txt
+    virtualenv: /opt/brusvyanka/.env
+
+
+- name: migrate db
+  django_manage:
+    command: migrate
+    virtualenv: /opt/brusvyanka/.env/
+    app_path: /opt/brusvyanka/
+    settings: ilya.server_settings
+
+
+- name: Fixed permissions
+  file:
+    path: /opt/brusvyanka/media/
+    state: directory
+    owner: www-data
+  become: true
+
+
+- service:
+    name: nginx
+    state: reloaded
+  become: true
+
+
+- service:
+    name: uwsgi
+    state: reloaded
+  become: true

@@ -1,0 +1,50 @@
+- name: install server requirements
+  apt: pkg={{item}} update_cache=yes
+  with_items:
+    - vim
+    - htop
+    - sudo
+    - mc
+    - wget
+    - python
+    - python-pip
+    - python-dev
+    - tmux
+    - build-essential
+    - locales
+    - dialog
+    - nginx
+    - uwsgi
+    - git
+    - libjpeg-dev
+    - zlib1g-dev
+    - uwsgi-plugin-python
+
+- name: copy uwsgi_params
+  template: src=uwsgi_params.j2 dest=/etc/nginx/uwsgi_params
+
+- name: copy nginx config
+  template:
+    src: nginx_site_conf.j2
+    dest: /etc/nginx/sites-available/brusvyanka
+
+- name: create symlinks
+  file:
+    src: /etc/nginx/sites-available/brusvyanka
+    dest: /etc/nginx/sites-enabled/brusvyanka
+    state: link
+
+- name: copy uwsgi config
+  template:
+    src: uwsgi.j2
+    dest: /etc/uwsgi/apps-available/brusvyanka.ini
+
+- name: create symlinks for uwsgi
+  file:
+    src: /etc/uwsgi/apps-available/brusvyanka.ini
+    dest: /etc/uwsgi/apps-enabled/brusvyanka.ini
+    state: link
+
+- name: install virtualenv
+  pip:
+    name: virtualenv
