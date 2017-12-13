@@ -15,7 +15,7 @@
 
 - name: Change permissions
   file:
-    path: /opt/
+    path: /opt/brusvyanka/
     owner: 1000
     group: 1000
   become: true
@@ -59,10 +59,7 @@
 
 
 - name: Fixed permissions
-  file:
-    path: /opt/brusvyanka/media/
-    state: directory
-    owner: www-data
+  command: chown -R www-data /opt/brusvyanka/media/
   become: true
 
 - service:
