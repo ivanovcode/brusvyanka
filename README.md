@@ -1,3 +1,23 @@
+### Быстрый старт ###
+
+На локальном 
+eval `ssh-agent`
+ssh-add
+ssh -A ivanov@test.brusvyanka.ru -p 2525
+
+На удаленном
+pip install ansible
+~/.local/bin/ansible-playbook conf.yml -v  (all | localhost)
+~/.local/bin/ansible-playbook deploy.yml -v  (all | localhost)
+
+Дополнительные команды
+sudo chown -R www-data ./brusvyanka
+source .env/bin/activate | sudo python manage.py thumbnail clear | sudo rm -rf ./media/cache/* | sudo rm -rf ./media2/cache/*
+service uwsgi restart
+virtualenv .env
+
+
+
 ### Тестовая среда на докере ###
 
  * установите docker http://docker.com
