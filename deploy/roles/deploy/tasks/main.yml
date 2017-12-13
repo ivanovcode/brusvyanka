@@ -35,6 +35,13 @@
   become: true
 
 
+- name: Create logs
+  file:
+    path: /opt/brusvyanka/logs
+    state: directory
+    owner: www-data
+  become: true
+
 - service:
     name: nginx
     state: reloaded
