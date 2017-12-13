@@ -25,6 +25,7 @@
   pip:
     requirements: /opt/brusvyanka/requirements.txt
     virtualenv: /opt/brusvyanka/.env
+  become: true
 
 
 - name: Create logs
@@ -50,6 +51,7 @@
     virtualenv: /opt/brusvyanka/.env/
     app_path: /opt/brusvyanka/
     settings: ilya.server_settings
+  become: true
 
 
 - file:
