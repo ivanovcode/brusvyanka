@@ -50,5 +50,5 @@
 
 - service:
     name: uwsgi
-    state: reloaded
+    state: restarted
   become: true
