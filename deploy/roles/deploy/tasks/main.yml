@@ -1,4 +1,4 @@
-- name: Fixed permissions
+- name: Fix permissions
   file:
     path: /opt/
     owner: 1000
@@ -11,6 +11,14 @@
     repo: git@gitlab.com:Gasoid/brusvyanka.git
     dest: /opt/brusvyanka/
     accept_hostkey: yes
+
+
+- name: Change permissions
+  file:
+    path: /opt/
+    owner: 1000
+    group: 1000
+  become: true
 
 
 - name: install python packages
