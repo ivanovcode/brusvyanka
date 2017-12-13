@@ -19,6 +19,22 @@
     virtualenv: /opt/brusvyanka/.env
 
 
+- name: Create logs
+  file:
+    path: /opt/brusvyanka/logs
+    state: directory
+    owner: www-data
+  become: true
+
+
+- name: Touch errors file
+  file:
+    path: /opt/brusvyanka/logs/errors.log
+    state: touch
+    owner: www-data
+  become: true
+
+
 - name: migrate db
   django_manage:
     command: migrate
@@ -27,17 +43,15 @@
     settings: ilya.server_settings
 
 
-- name: Fixed permissions
-  file:
-    path: /opt/brusvyanka/media/
-    state: directory
+- file:
+    path: /opt/brusvyanka/db.sqlite3
     owner: www-data
   become: true
 
 
-- name: Create logs
+- name: Fixed permissions
   file:
-    path: /opt/brusvyanka/logs
+    path: /opt/brusvyanka/media/
     state: directory
     owner: www-data
   become: true
