@@ -12,6 +12,11 @@ server {
        root /opt/brusvyanka/static/;
     }
 
+    location /static/admin {
+        expires 8d;
+        alias /opt/brusvyanka/.env/lib/python2.7/site-packages/django/contrib/admin/static/admin;
+    }
+
     location /static {
        expires 8d;
        alias /opt/brusvyanka/static;
