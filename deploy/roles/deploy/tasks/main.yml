@@ -32,6 +32,7 @@
     path: /opt/brusvyanka/logs/errors.log
     state: touch
     owner: www-data
+    mode: 0777
   become: true
 
 
