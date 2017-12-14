@@ -64,6 +64,10 @@
   command: chown -R www-data /opt/brusvyanka/media/
   become: true
 
+- name: Fixed permissions
+  command: chown -R www-data /opt/brusvyanka/media2/
+  become: true
+
 - service:
     name: nginx
     state: reloaded
