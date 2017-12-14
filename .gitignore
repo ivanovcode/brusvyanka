@@ -1,13 +1,10 @@
 *.pyc
-media
 cache
 builds
 local_settings.py
 .idea
-*.sqlite3
 ENV
 .sass-cache
-db-2.sqlite3
 dumpdata.json
 *~
 test_emails
