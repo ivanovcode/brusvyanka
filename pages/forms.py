@@ -33,11 +33,10 @@ class OrderForm(forms.Form):
         return body.encode('utf-8')
 
     def send_email(self, text):
-        send_mail(u"Заявка с сайта: ilyaeliseev.ru", text, 'mailbox@ilyaeliseev.ru', ["ilyaeliseeff@ya.ru", 'info@brusvyanka.ru'],
-                  fail_silently=False)
+        send_mail('Заявка с сайта: brusvyanka.ru', text, 'development@ivanov.site', ['info@brusvyanka.ru'], fail_silently=False)
 
     def send_sms(self, text):
-        url = "http://sms.ru/sms/send?api_id=a6b3607d-eb92-d9c4-1588-f793062dbcc6&to=79067998080&text=%s" % quote(text)
+        url = "https://sms.ru/sms/send?api_id=fa5cbf1c-3a4a-f2a4-3122-365973dd3b2c&to=79164401342&msg=%s" % quote(text)        
         try:
             urlopen(url, timeout=60)
         except URLError:
@@ -59,11 +58,11 @@ class RecallForm(forms.Form):
         return body.encode('utf-8')
 
     def send_email(self, text):
-        send_mail(u"Заявка с сайта: ilyaeliseev.ru", text, 'mailbox@ilyaeliseev.ru', ["ilyaeliseeff@ya.ru", 'info@brusvyanka.ru'],
-                  fail_silently=False)
+        send_mail('Заявка с сайта: brusvyanka.ru', 'test', 'development@brusvyanka.ru', ['info@brusvyanka.ru'], fail_silently=False)
+        #send_mail("Заявка с сайта: brusvyanka.ru", text, 'mailbox@brusvyanka.ru', ['info@brusvyanka.ru'], fail_silently=False)
 
     def send_sms(self, text):
-        url = "http://sms.ru/sms/send?api_id=a6b3607d-eb92-d9c4-1588-f793062dbcc6&to=79067998080&text=%s" % quote(text)
+        url = "https://sms.ru/sms/send?api_id=fa5cbf1c-3a4a-f2a4-3122-365973dd3b2c&to=79164401342&msg=test"
         try:
             urlopen(url, timeout=60)
         except URLError:

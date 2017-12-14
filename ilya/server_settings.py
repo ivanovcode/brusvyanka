@@ -7,7 +7,14 @@ STATICFILES_DIRS = ()
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 DEBUG = False
-# DEBUG = True
+#DEBUG = True
+
+ADMINS = (('Mailbox', 'development@ivanov.site'),)
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'development@ivanov.site'
+EMAIL_HOST_PASSWORD = 'sparta'
+EMAIL_PORT = 465
 
 X_FRAME_OPTIONS = ""
 

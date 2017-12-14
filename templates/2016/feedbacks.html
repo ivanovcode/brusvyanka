@@ -14,10 +14,13 @@
             </ul>
           </div>
         </div>
+        <style>
+        .block.block--tests .item .title{padding-top:0px!important;}
+      </style>
         <div class="content">
         <div class="block block--tests">
           <div class="row">
-            <h1 class="block_title">Отзывы наших клиентов<br/> говорят сами за себя</h1>
+            <h1 class="block_title">Отзывы наших клиентов</h1>
             
             <div class="block_sub-title">
               {{ page.body|safe }}
@@ -27,13 +30,13 @@
              
             {% feedback_list '' as feedbacks %}
             {% for feedback in feedbacks %}
-            <div class="row">
-                <div class="columns small-4 medium-2">
+            <div class="row" style="margin-top:15px;">
+                <div style="display:none" class="columns small-4 medium-2">
                     {% thumbnail feedback.img '130x130' crop="center" as thumb%}
                        <img src="{{ thumb.url }}" alt style="max-width: 99%;padding-bottom: 15px;"/>
                     {% endthumbnail %}
                   </div>
-            <div class="columns small-8 medium-8">
+            <div class="columns small-12 medium-12">
               <div class="item">
                 <div class="title">{{ feedback.video_url }}  <span style="font-weight: normal; font-size: 13px;">{{ feedback.date|date:'d.m.Y' }}</span></div>
                 <div>{{ feedback.title }}</div>

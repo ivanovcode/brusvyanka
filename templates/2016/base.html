@@ -16,6 +16,9 @@
     <title>{% block head_title %}{% endblock %}</title>
     
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name='yandex-verification' content='744d8e965ed6593e'/>
+<meta name="google-site-verification" content="FrjEuVQhFgrHbJYVPxgfpNKqICCie-Lt_FnRIpWIFG0" />
+
     <script type="text/javascript">
       var viewport = document.getElementById('viewport');
       var ww = document.documentElement.clientWidth || document.body.clientWidth;
@@ -26,7 +29,47 @@
       }
       viewport.setAttribute('content', content);
     </script>
-    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60271317-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-60271317-1');
+    </script>    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter25663112 = new Ya.Metrika({
+                        id:25663112,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/25663112" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->    
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,600i,700&subset=cyrillic" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold,bolditalic" rel="stylesheet" type="text/css" />
     <link href="{% static '2016/css/style.css' %}?19.11.2016" rel="stylesheet" type="text/css">
@@ -164,24 +207,14 @@
         
         <ul>
           <li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
-          <li class="has-child">
-            <a href="/o-nas/">О нас</a>
-            <ul>
-              {% o_nas_list as o_nas_pages %}
-              {% for p in o_nas_pages %}
-              <li {% class_active page.url p.url %}><a href='/{{ p.url }}/'>{{ p.name }}</a></li>
-              {% endfor %}
-              <li {% class_active page.url 'novosti' %}><a href='/novosti/'>Новости</a></li>
-              <li {% class_active page.url 'otzyvi' %}><a href='/otzyvi/'>Отзывы</a></li>
-            </ul>
-          </li>
+
           <li class="has-child">
             <a href="#" onclick="return false;">Услуги и цены</a>
             <ul>
               <li {% class_active page.url 'proektirovanie-domov' %}><a {% href_active page.url '/proektirovanie-domov/' %}>Архитектурное проектирование</a></li>
               <li {% class_active page.url 'stroitelstvo' %}><a {% href_active page.url '/stroitelstvo/' %}>Строительство</a></li>
               <li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
-              <li {% class_active page.url 'peredelka' %}><a {% href_active page.url '/peredelka/' %}>Переделка недвижимости</a></li>
+
             </ul>
           </li>
           <li {% class_active page.url 'why-we' %}><a {% href_active page.url '/why-we/' %}>Почему мы</a></li>
@@ -193,7 +226,7 @@
                 <li {% if page_interior %}class="active"{% endif %}><a {% if not page_interior %}href="{% url 'interior' %}"{% endif %}>Реконструкция домов</a></li>
               </ul>
           </li>
-          <li {% class_active page.url 'stati' %}><a {% href_active page.url '/stati/' %}>Статьи</a></li>
+         
           <li {% if page_contacts %}class="active"{% endif %}><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
         </ul>
         
@@ -304,7 +337,7 @@
             <a class="mailto" href="mailto:info@brusvyanka.ru">info@brusvyanka.ru</a>
             
             <div class="social">
-              <a href="https://vk.com/arhitektor_ilyaeliseev" class="social--vk" target="_blank">
+              <a href="#" rel="nofollow" class="social--vk" target="_blank">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 304.36 304.36" style="enable-background:new 0 0 304.36 304.36;" xml:space="preserve">
                   <path id="XMLID_807_" style="fill-rule:evenodd;clip-rule:evenodd;" d="M261.945,175.576c10.096,9.857,20.752,19.131,29.807,29.982 c4,4.822,7.787,9.798,10.684,15.394c4.105,7.955,0.387,16.709-6.746,17.184l-44.34-0.02c-11.436,0.949-20.559-3.655-28.23-11.474 c-6.139-6.253-11.824-12.908-17.727-19.372c-2.42-2.642-4.953-5.128-7.979-7.093c-6.053-3.929-11.307-2.726-14.766,3.587
                 		c-3.523,6.421-4.322,13.531-4.668,20.687c-0.475,10.441-3.631,13.186-14.119,13.664c-22.414,1.057-43.686-2.334-63.447-13.641
@@ -314,7 +347,7 @@
                 		c1.146-13.383,1.297-26.743-0.713-40.079c-1.234-8.323-5.922-13.711-14.227-15.286c-4.238-0.803-3.607-2.38-1.555-4.799
                 		c3.564-4.172,6.916-6.769,13.598-6.769h50.111c7.889,1.557,9.641,5.101,10.721,13.039l0.043,55.663 c-0.086,3.073,1.535,12.192,7.07,14.226c4.43,1.448,7.35-2.096,10.008-4.905c11.998-12.734,20.561-27.783,28.211-43.366 c3.395-6.852,6.314-13.968,9.143-21.078c2.096-5.276,5.385-7.872,11.328-7.757l48.229,0.043c1.43,0,2.877,0.021,4.262,0.258 c8.127,1.385,10.354,4.881,7.844,12.817c-3.955,12.451-11.65,22.827-19.174,33.251c-8.043,11.129-16.645,21.877-24.621,33.072 C252.26,161.544,252.842,166.697,261.945,175.576L261.945,175.576z M261.945,175.576"/></svg>
               </a>
-              <a href="https://www.facebook.com/arhitektorilyaeliseev/" class="social--fb" target="_blank">
+              <a href="#" rel="nofollow" class="social--fb" target="_blank">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 	 width="430.113px" height="430.114px" viewBox="0 0 430.113 430.114" style="enable-background:new 0 0 430.113 430.114;"
                 	 xml:space="preserve">
@@ -323,7 +356,7 @@
                 		c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
                 </svg>
               </a>
-              <a href="https://www.instagram.com/ilyaeliseev_architect/" class="social--ig" target="_blank">
+              <a href="#" rel="nofollow" class="social--ig" target="_blank">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 	 width="97.395px" height="97.395px" viewBox="0 0 97.395 97.395" style="enable-background:new 0 0 97.395 97.395;"
                 	 xml:space="preserve">
@@ -342,7 +375,7 @@
       </div>
       
       <div class="copy">
-        &copy; 2009–2017 «Строительная компания Брусвянка»
+        &copy; 2011–2017 «Строительная компания Брусвянка»
       </div>
       
     </div>
@@ -408,18 +441,20 @@
                 } else {
                   var data = $(this).serializeArray();
                 var goal = $(this).data('goal');
-                $.post('/recall', data, function(response){
+                $.post('/order', data, function(response){
                     alert(response.result);
                     $('.form_recall').find('input[type="text"]').val("");
                     $('.form_recall').find('input[type="email"]').val("");
+                    console.log('response:');
+                    console.log(response);
                     $('body').removeClass('opened-modal');
                     $('.modal').fadeOut();
                     
                     if(goal) {
-                      yaCounter9636880.reachGoal(goal);
+                      //yaCounter9636880.reachGoal(goal);
                     } 
                     else {
-                      yaCounter9636880.reachGoal('other_goal');
+                      //yaCounter9636880.reachGoal('other_goal');
                     }
                 });
                 return false;
@@ -438,13 +473,15 @@
                     alert(response.result);
                     $('.form_order').find('input[type="text"]').val("");
                     $('.form_order').find('input[type="email"]').val("");
+                    console.log('response:');
+                    console.log(response);
                     $('body').removeClass('opened-modal');
                     $('.modal').fadeOut();
                     if(goal) {
-                      yaCounter9636880.reachGoal(goal);
+                      //yaCounter9636880.reachGoal(goal);
                     }
                     else { 
-                      yaCounter9636880.reachGoal('other_goal');
+                      //yaCounter9636880.reachGoal('other_goal');
                     }
                 });
                 return false;
@@ -462,11 +499,13 @@
                       alert(response.result);
                       $('.form_order').find('input[type="text"]').val("");
                       $('.form_order').find('input[type="email"]').val("");
+                                console.log('response:');
+                    console.log(response);
                       if(goal) {
-                        yaCounter9636880.reachGoal(goal);
+                        //yaCounter9636880.reachGoal(goal);
                       }
                       else { 
-                        yaCounter9636880.reachGoal('other_goal');
+                        //yaCounter9636880.reachGoal('other_goal');
                       }
                   });
                   return false;

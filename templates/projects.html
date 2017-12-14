@@ -70,7 +70,7 @@
             {% thumbnail project.mainphoto "271x192" quality=70 crop="center" as photo %}
               <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
             {% endthumbnail %}
-              <a href="{{ project.get_absolute_url }}" class="title">{{ project.name }}</a>
+              <a href="{{ project.get_absolute_url }}" class="title">{{ project.title }}</a>
             <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}</div>
           </div>
         {% endfor %}

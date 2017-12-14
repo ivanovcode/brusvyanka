@@ -163,7 +163,8 @@ def free_recall(request):
         if form.is_valid():
             text = form.body_serialize(request)
             if not settings.DEBUG:
-                form.send_email(text)
+                form.send_email(text)   
+                #form.send_sms(text) 
             response['result'] = u"Мы с вами свяжемся!"
             response['ok'] = True
         else:
@@ -182,7 +183,8 @@ def do_order(request):
         if form.is_valid():
             text = form.body_serialize(request)
             if not settings.DEBUG:
-                form.send_email(text)
+                form.send_email(text)  
+                #form.send_sms(text)    
             response['result'] = u"Мы с вами свяжемся!"
             response['ok'] = True
         else:

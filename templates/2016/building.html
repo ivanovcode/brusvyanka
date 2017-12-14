@@ -206,15 +206,7 @@
             {% endfor %}
             
           </div>
-          <div class="row">
-              <h2 class="block_title">Также мы строим</h2>
-              <div class="row">
-                {% get_stroitelstvo as links %}
-                {% for a in links %}
-                  <p><a href="{{ a.get_absolute_url }}">{{ a.name }}</a></p>
-                {% endfor %}  
-              </div>
-          </div>
+
         </div>
         
     {% endspaceless %}
