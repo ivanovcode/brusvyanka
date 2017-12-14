@@ -1,21 +1,29 @@
 ### Быстрый старт ###
 
-На локальном 
+На локальной машине проброс ключа ssh
+```
 eval `ssh-agent`
 ssh-add
 ssh -A ivanov@test.brusvyanka.ru -p 2525
+```
 
-На удаленном
-pip install ansible
-~/.local/bin/ansible-playbook conf.yml -v  (all | localhost)
-~/.local/bin/ansible-playbook deploy.yml -v  (all | localhost)
+На удаленном сервере
+```
+pip install ansible #установка ansible-playbook
+~/.local/bin/ansible-playbook conf.yml -v  #(! all | localhost) при первом запуске
+~/.local/bin/ansible-playbook deploy.yml -v  #(! all | localhost) тоже самое что git pull
+virtualenv .env #развертывание окружения
+```
 
 Дополнительные команды
-sudo chown -R www-data ./brusvyanka
-source .env/bin/activate | sudo python manage.py thumbnail clear | sudo rm -rf ./media/cache/* | sudo rm -rf ./media2/cache/*
-service uwsgi restart
-virtualenv .env
+```
+sudo chown -R www-data ./brusvyanka #фикс с правами на случай
+source .env/bin/activate #хз нужно выполнить
+sudo python manage.py thumbnail clear #работа с кэшем
 
+service uwsgi restart #рестарт после любых изменений
+
+```
 
 
 ### Тестовая среда на докере ###
