@@ -1,5 +1,5 @@
 Django==1.9.1
-sorl-thumbnail
+sorl-thumbnail==12.3
 django-tinymce
 django-tinymce-filebrowser
 Pillow
