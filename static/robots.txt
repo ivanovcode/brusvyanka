@@ -1,19 +1,2 @@
-User-Agent: Yandex
+User-agent: *
 Disallow: /
-Disallow: /admin
-Disallow: /*.swf
-Disallow: /form
-Disallow: /recall
-Disallow: /search
-
-
-User-Agent: *
-Disallow: /
-Disallow: /admin
-Disallow: /*.swf
-Disallow: /form
-Disallow: /recall
-Disallow: /search
-
-Host: test.brusvyanka.ru
-
