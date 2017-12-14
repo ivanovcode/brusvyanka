@@ -8,7 +8,7 @@
 
 - name: clone repo
   git:
-    repo: git@gitlab.com:Gasoid/brusvyanka.git
+    repo: git@gitlab.com:seavalley/brusvyanka.git
     dest: /opt/brusvyanka/
     accept_hostkey: yes
 
