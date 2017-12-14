@@ -1,0 +1,37 @@
+.content-inner > .content {
+	padding-top: 20px;
+	min-height: calc(100% - 263px);
+	padding-bottom: 50px;
+	
+	@media #{$medium-only} {
+		//padding-left: rem-calc(20);
+		//padding-right: rem-calc(20);
+	}
+	
+	.content_main {
+		padding-top: 30px;
+		padding-bottom: 54px;
+	}
+}
+
+table {
+    width: 100%;
+    border-spacing: initial;
+	tbody {
+		td {
+			& + td {
+				border-left: solid 1px #CCCCCC;
+			}
+		}
+		tr + tr {
+			td {
+				border-top: solid 1px #CCCCCC;
+				
+			}
+		}
+	}
+}
+
+#map {
+    padding-top: 20px;
+}

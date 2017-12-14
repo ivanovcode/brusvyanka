@@ -1,0 +1,22 @@
+.row {
+	@media #{$medium-only} {
+		width: rem-calc(880); 
+	}
+	
+	.row {
+  	@media #{$small-only} {
+    	margin: 0;
+  	}
+	}
+	
+}
+.row-mobile-fix {
+  @media #{$small-only} {
+    //padding-left: 1.07143rem;
+    //padding-right: 1.07143rem;    
+  }
+}
+
+@import "_content";
+@import "_sodagrid";
+@import "_modal";

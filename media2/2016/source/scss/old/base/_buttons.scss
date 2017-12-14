@@ -1,0 +1,93 @@
+.button {
+	$button-padding-top: rem-calc(7.5);
+	$button-padding-bot: rem-calc(9.5);
+	$button-padding-left-right: rem-calc(24);
+	padding: $button-padding-top $button-padding-left-right $button-padding-bot;
+	
+	&:focus {
+		outline: none;
+	}
+	
+	&.button-active {
+		padding: rem-calc(8.5) rem-calc(24) rem-calc(8.5);
+	}
+}
+
+.button.button-clear {
+	padding: rem-calc(4);
+	margin: 0;
+	background-color: transparent;
+}
+
+.button.post-load-more {
+	margin-top: 15px;
+	span {
+		font-size: rem-calc(20);
+		display: inline-block;
+		position: relative;
+		bottom: -2px;
+	}
+}
+
+.button[data-hover] {
+	background: #D8D8D8;
+	
+	&:hover {
+		background: #CCCCCC;
+	}
+	
+	&:active {
+		background: #BFBFBF;
+	}
+}
+
+.button.button-signin-vk,
+.button.button-signin-od,
+.button.button-signin-fb {
+	min-width: rem-calc(220);
+	height: rem-calc(38);
+	line-height: rem-calc(38);
+	border-radius: 3px;
+	font-size: rem-calc(13);
+	background-color: #D8D8D8;
+	padding: rem-calc(0 15);
+	margin-bottom: 0;
+	text-align: left;
+	@include single-transition('background-color', 100ms);
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+		width: 24px;
+		height: 24px;
+		background-image: url(../img/signin-social-icons-sprite.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		margin-top: -3px;
+	}
+}
+.button.button-signin-vk {
+	&:before {
+		background-position: 0 0;
+	}
+	&:hover {
+		background-color: #497799;
+	}
+}
+.button.button-signin-od {
+	&:before {
+		background-position: 0 -24px;
+	}
+	&:hover {
+		background-color: #FF892B;
+	}
+}
+.button.button-signin-fb {
+	&:before {
+		background-position: 0 -48px;
+	}
+	&:hover {
+		background-color: #3B73B2;
+	}
+}

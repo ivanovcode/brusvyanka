@@ -1,0 +1,146 @@
+
+/*
+.soda-grid_row.post-full {
+	.col3 {
+		@media #{$medium-only} {
+			padding-left: rem-calc(0);
+			padding-right: rem-calc(10);
+			float: left;
+		}
+	}
+	.col1 {
+		@media #{$medium-only} {
+			padding-left: rem-calc(10);
+			padding-right: rem-calc(0);
+			float: right;
+		}
+	}
+	.col2 {
+		@media #{$medium-only} {
+			padding-left: rem-calc(0);
+			padding-right: rem-calc(10);
+			float: left;
+		}
+		.order-form {
+			@media #{$medium-only} {
+				
+			}
+		}
+	}
+}
+*/
+
+.post-full_art {
+	margin-top: -4px;
+	color: #303030;
+    font-size: 24px;
+    line-height: 29px;
+    
+    @media #{$small-only} {
+	    text-align: center !important;
+    }
+    
+    span {
+		font-size: 16px;
+		line-height: 19px;
+    }
+}
+
+.post-full_tags {
+	font-size: 14px;
+    line-height: 20px;
+    margin-top: 30px;
+    
+    @media #{$small-only} {
+	    text-align: center !important;
+    }
+    
+    ul {
+	    list-style: none;
+	    
+	    @media #{$small-only} {
+	    	margin-left: 0;
+		}
+	    li {
+		    display: block;
+		    
+		    & + li {
+			    margin-top: 5px;
+			}
+	    }
+    }
+}
+
+.post-full_social-share {
+	list-style: none;
+	 @media #{$small-only} {
+    	margin-left: 0;
+    	text-align: center !important;
+	}
+	li {
+		line-height: 15px;
+		margin-bottom: 10px;
+		font-size: 14px;
+		@include single-transition(color, 300ms);
+		
+		@media #{$small-only} {
+		    display: inline-block;
+		    margin: 0 10px;
+		}
+		
+		a {
+			color: #BFBFBF;
+			font-weight: 700;
+		}
+		.icon {
+			fill: #FFFFFF;
+			
+		}
+		
+		span {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background-color: #D8D8D8;
+			@include single-transition(background-color, 300ms);
+			text-align: center;
+		    vertical-align: middle;
+		    line-height: 23px;
+		}
+		
+		&.title {
+			margin-bottom: 15px;
+		}
+		&.vk a {
+			&:hover {
+				color: #53749C;
+				span {
+					background-color: #53749C;
+				}
+			}
+		}
+		&.fb a {
+			&:hover {
+				color: #4B6FB7;
+				span {
+					background-color: #4B6FB7;
+				}
+			}
+		}
+		&.od a {
+			&:hover {
+				color: #F3880D;
+				span {
+					background-color: #F3880D;
+				}
+			}
+		}
+	}
+}
+
+.post-full {
+	.order-form {
+		position: relative;
+		padding-top: 85px;
+	}
+}

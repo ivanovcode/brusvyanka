@@ -1,0 +1,147 @@
+.widget.widget-list {
+	.post-item {
+		min-height: 130px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+		
+		& + .post-item {
+			margin-top: 20px;
+		}
+		
+		&_pic {
+			float: left;
+			img {
+				width: 130px;
+				height: 130px;
+				opacity: 1;
+				
+				@include single-transition(opacity, 100ms);
+			}
+			&:hover {
+				img {
+					opacity: 0.95;
+				}
+			}
+		}
+		&_details {
+			padding-left: rem-calc(145);
+		}
+		&_title {
+			margin-top: 0;
+			
+			h5 {
+				font-size: rem-calc(15);
+				line-height: rem-calc(17);
+				font-weight: 600;
+				margin-top: 0;
+				margin-bottom: 0;
+				padding-top: 5px;
+				padding-bottom: 10px;
+			}
+			
+			&, & a {
+				color: #303030;
+				-webkit-transition: color 0.1s;
+				-moz-transition: color 0.1s;
+				-o-transition: color 0.1s;
+				transition: color 0.1s;
+				
+				&:hover {
+					color: #5FA2E6;
+				}
+			}
+		}
+		&_author-link {
+			font-size: rem-calc(13);
+			
+		}
+		&_date {
+			font-size: rem-calc(12);
+			color: #7F7F7F;
+			margin-top: 8px;
+		}
+	}
+	
+	.listing_item {
+		
+		& + .listing_item {
+			margin-top: 35px;
+		}
+		
+		.listing_item-pic {
+			padding-bottom: 10px;
+			opacity: 1;
+			
+			@include single-transition(opacity, 300ms);
+		}
+		
+		.listing_item-name {
+			a {
+				color: #000;
+				font-size: 13px;
+			    text-align: left;
+			    line-height: 17px;
+			    display: inline-block;
+			    
+			    @include single-transition(color, 300ms);
+			}
+		}
+		&:hover {
+			.listing_item-name {
+				a {
+					color: #60A5EA;
+				}
+			}
+			.listing_item-pic {
+				opacity: 0.9;
+			}
+		}
+	}
+}
+
+.col3 .widget.widget-list {
+	.post-item {
+		& + .post-item {
+			margin-top: 16px;
+		}
+		&_details {
+			width: 100%;
+			padding: 0;
+			display: block;
+		}
+		&_pic {
+			width: 100%;
+			max-width: 100%;
+			float: none;
+			padding-bottom: 4px;
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&_title {
+			display: inline;
+			font-size: 14px;
+			line-height: 20px;
+			color: #333333;
+			font-weight: 600;
+			@include single-transition(color, 100ms);
+			
+		}
+		
+		&:hover {
+			.post-item_pic img {
+				opacity: 0.95;
+			}
+			.post-item_title {
+				color: #60A5EA;
+			}
+		}
+	}
+}
+
+#interesting-posts .widget-title {
+	margin-bottom: 18px;
+}
