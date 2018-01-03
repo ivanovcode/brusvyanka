@@ -1,11 +1,7 @@
-upstream django {
-    server unix:///run/uwsgi/app/brusvyanka/socket;
-}
-
-
 server {
-    listen       80;
-    server_name  _;
+    listen 151.248.112.108:80;
+
+    server_name www.brusvyanka.ru 151.248.112.108 brusvyanka.ru;
 
   location /o-nas.html {
     rewrite ^/.*  http://brusvyanka.ru/o-nas/ permanent;
@@ -447,7 +443,8 @@ server {
     location /rekonstrukciya/vosstanovlenie-fundament-doma {
       rewrite ^/.* http://brusvyanka.ru/rekonstrukciya-domov/fundament/vosstanovlenie-fundament-doma/ permanent;
     }
-    
+
+
     location ~* ^.+\.(txt|ico)$ {
        expires 8d;
        root /opt/brusvyanka/static/;
@@ -469,8 +466,8 @@ server {
     }
 
     location / {
-        uwsgi_pass  django;
+        uwsgi_pass  unix:///run/uwsgi/app/brusvyanka/socket;
         include     /etc/nginx/uwsgi_params;
-     }
-
+    }
 }
+
