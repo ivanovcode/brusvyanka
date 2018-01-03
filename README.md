@@ -1,4 +1,4 @@
-development
+production
 
 ### Быстрый старт ###
 
