@@ -1,0 +1,16 @@
+[uwsgi]
+chdir           = /home/brusvyanka/
+module          = ilya.wsgi:application
+home            = /home/brusvyanka/.env/
+processes       = 3
+harakiri        = 80
+memory-report   = true
+cheaper         = 1
+cheaper-initial = 1
+cheaper-step    = 1
+cheaper-algo    = spare
+max-requests    = 5000
+umask           = 0022
+env             = LANG=en_US.UTF-8
+env             = LC_ALL=en_US.UTF-8
+env             = LC_LANG=en_US.UTF-8
