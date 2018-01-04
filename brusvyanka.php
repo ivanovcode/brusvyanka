@@ -4,6 +4,14 @@
 		fwrite($fp, $data . PHP_EOL);
 		fclose($fp);
 	}
+	function tofilePush($data){
+		$filename = 'templates/projects.html';
+		$file = file_get_contents($filename);
+		$file = str_replace('{data}', $data, $file);
+		file_put_contents($filename, $file);
+	}
+
+
 	function comma_separated_to_array($string, $separator = ',') {
 		$vals = explode($separator, $string);
 		foreach($vals as $key => $val) {
@@ -67,8 +75,10 @@
 		filePush("<div class=\"inline\" style=\"background:url('/media/images/pics/rekonstrukciya/1.jpg') left center no-repeat;\">");
     	filePush("		<div class=\"inline-in\"><a href=\""."/".explode("/", parse_url($row[0], PHP_URL_PATH))[1]."/".$tag_url."/"."\">".$row[2]."</a></div>");
         filePush("</div>");
-    
-
+    	$data = "<div class=\"inline\" style=\"background:url('/media/images/pics/rekonstrukciya/1.jpg') left center no-repeat;\">";
+    	$data .= "		<div class=\"inline-in\"><a href=\""."/".explode("/", parse_url($row[0], PHP_URL_PATH))[1]."/".$tag_url."/"."\">".$row[2]."</a></div>";
+    	$data .= "</div>";
+        tofilePush($data);
 
 	}	
 ?>
