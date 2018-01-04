@@ -50,7 +50,8 @@ def view_tag(request, tag_id):
     if 'ilyaeliseev' in referer:
         response['articles'] = ""
         response['reasons'] = []
-    tags = Tag.objects.all()
+    tags = Tag.objects.all().exclude(img='')
+    #tags = Tag.objects.all()
     response['tags'] = tags
     response['tag_id'] = tag_id
     response['tag_cur'] = tag.name
@@ -146,7 +147,8 @@ def view_article(request, url):
     response = {'article': article, "tag": article.tag, 'url_s': url}
     response['page'] = copy.copy(article)
     response['page_projects'] = 1
-    tags = Tag.objects.all()
+    tags = Tag.objects.all().exclude(img='')
+    #tags = Tag.objects.all()
     response['tags'] = tags
     try:
         url = reverse('projects')
