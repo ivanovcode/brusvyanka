@@ -1,4 +1,9 @@
 <?php	
+	function filePush($data){
+		$fp = fopen('brusvyanka.html', 'a');
+		fwrite($fp, $data . PHP_EOL);
+		fclose($fp);
+	}
 	function comma_separated_to_array($string, $separator = ',') {
 		$vals = explode($separator, $string);
 		foreach($vals as $key => $val) {
@@ -53,11 +58,17 @@
 			$tag_id = $db->lastInsertRowID();	
 			if(intval($tag_id)==0) die('empty tag id');		
 			$results = $db->query("INSERT INTO django_admin_log (id, object_id, object_repr, action_flag, change_message, content_type_id, user_id, action_time) VALUES (NULL, '".$tag_id."', '".$row[2]."', 1, 'Добавлено. Добавлен tag project \"".$row[2]."\".', ".$tag_id.", 3, '".date("Y-m-d H:i:s")."');");
-			$results = $db->query("INSERT INTO pages_url_site (id, content_id, content_type_id, url) VALUES (NULL, ".$tag_id.", ".$tag_id.", '/proekty-domov/odnoetazhnye/');");
+			$results = $db->query("INSERT INTO pages_url_site (id, content_id, content_type_id, url) VALUES (NULL, ".$tag_id.", ".$tag_id.", '"."/".explode("/", parse_url($row[0], PHP_URL_PATH))[1]."/".$tag_url."/"."');");
 		}
 		foreach($project_ids as $project_id) {
 			if(intval($project_id)==0) continue;
 			$results = $db->query("INSERT INTO projects_tagproject (id, project_id, tag_id, \"order\") VALUES (NULL, ".$project_id.", ".$tag_id.", 0);");
 		}
+		filePush("<div class=\"inline\" style=\"background:url('/media/images/pics/rekonstrukciya/1.jpg') left center no-repeat;\">");
+    	filePush("		<div class=\"inline-in\"><a href=\""."/".explode("/", parse_url($row[0], PHP_URL_PATH))[1]."/".$tag_url."/"."\">".$row[2]."</a></div>");
+        filePush("</div>");
+    
+
+
 	}	
 ?>
