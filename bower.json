@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "admin.ladysshowroom": "https://github.com/seavalley/brusvyanka.sync.git#master"
+    "brusvyanka.sync": "https://github.com/seavalley/brusvyanka.sync.git#master"
   }
 }
