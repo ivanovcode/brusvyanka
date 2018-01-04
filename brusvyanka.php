@@ -62,7 +62,7 @@
 			projects_tag.url = '".$tag_url."'
 		");
 		if(empty($tag_id)) {
-			$results = $db->query("INSERT INTO projects_tag (id, name, title, h1, url, descr, sort, keyword, description, is_index, img) VALUES (NULL, '".$row[2]."', '".$row[2]."', '".$row[2]."', 'odnoetazhnye', '<h2>".$row[2]."</h2>', 0, '', '', 1, '');");
+			$results = $db->query("INSERT INTO projects_tag (id, name, title, h1, url, descr, sort, keyword, description, is_index, img) VALUES (NULL, '".$row[2]."', '".$row[2]."', '".$row[2]."', '".$tag_url."', '<h2>".$row[2]."</h2>', 0, '', '', 1, '');");
 			$tag_id = $db->lastInsertRowID();	
 			if(intval($tag_id)==0) die('empty tag id');		
 			$results = $db->query("INSERT INTO django_admin_log (id, object_id, object_repr, action_flag, change_message, content_type_id, user_id, action_time) VALUES (NULL, '".$tag_id."', '".$row[2]."', 1, 'Добавлено. Добавлен tag project \"".$row[2]."\".', ".$tag_id.", 3, '".date("Y-m-d H:i:s")."');");
