@@ -29,7 +29,8 @@ def view_projects(request):
     referer = request.META.get("HTTP_REFERER", "")
     if 'ilyaeliseev' in referer:
         response['articles'] = ""
-    tags = Tag.objects.all()
+    tags = Tag.objects.all().exclude(img='')
+    #tags = Tag.objects.all()
     response['tags'] = tags
     response['page_projects'] = 1
     response['page'] = page
