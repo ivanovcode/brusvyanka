@@ -1,0 +1,22 @@
+{
+  "name": "brusvyanka.sync",
+  "homepage": "https://github.com/seavalley/brusvyanka.sync.git",
+  "authors": [
+    "seavalley <development@ivanov.site>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "cdn/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "admin.ladysshowroom": "https://github.com/seavalley/brusvyanka.sync.git#master"
+  }
+}

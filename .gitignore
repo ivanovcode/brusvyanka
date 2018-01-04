@@ -13,3 +13,4 @@ test_emails
 settings.json
 logs
 *.retry
+/bower_components
