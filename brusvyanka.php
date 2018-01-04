@@ -49,6 +49,7 @@
 	}
 
 	$rows = array_map('str_getcsv', file('brusvyanka.csv'));
+	$data = "";
 	foreach($rows as $row) {
 		$db = new SQLite3('db.sqlite3');
 		$project_ids = getProjectIds($row, $db);
@@ -75,10 +76,11 @@
 		filePush("<div class=\"inline\" style=\"background:url('/media/images/pics/rekonstrukciya/1.jpg') left center no-repeat;\">");
     	filePush("		<div class=\"inline-in\"><a href=\""."/".explode("/", parse_url($row[0], PHP_URL_PATH))[1]."/".$tag_url."/"."\">".$row[2]."</a></div>");
         filePush("</div>");
-    	$data = "<div class=\"inline\" style=\"background:url('/media/images/pics/rekonstrukciya/1.jpg') left center no-repeat;\">";
+    	$data .= "<div class=\"inline\" style=\"background:url('/media/images/pics/rekonstrukciya/1.jpg') left center no-repeat;\">";
     	$data .= "		<div class=\"inline-in\"><a href=\""."/".explode("/", parse_url($row[0], PHP_URL_PATH))[1]."/".$tag_url."/"."\">".$row[2]."</a></div>";
     	$data .= "</div>";
-        tofilePush($data);
+        
 
 	}	
+	tofilePush($data);
 ?>
