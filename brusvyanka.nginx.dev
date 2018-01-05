@@ -375,79 +375,206 @@ server {
     rewrite ^/.*  http://test.brusvyanka.ru/ permanent;
   }
 
-    location /peredelka/derevenskogo-doma {
-      rewrite ^/.*  http://test.brusvyanka.ru/rekonstrukciya-domov/derevenskogo-doma/ permanent;
-    } 
-    location /peredelka/dachi-v-zhiloj-dom {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/dachi-v-zhiloj-dom/ permanent;
-    }
-    location /stroitelstvo/karkasnaya-pristrojka {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/karkasnyh/ permanent;
-    }
-    location /peredelka/mansardy {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/mansarda/mansardy/ permanent;
-    }
-    location /peredelka/starogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/starogo-doma/ permanent;
-    }
-    location /peredelka/staroj-bani {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-kleenogo-brusa/staroj-bani/ permanent;
-    }
-    location /rekonstrukciya/bani {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fasad/bani/ permanent;
-    }
-    location /rekonstrukciya/brevenchatogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-ozilindrovannogo-brevna/brevenchatogo-doma/ permanent;
-    }
-    location /rekonstrukciya/chastnogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fasad/chastnogo-doma/ permanent;
-    }
-    location /rekonstrukciya/dachnogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/dachnyh-domov/ permanent;
-    }
-    location /rekonstrukciya/doma-v-derevne {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-ozilindrovannogo-brevna/doma-v-derevne/ permanent;
-    }
-    location /rekonstrukciya/domov-iz-brusa {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-profilirovannogo-brusa/domov-iz-brusa/ permanent;
-    }
-    location /rekonstrukciya/fundamenta-derevyannogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fundament/fundamenta-derevyannogo-doma/ permanent;
-    }
-    location /rekonstrukciya/i-pristrojka-k-domu {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/i-pristrojka-k-domu/ permanent;
-    }
-    location /rekonstrukciya/karkasnogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/karkasnyh/karkasnogo-doma/ permanent;
-    }
-    location /rekonstrukciya/kottedzhej {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/kottedzhej/ permanent;
-    }
-    location /rekonstrukciya/sgorevshego-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fasad/sgorevshego-doma/ permanent;
-    }
-    location /rekonstrukciya/starogo-dom {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/staryh-domov/ permanent;
-    }
-    location /rekonstrukciya/derevyannykh-domov {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/derevyannogo-doma/ permanent;
-    }
-    location /rekonstrukciya/kryshi-chastnogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/krovlya/kryshi-chastnogo-doma/ permanent;
-    }
-    location /rekonstrukciya/vosstanovlenie-derevenskogo-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-rublennogo-lesa/vosstanovlenie-derevenskogo-doma/ permanent;
-    }
-    location /rekonstrukciya/vosstanovlenie-derevjannyh-domov {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/vosstanovlenie-derevjannyh-domov/ permanent;
-    }
-    location /rekonstrukciya/vosstanovlenie-doma-posle-pozhara {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/vosstanovlenie-doma-posle-pozhara/ permanent;
-    }
-    location /rekonstrukciya/vosstanovlenie-fundament-doma {
-      rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fundament/vosstanovlenie-fundament-doma/ permanent;
-    }
-    
+  location /peredelka/derevenskogo-doma {
+    rewrite ^/.*  http://test.brusvyanka.ru/rekonstrukciya-domov/derevenskogo-doma/ permanent;
+  } 
+  location /peredelka/dachi-v-zhiloj-dom {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/dachi-v-zhiloj-dom/ permanent;
+  }
+  location /stroitelstvo/karkasnaya-pristrojka {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/karkasnyh/ permanent;
+  }
+  location /peredelka/mansardy {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/mansarda/mansardy/ permanent;
+  }
+  location /peredelka/starogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/starogo-doma/ permanent;
+  }
+  location /peredelka/staroj-bani {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-kleenogo-brusa/staroj-bani/ permanent;
+  }
+  location /rekonstrukciya/bani {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fasad/bani/ permanent;
+  }
+  location /rekonstrukciya/brevenchatogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-ozilindrovannogo-brevna/brevenchatogo-doma/ permanent;
+  }
+  location /rekonstrukciya/chastnogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fasad/chastnogo-doma/ permanent;
+  }
+  location /rekonstrukciya/dachnogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/dachnyh-domov/ permanent;
+  }
+  location /rekonstrukciya/doma-v-derevne {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-ozilindrovannogo-brevna/doma-v-derevne/ permanent;
+  }
+  location /rekonstrukciya/domov-iz-brusa {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-profilirovannogo-brusa/domov-iz-brusa/ permanent;
+  }
+  location /rekonstrukciya/fundamenta-derevyannogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fundament/fundamenta-derevyannogo-doma/ permanent;
+  }
+  location /rekonstrukciya/i-pristrojka-k-domu {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/i-pristrojka-k-domu/ permanent;
+  }
+  location /rekonstrukciya/karkasnogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/karkasnyh/karkasnogo-doma/ permanent;
+  }
+  location /rekonstrukciya/kottedzhej {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/kottedzhej/ permanent;
+  }
+  location /rekonstrukciya/sgorevshego-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fasad/sgorevshego-doma/ permanent;
+  }
+  location /rekonstrukciya/starogo-dom {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/staryh-domov/ permanent;
+  }
+  location /rekonstrukciya/derevyannykh-domov {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/derevyannogo-doma/ permanent;
+  }
+  location /rekonstrukciya/kryshi-chastnogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/krovlya/kryshi-chastnogo-doma/ permanent;
+  }
+  location /rekonstrukciya/vosstanovlenie-derevenskogo-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/iz-rublennogo-lesa/vosstanovlenie-derevenskogo-doma/ permanent;
+  }
+  location /rekonstrukciya/vosstanovlenie-derevjannyh-domov {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/derevyannyh/vosstanovlenie-derevjannyh-domov/ permanent;
+  }
+  location /rekonstrukciya/vosstanovlenie-doma-posle-pozhara {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/vosstanovlenie-doma-posle-pozhara/ permanent;
+  }
+  location /rekonstrukciya/vosstanovlenie-fundament-doma {
+    rewrite ^/.* http://test.brusvyanka.ru/rekonstrukciya-domov/fundament/vosstanovlenie-fundament-doma/ permanent;
+  }
+
+  # 1-35 new projects page https://docs.google.com/spreadsheets/d/1-9vdDWma_gz53gUKe4Ml22dAKpEeH4FRZD6kB4rTQdA/edit?usp=sharing
+
+  location /proekty-domov/odnoetazhnye/iz-blokov/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/odnoetazhnye-iz-blokov/ permanent;
+  }
+   
+  location /proekty-domov/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/karkasnie/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/karkasnie-odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/karkasnie/dvuhetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/karkasnie-dvuhetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-profilirovannogo-brusa/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-profilirovannogo-brusa-odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-penoblokov/s-cokolnym-etazhom/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-penoblokov-s-cokolnym-etazhom/ permanent;
+  }
+   
+  location /proekty-domov/iz-penoblokov/odnoetazhnye/do-150-m2/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-penoblokov-odnoetazhnye-do-150-m2/ permanent;
+  }
+   
+  location /proekty-domov/iz-penoblokov/odnoetazhnye/do-100-m2/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-penoblokov-odnoetazhnye-do-100-m2/ permanent;
+  }
+   
+  location /proekty-domov/iz-penoblokov/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-penoblokov-odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-penoblokov/dvuhetazhnye/10х10/  {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-penoblokov-dvuhetazhnye-10х10/ permanent;
+  }
+   
+  location /proekty-domov/iz-penoblokov/dvuhetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-penoblokov-dvuhetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-ozilindrovannogo-brevna/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-ozilindrovannogo-brevna-odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-kleenogo-brusa/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-kleenogo-brusa-odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-kirpicha/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-kirpicha/ permanent;
+  }
+   
+  location /proekty-domov/iz-gazobetona/s-cokolnym-etazhom/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-gazobetona-s-cokolnym-etazhom/ permanent;
+  }
+   
+  location /proekty-domov/iz-gazobetona/odnoetazhnye/do-100-m2/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-gazobetona-odnoetazhnye-do-100-m2/ permanent;
+  }
+   
+  location /proekty-domov/iz-gazobetona/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-gazobetona-odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-gazobetona/dvuhetazhnye/10х10/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-gazobetona-dvuhetazhnye-10х10/ permanent;
+  }
+   
+  location /proekty-domov/iz-brusa/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-brusa-odnoetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-brusa/dvuhetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-brusa-dvuhetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/iz-brevna/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-brevna/ permanent;
+  }
+   
+  location /proekty-domov/iz-blokov/dvuhetazhnye/s-erkerom/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-blokov-dvuhetazhnye-s-erkerom/ permanent;
+  }
+   
+  location /proekty-domov/iz-blokov/dvuhetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/iz-blokov-dvuhetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/dvuhetazhnye/s-mansardoj/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/dvuhetazhnye-s-mansardoj/ permanent;
+  }
+   
+  location /proekty-domov/dvuhetazhnye/s-garazhom/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/dvuhetazhnye-s-garazhom/ permanent;
+  }
+   
+  location /proekty-domov/dvuhetazhnye/s-cokolnym-etazhom/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/dvuhetazhnye-s-cokolnym-etazhom/ permanent;
+  }
+   
+  location /proekty-domov/dvuhetazhnye/nedorogie/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/dvuhetazhnye-nedorogie/ permanent;
+  }
+   
+  location /proekty-domov/dvuhetazhnye/nebolshie/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/dvuhetazhnye-nebolshie/ permanent;
+  }
+   
+  location /proekty-domov/dvuhetazhnye/do-100-m2/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/dvuhetazhnye-do-100-m2/ permanent;
+  }
+   
+  location /proekty-domov/dvuhetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/dvuhetazhnye/ permanent;
+  }
+   
+  location /proekty-domov/derevyannie/odnoetazhnye/ {
+    rewrite ^/.*  http://test.brusvyanka.ru/proekty-domov/derevyannie-odnoetazhnye/ permanent;
+  }
+   
+ 
     location ~* ^.+\.(txt|ico)$ {
        expires 8d;
        root /opt/brusvyanka/static/;
