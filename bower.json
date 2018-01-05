@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "brusvyanka.sync": "https://github.com/seavalley/brusvyanka.sync.git#master"
+    "brusvyanka.sync": "seavalley/brusvyanka.sync"
   }
 }
