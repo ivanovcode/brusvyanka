@@ -255,6 +255,60 @@
       
         {% block content %}
         {% endblock %}
+
+	<!--Partners List-->
+	<div class="block" style="margin-bottom:0px;">
+		<div class="row">
+			<h2 class="block_title">Наши партнеры</h2>
+			<div class="block_sub-title" style="margin-bottom:0px;">За годы работы компания Брусвянка обзавелась надёжными и проверенными партнёрами, в чьём профессионализме и компетентности мы не раз убеждались за время сотрудничества.</div>
+		</div>
+	</div>
+	<style>
+
+	.nbs-flexisel-nav-right{
+		background-color:#80c462!important;
+		border-radius:0px!important;
+	}
+	.nbs-flexisel-nav-left{
+        	background-color:#80c462!important;
+	        border-radius:0px!important;
+	}
+	</style>	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script>var jquery_1_7_1 = jQuery;</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexisel/2.2.2/js/jquery.flexisel.min.js"></script>
+      
+	<link href="/static/css/partners.css" rel="stylesheet" type="text/css">
+	<ul id="partners-list">
+		<li><img src="/static/partners/factum.png" /></li>
+		<li><img src="/static/partners/karsen.png" /></li>
+		<li><img src="/static/partners/plastok.png" /></li>
+          	<li><img src="/static/partners/biiks.png" /></li>
+          	<li><img src="/static/partners/gidroinzenerstroy.png" /></li> 
+          	<li><img src="/static/partners/klindoors.png" /></li>      
+          	<li><img src="/static/partners/velux.png" /></li>   
+          	<li><img src="/static/partners/vintosnova.png" /></li>        
+          	<li><img src="/static/partners/vologodskyles.png" /></li>       
+          	<li><img src="/static/partners/zavod.png" /></li>                                 
+      	</ul>    
+      	<div class="clearout"></div>
+	<script type="text/javascript">
+	$(function() {
+		var $ = jQuery = jquery_1_7_1;      
+		$(window).load(function() {   
+	        	$("#partners-list").flexisel({
+		        	visibleItems: 3,
+				itemsToScroll: 1,         
+				autoPlay: {
+					enable: true,
+					interval: 5000,
+					pauseOnHover: true
+				}        
+			});          
+		});
+	})	
+      </script>  
+      <!--/Partners List-->
       
       <div class="block block--feedback block--parralax" style="background-image: url({% get_parralax 'feedback' %});" data-bottom-top="background-position:center calc(50% + 80px);" data-top-bottom="background-position:center calc(50% + -200px);">
         <div class="row">
