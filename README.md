@@ -10,7 +10,7 @@ ssh -A ivanov@test.brusvyanka.ru -p 2525
 ```
 
 На удаленном сервере
-_nginx конфиг /etc/nginx/seite-enabled/brusvyanka должен быть удален на удаленном сервере_
+_ перед установкой nginx конфиг /etc/nginx/seite-enabled/brusvyanka должен быть удален на удаленном сервере_
 _конфиг берется ansible-playbook из папки deploy/roles/tasks/conf/templates/_
 
 ```
@@ -38,12 +38,7 @@ sudo chown -R www-data ./brusvyanka #фикс с правами на случа�
 **Внимание! Исправить nginx конфиг, в ссылках убрать test.**
 
 ### Добавление новых проектов по таблице ###
-```
-sudo git reset --hard
-sudo ~/.local/bin/ansible-playbook ./deploy/deploy.yml -v
-sudo php brusvyanka.php #скрипт добавления новых проектов из brusvyanka.csv
-
-```
+(Быстрый старт см. в brusvyanka.sync)[https://github.com/seavalley/brusvyanka.sync]
 
 ### Тестовая среда на докере ###
 
