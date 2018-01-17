@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/et_dlg.js
+tinyMCE.addI18n('et.advhr_dlg',{size:"K\u00f5rgus",noshade:"Ilma varjuta",width:"Laius",normal:"Normaalne",widthunits:"\u00dchikud"});

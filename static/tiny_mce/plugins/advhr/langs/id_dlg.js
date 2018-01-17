@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/id_dlg.js
+tinyMCE.addI18n('id.advhr_dlg',{size:"Tinggi",noshade:"Tanpa bayangan",width:"Lebar",normal:"Normal",widthunits:"Unit-unit"});

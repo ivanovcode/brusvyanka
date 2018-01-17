@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/lv_dlg.js
+tinyMCE.addI18n('lv.advhr_dlg',{size:"Augstums",noshade:"Bez \u0113nas",width:"Platums",normal:"Norm\u0101ls",widthunits:"Vien\u012bbas"});

@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/paste/langs/it_dlg.js
+tinyMCE.addI18n('it.paste_dlg',{"word_title":"Premere CTRL+V sulla tastiera per incollare il testo nella finestra.","text_linebreaks":"Mantieni interruzioni di riga","text_title":"Premere CTRL+V sulla tastiera per incollare il testo nella finestra."});

@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/tr_dlg.js
+tinyMCE.addI18n('tr.advhr_dlg',{size:"Y\u00fckseklik",noshade:"G\u00f6lge yok",width:"Geni\u015flik",normal:"Normal",widthunits:"Birimler"});

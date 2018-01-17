@@ -1,1 +1,3 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/example/langs/en_dlg.js
+tinyMCE.addI18n('en.example_dlg',{
+	title : 'This is just a example title'
+});

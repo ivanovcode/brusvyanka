@@ -1,1 +1,3 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/example/langs/en.js
+tinyMCE.addI18n('en.example',{
+	desc : 'This is just a template button'
+});

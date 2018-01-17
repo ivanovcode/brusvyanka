@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/paste/langs/eo_dlg.js
+tinyMCE.addI18n('eo.paste_dlg',{"word_title":"Uzu CTRL V por alglui tekston en la fenestron.","text_linebreaks":"Konservi linisaltojn","text_title":"Uzu CTRL V por alglui tekston en la fenestron."});

@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/paste/langs/hr_dlg.js
+tinyMCE.addI18n('hr.paste_dlg',{"word_title":"Koristite CTRL+V na tipkovnici da zalijepite tekst u prozor.","text_linebreaks":"Zadr\u017ei prijelome","text_title":"Koristite CTRL+V na tipkovnici da zalijepite tekst u prozor."});

@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/lb_dlg.js
+tinyMCE.addI18n('lb.advhr_dlg',{size:"H\u00e9icht",noshade:"Kee Schiet",width:"Breet",normal:"Normal",widthunits:"Units"});

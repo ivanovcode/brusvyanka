@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/zh-tw_dlg.js
+tinyMCE.addI18n('zh-tw.advhr_dlg',{size:"\u9ad8",noshade:"\u7121\u9670\u5f71\u6548\u679c",width:"\u5bec",normal:"Normal",widthunits:"Units"});

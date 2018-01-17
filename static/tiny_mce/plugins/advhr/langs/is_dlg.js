@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/is_dlg.js
+tinyMCE.addI18n('is.advhr_dlg',{size:"H\u00e6\u00f0",noshade:"Enginn skuggi",width:"Breidd",normal:"Normal",widthunits:"Units"});

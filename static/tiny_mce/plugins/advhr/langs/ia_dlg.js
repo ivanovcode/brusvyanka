@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/ia_dlg.js
+tinyMCE.addI18n('ia.advhr_dlg',{size:"\u957f",noshade:"\u65e0\u9634\u5f71",width:"\u5bbd",normal:"Normal",widthunits:"Units"});

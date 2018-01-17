@@ -1,1 +1,1 @@
-/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/eu_dlg.js
+tinyMCE.addI18n('eu.advhr_dlg',{size:"Altuera",noshade:"Itzalik gabe",width:"Zabalera",normal:"Ohikoa",widthunits:"Unitateak"});
