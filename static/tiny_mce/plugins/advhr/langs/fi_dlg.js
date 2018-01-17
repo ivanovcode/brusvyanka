@@ -1,1 +1,1 @@
-tinyMCE.addI18n('fi.advhr_dlg',{size:"Korkeus",noshade:"Ei varjoa",width:"Leveys",normal:"Normaali",widthunits:"Yksik\u00f6t"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/fi_dlg.js

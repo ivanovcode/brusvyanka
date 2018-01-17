@@ -1,1 +1,1 @@
-tinyMCE.addI18n('sl.advhr_dlg',{size:"Vi\u0161ina",noshade:"Brez sen\u010denja",width:"\u0160irina",normal:"Obi\u010dajno",widthunits:"Enote"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/sl_dlg.js

@@ -1,1 +1,1 @@
-tinyMCE.addI18n('et.paste_dlg',{"word_title":"Vajuta CTRL+V oma klaviatuuril teksti aknasse kleepimiseks.","text_linebreaks":"J\u00e4ta reavahetused","text_title":"Vajuta CTRL+V oma klaviatuuril teksti aknasse kleepimiseks."});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/paste/langs/et_dlg.js

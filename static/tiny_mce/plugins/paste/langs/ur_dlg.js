@@ -1,1 +1,1 @@
-tinyMCE.addI18n('ur.paste_dlg',{"word_title":"Use CTRL+V on your keyboard to paste the text into the window.","text_linebreaks":"Keep linebreaks","text_title":"Use CTRL+V on your keyboard to paste the text into the window."});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/paste/langs/ur_dlg.js

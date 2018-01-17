@@ -1,1 +1,1 @@
-tinyMCE.addI18n('br.paste_dlg',{"word_title":"Use CTRL+V para colar o texto na janela.","text_linebreaks":"Manter quebras de linha","text_title":"Use CTRL+V para colar o texto na janela."});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/paste/langs/br_dlg.js

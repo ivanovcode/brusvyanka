@@ -1,1 +1,1 @@
-tinyMCE.addI18n('az.advhr_dlg',{size:"H\u00fcnd\u00fcrl\u00fcy\u00fc",noshade:"K\u00f6lg\u0259 yoxdur",width:"Eni",normal:"Normal",widthunits:"Units"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/az_dlg.js

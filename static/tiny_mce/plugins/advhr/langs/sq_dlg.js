@@ -1,1 +1,1 @@
-tinyMCE.addI18n('sq.advhr_dlg',{size:"Gjat\u00ebsia",noshade:"Pa hije",width:"Gjer\u00ebsia",normal:"Normal",widthunits:"Nj\u00ebsi"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/sq_dlg.js

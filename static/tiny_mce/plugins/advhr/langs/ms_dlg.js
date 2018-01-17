@@ -1,1 +1,1 @@
-tinyMCE.addI18n('ms.advhr_dlg',{size:"Tinggi",noshade:"Tanpa bayang",width:"Lebar",normal:"Normal",widthunits:"Units"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/ms_dlg.js

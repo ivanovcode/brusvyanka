@@ -1,1 +1,1 @@
-tinyMCE.addI18n('nl.paste_dlg',{"word_title":"Gebruik Ctrl+V om tekst in het venster te plakken.","text_linebreaks":"Regelafbreking bewaren","text_title":"Gebruik Ctrl+V om tekst in het venster te plakken."});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/paste/langs/nl_dlg.js

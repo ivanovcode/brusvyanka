@@ -1,1 +1,1 @@
-tinyMCE.addI18n('nn.advhr_dlg',{size:"Storleik",noshade:"Inga skugge",width:"Breidd",normal:"Normal",widthunits:"Einingar"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/nn_dlg.js

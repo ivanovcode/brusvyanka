@@ -1,1 +1,1 @@
-tinyMCE.addI18n('kb.advhr_dlg',{size:"Te\u0263zi",noshade:"Ulac tili",width:"Tehri",normal:"Amagnu",widthunits:"Iferdisen"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/kb_dlg.js

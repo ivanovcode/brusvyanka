@@ -1,1 +1,1 @@
-tinyMCE.addI18n('cy.advhr_dlg',{size:"Uchder",noshade:"Dim cysgod",width:"Lled",normal:"Normal",widthunits:"Unedau"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/cy_dlg.js

@@ -1,1 +1,1 @@
-tinyMCE.addI18n('eo.advhr_dlg',{size:"Alteco",noshade:"Sen ombro",width:"Lar\u011deco",normal:"Normal",widthunits:"Units"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/eo_dlg.js

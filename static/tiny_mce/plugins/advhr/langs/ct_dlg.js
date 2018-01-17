@@ -1,1 +1,1 @@
-tinyMCE.addI18n('ct.advhr_dlg',{size:"Al\u00e7ada",noshade:"Sense sombra",width:"Amplada",normal:"Normal",widthunits:"Unitats"});
+/home/ilyaeliseev/venv/local/lib/python2.7/site-packages/tinymce/static/tiny_mce/plugins/advhr/langs/ct_dlg.js
