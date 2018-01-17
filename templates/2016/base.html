@@ -370,6 +370,7 @@
             <li><a {% href_active page.url '/proektirovanie-domov/' %}>Проектирование домов</a></li>
             <li><a {% href_active page.url '/stroitelstvo/' %}>Строительство домов</a></li>
             <li><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция домов</a></li>
+            <li><a href='/certificates/'>Сертификаты</a></li>
           </ul>
         </div>
         
@@ -379,6 +380,7 @@
             <li><a href="{% url 'projects' %}">Проекты домов</a></li>
             <li><a href="{% url 'builds' %}">Строительство фото</a></li>
             <li><a href="{% url 'interior' %}">Реконструкция</a></li>
+            <li><a href='/payment/'>Оплата</a></li>
           </ul>
         </div>
         
@@ -389,7 +391,7 @@
               <li><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
               <li><a {% href_active page.url '/sitemap/' %}>Карта сайта</a></li>
               <li><a href='/novosti/'>Новости</a></li>
-		<li><a href='/payment/'>Оплата</a></li>
+		
               <li><a href='/blog/'>Статьи</a></li>
 
             </ul>
