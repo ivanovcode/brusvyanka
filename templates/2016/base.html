@@ -591,16 +591,5 @@
   {% include 'inc_counters.html' %}
   </body>
 </html>
-{% if page.url == "/proekty-domov/karkasnie/" %}karkasnie0{% endif %}
-{% if page.url == "proekty-domov/karkasnie/" %}karkasnie1{% endif %}
-{% if page.url == "proekty-domov/karkasnie" %}karkasnie2{% endif %}
-{% if page.url == "/proekty-domov/karkasnie" %}karkasnie3{% endif %}
-{% if page.url == "/proekty-domov/" %}karkasnie4{% endif %}
-{% if page.url == 'proekty-domov' %}karkasnie5{% endif %}
-{% if page.url == 'karkasnie' %}karkasnie5 yah!!{% endif %}
-{% if page.url == "/" %}111{% endif %}
-{{ page.url }}
-{{ page.name }}
-{{ request.path }}
-{{ request.get_full_path }}
+{% if page.url == 'karkasnie' %}{% include 'links/karkasnie.html' %}{% endif %}
 {% endspaceless %}
