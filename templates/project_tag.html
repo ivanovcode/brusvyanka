@@ -75,6 +75,17 @@
             {% endthumbnail %}
               <a href="{{ project.get_absolute_url }}" class="title">{{ project.name }}</a>
             <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}</div>
+            <style>
+            .btn-order {
+                font-size: 14px!important;                 
+                height: 34px!important;
+                line-height: 31px!important;              
+                padding: 0 15px!important;             
+                text-transform: uppercase!important;
+            }
+            </style>
+            <a class="js__call-order btn-order" href="/proekty-domov/">Заказать проект</a>
+
           </div>
         {% endfor %}
       </div>
