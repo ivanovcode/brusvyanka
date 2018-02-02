@@ -74,24 +74,8 @@
               <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
             {% endthumbnail %}
               <a href="{{ project.get_absolute_url }}" class="title">{{ project.name }}</a>
-            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}</div>
-<style>
-.btn-order {
-    font-weight: 500;
-    font-size: 14px;
-    color: #6a6a6a;
-    border: 2px solid #9f9f9f;
-    text-decoration: none;
-    height: 34px;
-    line-height: 31px;
-    display: inline-block;
-    padding: 0 15px;
-    transition: all .2s ease-out 0s;
-    text-transform: uppercase;
-    margin: 15px 0px;
-}
-</style>
-<div style="text-align:center;"><a class="js__call-order btn-order" href="#">Заказать проект</a></div>
+            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__call-order btn-order" href="#">Заказать</a></span></div>
+
 
 
 
