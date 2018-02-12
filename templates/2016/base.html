@@ -143,9 +143,9 @@
 					<li {% class_active page.url 'stroitelstvo' %}><a {% href_active page.url '/stroitelstvo/' %}>Строительство</a></li>
 					<li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
 					<li {% class_active page.url 'why-we' %}><a {% href_active page.url '/why-we/' %}>Почему мы</a></li>
-					<li {% if page_projects %}class="active"{% endif %} ><a href="{% url 'projects' %}">Проекты домов</a></li>
-					<li {% if page_builds %}class="active"{% endif %}><a href="../stroitelstvo-domov/">Строительство домов</a></li>
-					<li {% if page_interior %}class="active"{% endif %}><a href="{% url 'interior' %}">Реконструкция домов</a></li>
+					<li {% if page_projects %}class="active"{% endif %} ><a {% if not page_projects %}href="{% url 'projects' %}"{% endif %}>Проекты домов</a></li>
+					<li {% if page_builds %}class="active"{% endif %}><a {% if not page_builds %}href="{% url 'builds' %}"{% endif %}>Строительство домов</a></li>
+					<li {% if page_interior %}class="active"{% endif %}><a {% if not page_interior %}href="{% url 'interior' %}"{% endif %}>Реконструкция домов</a></li>
 					<li {% class_active page.url 'otzyvi' %}><a {% href_active page.url '/otzyvi/' %}>Отзывы</a></li>
 					<li {% if page_contacts %}class="active"{% endif %}><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
 					<li {% class_active page.url 'sitemap' %}><a {% href_active page.url '/sitemap/' %}>Карта сайта</a></li>
@@ -230,9 +230,9 @@
           <li class="has-child">
               <a href="#" onclick="return false;">Портфолио</a>
               <ul>
-                <li {% if page_projects %}class="active"{% endif %} ><a{% if not page_projects or not page.url == 'proekty-domov' %} href="{% url 'projects' %}"{% endif %}>Проекты домов</a></li>
-                <li {% if page_builds %}class="active"{% endif %}><a {% if not page_builds %}href="{% url 'builds' %}"{% endif %}>Строительство домов</a></li>
-                <li {% if page_interior %}class="active"{% endif %}><a {% if not page_interior %}href="{% url 'interior' %}"{% endif %}>Реконструкция домов</a></li>
+                <li {% if page_projects %}class="active"{% endif %} ><a href="{% url 'projects' %}">Проекты домов</a></li>
+                <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>
+                <li {% if page_interior %}class="active"{% endif %}><a href="{% url 'interior' %}">Реконструкция домов</a></li>
               </ul>
           </li>
          
