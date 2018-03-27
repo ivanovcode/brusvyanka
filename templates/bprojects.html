@@ -70,7 +70,32 @@
               <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
             {% endthumbnail %}
               <a href="{{ project.get_absolute_url }}" class="title">{{ project.name }}</a>
-            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}</div>
+            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__call-order btn-order" href="#">Заказать</a></span></div>
+ <style>
+.btn-order {
+    position: relative;
+    top: -2px;
+    font-size: 11px;
+    color: #6a6a6a;
+    border: 1px solid #80c462;
+    text-decoration: none;
+    height: 20px;
+    line-height: 19px;
+    display: inline-block;
+    padding: 0 10px;
+    transition: all .2s ease-out 0s;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #80c462;
+}
+.btn-order:hover{
+  background: #80c462; 
+  color: #fff;
+}
+.item.hovered .btn-order {
+    color: #80c462!important;
+}
+</style>
           </div>
         {% endfor %}
       </div>
