@@ -194,8 +194,36 @@
             компания &laquo;Брусвянка&raquo;
           </span>
         </a>
-
+        <style>
+          .header-contacts {
+            position: relative;
+          }
+          .header-time {
+            position: absolute;
+            top: 14px;
+            right: 184px;
+            font-size: 10px;
+            white-space: nowrap;
+            font-style: italic;          
+          }
+          .header-address {
+            position: absolute;
+            top: 0px;
+            right: 184px;
+            font-size: 11px;
+            white-space: nowrap;            
+          }
+          .header-phone {
+            position: absolute;
+            top: 24px;
+            right: 182px;
+            white-space: nowrap;
+            font-size: 21px;            
+          }
+        </style>
         <div class="header-contacts">
+          <span class="header-time"></span>
+          <span class="header-address"></span>
           <a href="tel:+74957227111" class="header-phone">+7 (495) 722-71-11</a>
           <button class="js__call-order">Заказать звонок</button>
         </div>
