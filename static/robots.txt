@@ -13,5 +13,6 @@ Disallow: *openstat*
 Disallow: */rss
 Disallow: */feed
 Disallow: /*search?
+Disallow: */certificates/
 Host: brusvyanka.ru
 Sitemap: http://brusvyanka.ru/sitemap.xml
