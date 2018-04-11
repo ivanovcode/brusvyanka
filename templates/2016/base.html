@@ -245,7 +245,9 @@
               <li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
 
             </ul>
-          </li>          
+          </li> 
+          <li {% if page_projects %}class="active"{% endif %} ><a href="{% url 'projects' %}">Проекты домов</a></li>
+          <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>         
           <li class="has-child">
             <a href="/why-we/">Почему мы</a>
             <ul>
@@ -258,8 +260,8 @@
           <li class="has-child">
               <a href="#" onclick="return false;">Портфолио</a>
               <ul>
-                <li {% if page_projects %}class="active"{% endif %} ><a href="{% url 'projects' %}">Проекты домов</a></li>
-                <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>
+                
+                
                 <li {% if page_interior %}class="active"{% endif %}><a href="{% url 'interior' %}">Реконструкция домов</a></li>
               </ul>
           </li>
