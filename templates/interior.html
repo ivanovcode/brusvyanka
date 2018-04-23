@@ -24,7 +24,7 @@
       <li><a href="/">Главная</a></li>
 			<li><a href="{% url 'interior' %}">{{ page.name }}</a></li>
             {% if tag %}<li><a href="{% url 'tag_interior' tag.url %}">{{ tag }}</a></li>{% endif %}
-			<li class="current"><a>{{ project.name }} {{project.sq|floatformat}}м²</a></li>
+			<li class="current">{{ project.name }} {{project.sq|floatformat}}м²</li>
     </ul>
   </div>
 </div>
