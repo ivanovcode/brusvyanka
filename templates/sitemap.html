@@ -69,73 +69,29 @@
             <li><a href="/why-we/">Почему мы</a></li>
     </ul>
 
-<ul>
+
      <li>
        <a href="{% url 'projects' %}">Проекты домов</a>
-
-       <ul style="margin-left: 30px;">
-       {% for tag in tags %}
-       <li><a href="{% url 'tag_project' tag.url %}">{{ tag }}</a>
-
-       </li>
-       {% endfor %}
-       </ul>
-
-       {% if articles %}
-               <ul style="margin-left: 30px;">
-                    {% for article in articles %}
-                        <li><a href="{{ article.get_absolute_url }}">{{ article.name }}</a> </li>
-                    {% endfor %}
-                  </ul>
-       {% endif %}
-
-       <ul style="margin-left: 30px;margin-top: 20px;">
-       {% for project in projects %}
-       <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
-       {% endfor %}
-       </ul>
 
 
 
      </li>
-</ul>
-<ul>
+
+
 <li>   <a href="{% url 'builds' %}">Строительство домов</a>
 
-    <ul style="margin-left: 30px;">
-       {% for tag in build_tags %}
-       <li><a href="{% url 'tag_builds' tag.url %}">{{ tag }}</a>
 
-       </li>
-       {% endfor %}
-       </ul>
-
-       <ul style="margin-left: 30px;margin-top: 20px;">
-       {% for project in buildings %}
-       <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
-       {% endfor %}
-       </ul>
 
 </li>
-     </ul>
+ 
 
-<ul>
+
 <li>   <a href="{% url 'interior' %}">Реконструкция домов</a>
 
-    <ul style="margin-left: 30px;">
-       {% for tag in interior_tags %}
-       <li><a href="{% url 'tag_interior' tag.url %}">{{ tag }}</a></li>
-       {% endfor %}
-       </ul>
 
-       <ul style="margin-left: 30px;margin-top: 20px;">
-       {% for project in interiors %}
-       <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
-       {% endfor %}
-       </ul>
 
 </li>
-     </ul>
+
 
 <ul>
 
