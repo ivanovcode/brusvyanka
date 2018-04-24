@@ -76,13 +76,7 @@
        <ul style="margin-left: 30px;">
        {% for tag in tags %}
        <li><a href="{% url 'tag_project' tag.url %}">{{ tag }}</a>
-           {% if tag.articletag_set.count %}
-                  <ul style="margin-left: 30px;">
-                    {% for article in tag.articletag_set.all %}
-                        <li><a href="{{ article.get_absolute_url }}">{{ article.name }}</a> </li>
-                    {% endfor %}
-                  </ul>
-           {% endif %}
+
        </li>
        {% endfor %}
        </ul>
@@ -111,13 +105,7 @@
     <ul style="margin-left: 30px;">
        {% for tag in build_tags %}
        <li><a href="{% url 'tag_builds' tag.url %}">{{ tag }}</a>
-        {% if tag.articletag_set.count %}
-                  <ul style="margin-left: 30px;">
-                    {% for article in tag.articletag_set.all %}
-                        <li><a href="{{ article.get_absolute_url }}">{{ article.name }}</a> </li>
-                    {% endfor %}
-                  </ul>
-           {% endif %}
+
        </li>
        {% endfor %}
        </ul>
