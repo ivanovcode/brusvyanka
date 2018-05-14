@@ -1,0 +1,53 @@
+<!-- why-we.html -->
+{% extends "2016/base.html" %}
+{% load thumbnail %}
+{% load banner_list %}
+{% load staticfiles %}
+{% block content %}
+    {% spaceless %}
+        <div class="breadcrumbs">
+          <div class="row">
+            <ul>
+              <li><a href="/">Главная</a></li>
+              <li><a href="/o-nas/">О нас</a></li>
+              <li class="current"><span>{{ page.name }}</span></li>
+            </ul>
+          </div>
+        </div>
+        <style>
+        .block.block--tests .item .title{padding-top:0px!important;}
+      </style>
+        <div class="content">
+        <div class="block block--tests">
+          <div class="row">
+            <h1 class="block_title">Отзывы наших клиентов</h1>
+            
+            <div class="block_sub-title">
+              {{ page.body|safe }}
+            </div>
+            
+            <div class="row">
+             
+            {% feedback_list '' as feedbacks %}
+            {% for feedback in feedbacks %}
+            <div class="row" style="margin-top:15px;">
+                <div style="display:none" class="columns small-4 medium-2">
+                    {% thumbnail feedback.img '130x130' crop="center" as thumb%}
+                       <img src="{{ thumb.url }}" alt style="max-width: 99%;padding-bottom: 15px;"/>
+                    {% endthumbnail %}
+                  </div>
+            <div class="columns small-12 medium-12">
+              <div class="item">
+                <div class="title">{{ feedback.video_url }}  <span style="font-weight: normal; font-size: 13px;">{{ feedback.date|date:'d.m.Y' }}</span></div>
+                <div>{{ feedback.title }}</div>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+        </div>
+    {% endspaceless %}
+{% endblock content %}
+{% block head_title %}{{ page.title }}{% endblock %}
