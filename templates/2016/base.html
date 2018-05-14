@@ -186,8 +186,8 @@
   	
     <div class="header">
       <div class="wrapper">
-        <a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %} class="header-logo">
-          <img src="{% static '2016/images/logo.png' %}" style="width: 179px; margin-left: 12px;"/>
+        <a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %} class="header-logo" title="Главная">
+          <img src="{% static '2016/images/logo.png' %}" alt="Главная" style="width: 179px; margin-left: 12px;"/>
           <span class="header-desc">
             Архитектурно-строительная<br/>
             компания &laquo;Брусвянка&raquo;
@@ -234,7 +234,7 @@
       <div class="wrapper">
         
         <ul>
-          <li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+          <!--<li в{% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>-->
 
           <li class="has-child">
             <a href="#" onclick="return false;">Услуги и цены</a>
