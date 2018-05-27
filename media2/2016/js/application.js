@@ -3572,8 +3572,6 @@
                         e(document).scrollTop() > 120 ? e("body").addClass("fixed-menu") : e("body").removeClass("fixed-menu")
                     }), e(".js__call-order").click(function() {
                         return e("body").addClass("opened-modal"), e("#call-order").fadeIn(), !1
-                    }), e(".js__calc-order").click(function() {
-                        return e("body").addClass("opened-modal"), e("#calc-order").fadeIn(), !1
                     }), e(".js__project-order").click(function() {
                         return e("body").addClass("opened-modal"), e("#project-order").fadeIn(), !1
                     }), e(".modal_close").click(function() {
