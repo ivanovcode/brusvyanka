@@ -100,7 +100,7 @@
               <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
             {% endthumbnail %}
               <a href="{{ project.get_absolute_url }}" class="title">{{ project.title }}</a>
-            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__call-order btn-order" href="#">Заказать</a></span></div>
+            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: <span class="js__calc-order" data-href="http://http://brusvyanka.ru/{{ project.get_absolute_url }}">{{ project.articul }}</span><span style="float:right"><a class="js__call-order btn-order" href="#">Заказать</a></span></div>
 <style>
 .btn-order {
     position: relative;
