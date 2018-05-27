@@ -65,22 +65,7 @@
           <div class="row">
             <h1 class="listing_title">{{ page.h1 }}</h1>
       
-      <div class="modal modal-calc" id="calc-order">
-          <div class="modal_content">
-              <button class="modal_close">&nbsp;</button>
-              <iframe src="http://calc.brusvyanka.ru" style="border: 0; width: 100%; height: 100%">Your browser doesn't support iFrames.</iframe>        
-          </div>
-      </div>
-      <style>
-        .modal-calc .modal_content {
-          padding: 0px;
-        }
-      </style>  
-      <script type="text/javascript">
-        $("#calc-order").on("fadeInComplete", function() {
-            console.log('fadeInComplete');
-        });       
-      </script>  
+
 
             <div class="row">
         {% for project in projects %}                
