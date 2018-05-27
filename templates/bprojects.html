@@ -61,7 +61,7 @@
 		
 	<div class="block block--port">
     <div class="row">
-      <h1 class="listing_title">{{ page.h1 }}<span class="js__calc-order">.</span><span class="js__calc-iframe">.</span></h1>
+      <h1 class="listing_title">{{ page.h1 }}</h1>
 
       <div class="modal modal-calc" id="calc-order">
           <div class="modal_content">
@@ -86,7 +86,8 @@
           var $ = jQuery = jquery_2_1_4;  
           $(document).ready(function(){
               $(".js__calc-order").click(function() {
-                  $('#calc-order-iframe').attr('src', 'http://calc.brusvyanka.ru/?referer=http://brusvyanka.ru/proekty-domov/tayga/');
+                  var href = $(this).attr('data-href');
+                  $('#calc-order-iframe').attr('src', href);
                   $("body").addClass("opened-modal");
                   $("#calc-order").fadeIn();
                   $("#calc-order").fadeIn("slow", function() {
@@ -104,7 +105,7 @@
               <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
             {% endthumbnail %}
               <a href="{{ project.get_absolute_url }}" class="title">{{ project.name }}</a>
-            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__call-order btn-order" href="#">Заказать</a></span></div>
+            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: <span class="js__calc-order" data-href="{{ project.get_absolute_url }}">{{ project.articul }}</span><span style="float:right"><a class="js__call-order btn-order" href="#">Заказать</a></span></div>
  <style>
 .btn-order {
     position: relative;
