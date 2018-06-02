@@ -111,7 +111,7 @@
               <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
             {% endthumbnail %}
               <a href="{{ project.get_absolute_url }}" class="title">{{ project.title }}</a>
-            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__calc-order btn-order" data-href="http://calc.brusvyanka.ru/?referer=http://brusvyanka.ru{{ project.get_absolute_url }}" href="#"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;узнать цену</a></span></div>
+            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__calc-order btn-order" data-href="http://calc.brusvyanka.ru/?referer=http://brusvyanka.ru{{ project.get_absolute_url }}" href="javascript:void(0)"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;узнать цену</a></span></div>
 <style>
   .item:hover .btn-order {
     animation: bounce 1s;
