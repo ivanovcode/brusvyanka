@@ -380,7 +380,21 @@
             {% endfor %}
             </div>
             <div class="controls clearfix">
-                <a class="btn--clear" href="{% url 'projects' %}">Ознакомиться с полным портфолио</a>
+                <a class="btn--clear btn-portfolio-fix" href="{% url 'projects' %}">Ознакомиться с полным портфолио</a>
+                <style>
+                      .btn-portfolio-fix{
+                          height: 75px;
+                          line-height: 75px;
+                          padding: 0 75px;
+                      }
+                      @media only screen and (max-width: 45.71429em) {
+                        .btn-portfolio-fix{
+                          height: 60px;
+                          line-height: 58px;
+                          padding: 0 30px;                        
+                        }
+                      }
+                </style>
             </div>
             
           </div>
