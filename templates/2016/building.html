@@ -13,7 +13,22 @@
               <div class="img"><img src="{% static '2016/images/icon--service-stroi--white.png' %}" alt="Строительство домов и коттеджей" /></div>
               <h1 class="title"><span>{{ page.h1 }}</span></h1>
               {{ page.body|safe }}
-              <button class="btn btn--trans js__call-order">Заказать звонок</button>
+              <button class="btn btn--trans js__call-order btn-call-order-fix">Заказать звонок</button>
+              <style>
+                    .btn-call-order-fix{
+                      margin-bottom: 75px;
+                      margin-top: 25px;
+                      height: 65px;
+                      line-height: 65px;
+                      padding: 0 100px;                      
+                    }
+                    @media only screen and (max-width: 45.71429em) {
+                      .btn-call-order-fix{
+
+                      }
+                    }
+               </style>
+
             </div>
           </div>
         </div>
