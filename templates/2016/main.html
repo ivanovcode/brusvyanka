@@ -11,7 +11,22 @@
               <h1 class="title">{{ page.h1|safe }}</h1>
               <p>Закажите дом вашей мечты!<br/>
               </p>
-              <button class="btn js__call-order" style="padding-left:150px;padding-right: 150px;">Заказать</button>
+              <button class="btn js__call-order btn-order-fix">Заказать</button>
+              <style>
+                  .btn-order-fix{
+                      padding-left:150px;
+                      padding-right: 150px;  
+                  }
+                  @media only screen and (max-width: 45.71429em) {
+                      .btn-order-fix {
+                          float: none;
+                          width: 100%;
+                      }
+                  }
+              </style>
+
+
+
             </div>
           </div>
         </div>
