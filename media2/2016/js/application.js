@@ -3541,25 +3541,37 @@
                         var i = e(".post-full"),
                             n = i.offset(),
                             s = n.top,
-                            o = i.find(".order-form");
+                            o = i.find(".order-form"),
+                            o2 = i.find(".order-form2");
                         e(document).height();
                         e(window).width() > 1217 && e(window).scroll(function() {
                             var t = e(document).scrollTop();
                             t > s - 50 && t < s + i.height() - o.height() - 100 ? o.css("top", t - s + 50) : t >= s + i.height() - o.height() - 100 ? o.css("top", n) : o.css("top", 0);
                             var n = o.css("top")
-                        })
+                        });
+                        e(window).width() > 1217 && e(window).scroll(function() {
+                            var t = e(document).scrollTop();
+                            t > s - 50 && t < s + i.height() - o2.height() - 100 ? o2.css("top", t - s + 50) : t >= s + i.height() - o2.height() - 100 ? o2.css("top", n) : o2.css("top", 0);
+                            var n = o2.css("top")
+                        });
                     }
                     if (e(".projects-cont").length > 0) {
                         var i = e(".projects-cont"),
                             n = i.offset(),
                             s = n.top,
-                            o = i.find(".order-form");
+                            o = i.find(".order-form"),
+                            o2 = i.find(".order-form2");
                         e(document).height();
                         e(window).width() > 1217 && e(window).scroll(function() {
                             var t = e(document).scrollTop();
                             t > s - 100 && t < s + i.height() - o.height() - 100 ? o.css("top", t - s + 100) : t >= s + i.height() - o.height() - 100 ? o.css("top", n) : o.css("top", 0);
                             var n = o.css("top")
-                        })
+                        });
+                        e(window).width() > 1217 && e(window).scroll(function() {
+                            var t = e(document).scrollTop();
+                            t > s - 100 && t < s + i.height() - o2.height() - 100 ? o2.css("top", t - s + 100) : t >= s + i.height() - o2.height() - 100 ? o2.css("top", n) : o2.css("top", 0);
+                            var n = o2.css("top")
+                        });
                     }
                     e(window).width();
                     e(".search .close").click(function() {
