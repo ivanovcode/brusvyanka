@@ -60,110 +60,131 @@
 		</select>
 	</div>
 
-  <div class="block block--port">
-    <div class="row">
-      <h1 class="listing_title">{{ page.h1 }}</h1>
-
-      <div class="modal modal-calc" id="calc-order">
-          <div class="modal_content">
-              <button class="modal_close">&nbsp;</button>
-              <iframe id="calc-order-iframe" src="http://calc.brusvyanka.ru" style="border: 0; width: 100%; height:374px;">Your browser doesn't support iFrames.</iframe>        
+  <div class="soda-grid_row projects-cont row">
+    <div class="col1">
+      <div class="block block--port">
+        <div class="row">
+          <h1 class="listing_title">{{ page.h1 }}</h1>
+          <div class="modal modal-calc" id="calc-order">
+              <div class="modal_content">
+                  <button class="modal_close">&nbsp;</button>
+                  <iframe id="calc-order-iframe" src="http://calc.brusvyanka.ru" style="border: 0; width: 100%; height:374px;">Your browser doesn't support iFrames.</iframe>        
+              </div>
           </div>
-      </div>
-      <style>
-        .modal-calc .modal_content {
-          padding: 0px;
-        }
-        .modal-calc iframe {
-          display:block;
-          min-height:220px;
-          border: none;
-        }
-        @media all and (max-width: 415px) {
-          .modal_content{
-            margin-left: 15px;
-            margin-right: 15px;
-          }
-        }
-      </style>  
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
-      <script>var jquery_2_1_4 = jQuery;</script>
-      <script type="text/javascript">
-      $(function() {
-          var $ = jQuery = jquery_2_1_4;  
-          $(document).ready(function(){
-              $(".js__calc-order").click(function() {
-                  var href = $(this).attr('data-href');
-                  $('#calc-order-iframe').attr('src', href);
-                  $("body").addClass("opened-modal");
-                  $("#calc-order").fadeIn();
-                  $("#calc-order").fadeIn("slow", function() {
-                      console.log('fadeInComplete');
-                  });
-              });   
-          });
-      });  
-      </script>             
-      <div class="row">
-        {% for project in projects %}                
-          <div class="item columns small-12 medium-4 large-3">
-            {% thumbnail project.mainphoto "271x192" quality=70 crop="center" as photo %}
-              <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
-            {% endthumbnail %}
-              <a href="{{ project.get_absolute_url }}" class="title" style="min-height:55px;">{{ project.title }}</a>
-            <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__calc-order btn-order" data-href="http://calc.brusvyanka.ru/?referer=http://brusvyanka.ru{{ project.get_absolute_url }}" href="javascript:void(0)"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;узнать цену</a></span></div>
-<style>
-  .item:hover .btn-order {
-    animation: bounce 1s;
-  }
-  @keyframes bounce {
-    0%, 20%, 60%, 100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
+          <style>
+            .modal-calc .modal_content {
+              padding: 0px;
+            }
+            .modal-calc iframe {
+              display:block;
+              min-height:220px;
+              border: none;
+            }
+            @media all and (max-width: 415px) {
+              .modal_content{
+                margin-left: 15px;
+                margin-right: 15px;
+              }
+            }
+          </style>  
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+          <script>var jquery_2_1_4 = jQuery;</script>
+          <script type="text/javascript">
+          $(function() {
+              var $ = jQuery = jquery_2_1_4;  
+              $(document).ready(function(){
+                  $(".js__calc-order").click(function() {
+                      var href = $(this).attr('data-href');
+                      $('#calc-order-iframe').attr('src', href);
+                      $("body").addClass("opened-modal");
+                      $("#calc-order").fadeIn();
+                      $("#calc-order").fadeIn("slow", function() {
+                          console.log('fadeInComplete');
+                      });
+                  });   
+              });
+          });  
+          </script>             
+          <div class="row">
+            {% for project in projects %}                
+            <div class="item columns small-12 medium-4 large-3">
+                {% thumbnail project.mainphoto "271x192" quality=70 crop="center" as photo %}
+                <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
+                {% endthumbnail %}
+                <a href="{{ project.get_absolute_url }}" class="title" style="min-height:55px;">{{ project.title }}</a>
+                <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__calc-order btn-order" data-href="http://calc.brusvyanka.ru/?referer=http://brusvyanka.ru{{ project.get_absolute_url }}" href="javascript:void(0)"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;узнать цену</a></span></div>
+                <style>
+                    .item:hover .btn-order {
+                      animation: bounce 1s;
+                    }
+                    @keyframes bounce {
+                      0%, 20%, 60%, 100% {
+                        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                      }
 
-    40% {
-      -webkit-transform: translateY(-6px);
-      transform: translateY(-6px);
-    }
+                      40% {
+                        -webkit-transform: translateY(-6px);
+                        transform: translateY(-6px);
+                      }
 
-    80% {
-      -webkit-transform: translateY(-3px);
-      transform: translateY(-3px);
-    }
-  }
-
-.btn-order {
-    position: relative;
-    top: -2px;
-    font-size: 11px;
-    color: #6a6a6a;
-    border: 1px solid #80c462;
-    text-decoration: none;
-    height: 20px;
-    line-height: 19px;
-    display: inline-block;
-    padding: 0 10px;
-    transition: all .2s ease-out 0s;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #80c462;
-    border-radius:3px;
-    padding-left:7px;
-}
-.btn-order:hover{
-  background: #80c462; 
-  color: #fff;
-}
-.item.hovered .btn-order {
-    color: #80c462!important;
-}
-</style>
+                      80% {
+                        -webkit-transform: translateY(-3px);
+                        transform: translateY(-3px);
+                      }
+                    }
+                    .btn-order {
+                      position: relative;
+                      top: -2px;
+                      font-size: 11px;
+                      color: #6a6a6a;
+                      border: 1px solid #80c462;
+                      text-decoration: none;
+                      height: 20px;
+                      line-height: 19px;
+                      display: inline-block;
+                      padding: 0 10px;
+                      transition: all .2s ease-out 0s;
+                      text-transform: uppercase;
+                      font-weight: bold;
+                      color: #80c462;
+                      border-radius:3px;
+                      padding-left:7px;
+                    }
+                    .btn-order:hover{
+                    background: #80c462; 
+                    color: #fff;
+                    }
+                    .item.hovered .btn-order {
+                      color: #80c462!important;
+                    }
+                </style>
+            </div>
+            {% endfor %}
           </div>
-        {% endfor %}
+        </div>
       </div>
-    </div>
+    </div><!-- col1 -->
+
+    <div class="col2">
+          <div class="order-form">
+        <h3>Заказать звонок</h3>
+        <p>оставьте заявку и мы перезвоним вам в ближайшее время</p>
+        <form action="" class="form_recall" data-goal="projects_goal">{% csrf_token %}
+          <div class="field">
+            <input type="text" placeholder="Как к Вам обращаться" name="name"/>
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Контактный телефон" name="phone"/>
+          </div>
+          <div class="field field-submit">
+            <input class="button" type="submit" value="Оставить заявку" />
+          </div>
+        </form>
+      </div>
+    </div><!-- col2 -->
   </div>
+
 
 	<hr />
   <br/><br/>
