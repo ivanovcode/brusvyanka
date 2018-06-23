@@ -167,7 +167,21 @@
     </div><!-- col1 -->
 
     <div class="col2">
-
+        <div class="order-form">
+        <h3>Заказать звонок</h3>
+        <p>оставьте заявку и мы перезвоним вам в ближайшее время</p>
+        <form action="" class="form_recall" data-goal="projects_goal">{% csrf_token %}
+          <div class="field">
+            <input type="text" placeholder="Как к Вам обращаться" name="name"/>
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Контактный телефон" name="phone"/>
+          </div>
+          <div class="field field-submit">
+            <input class="button" type="submit" value="Оставить заявку" />
+          </div>
+        </form>
+      </div>
     </div><!-- col2 -->
   </div>
 
