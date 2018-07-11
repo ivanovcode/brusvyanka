@@ -634,6 +634,54 @@
     </script>
 
   {% include 'inc_counters.html' %}
+  <a href="#" id="go-top" title="Вверх">Вверх</a>
+  <style type="text/css">
+    .text-block {
+  width: 250px;
+  margin: 50px;
+}
+
+#go-top {
+  position: fixed; 
+  font-family: sans-serif;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  bottom: 25px; 
+  right: 10px; 
+  cursor:pointer; 
+  display:none;
+  width: 70px;
+  height: 30px;
+  background: #c0c0c0;
+  border-radius: 5px;
+}
+
+#go-top:hover {
+  background: #333;
+}
+  </style>
+<script type="text/javascript">
+  $(function() {
+ $.fn.scrollToTop = function() {
+  $(this).hide().removeAttr("href");
+  if ($(window).scrollTop() >= "250") $(this).fadeIn("slow")
+  var scrollDiv = $(this);
+  $(window).scroll(function() {
+   if ($(window).scrollTop() <= "250") $(scrollDiv).fadeOut("slow")
+   else $(scrollDiv).fadeIn("slow")
+  });
+  $(this).click(function() {
+   $("html, body").animate({scrollTop: 0}, "slow")
+  })
+ }
+});
+
+$(function() {
+ $("#go-top").scrollToTop();
+});
+
+</script>
   </body>
 <script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=5258496420085760"></script>
 </html>
