@@ -561,8 +561,8 @@
                 var goal = $(this).data('goal');
                 $.post('/order', data, function(response){
                     alert(response.result);
-                    console.log('order ok');
-                    yaCounter25663112.reachGoal('otpravit-zayavky'); 
+                    console.log('recall ok');
+                    yaCounter25663112.reachGoal('obr-zv-otpr'); 
                     $('.form_recall').find('input[type="text"]').val("");
                     $('.form_recall').find('input[type="email"]').val("");
                     console.log('response:');
@@ -591,6 +591,8 @@
                 var goal = $(this).data('goal');
                 $.post('/order', data, function(response){
                     alert(response.result);
+                    console.log('order ok');
+                    yaCounter25663112.reachGoal('otpravit-zayavky'); 
                     $('.form_order').find('input[type="text"]').val("");
                     $('.form_order').find('input[type="email"]').val("");
                     console.log('response:');
