@@ -561,6 +561,8 @@
                 var goal = $(this).data('goal');
                 $.post('/order', data, function(response){
                     alert(response.result);
+                    console.log('order ok');
+                    yaCounter25663112.reachGoal('otpravit-zayavky'); 
                     $('.form_recall').find('input[type="text"]').val("");
                     $('.form_recall').find('input[type="email"]').val("");
                     console.log('response:');
