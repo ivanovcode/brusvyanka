@@ -3570,8 +3570,8 @@
                         if (e(".search form").is(":not(.active)") || "" == e('.search input[type="text"]').val()) return !1
                     }), e(window).scroll(function() {
                         e(document).scrollTop() > 120 ? e("body").addClass("fixed-menu") : e("body").removeClass("fixed-menu")
-                    }), e(".js__call-order").click(function() {
-                        return e("body").addClass("opened-modal"), e("#call-order").fadeIn(), !1
+                    }), e(".js__call-order").click(function() {   
+                        return e("body").addClass("opened-modal"), e("#call-order").fadeIn(), console.log('%c target: obr-zv ', 'background: #80C462; color: #fff'), yaCounter25663112.reachGoal('obr-zv'), !1
                     }), e(".js__project-order").click(function() {
                         return e("body").addClass("opened-modal"), e("#project-order").fadeIn(), console.log('%c target: ostavit-zayavky2 ', 'background: #80C462; color: #fff'), yaCounter25663112.reachGoal('ostavit-zayavky2'), !1
                     }), e(".modal_close").click(function() {
