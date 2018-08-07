@@ -3573,7 +3573,7 @@
                     }), e(".js__call-order").click(function() {
                         return e("body").addClass("opened-modal"), e("#call-order").fadeIn(), !1
                     }), e(".js__project-order").click(function() {
-                        return e("body").addClass("opened-modal"), e("#project-order").fadeIn(), !1
+                        return e("body").addClass("opened-modal"), e("#project-order").fadeIn(), console.log('target: ostavit-zayavky2'), yaCounter25663112.reachGoal('ostavit-zayavky2'), !1
                     }), e(".modal_close").click(function() {
                         return e("body").removeClass("opened-modal"), e(this).parents(".modal").fadeOut(), !1
                     }), e(".block--port .item a").hover(function() {

@@ -224,7 +224,7 @@
           <span class="header-time">Пн-Вс с 10 до 19:00 (Заявки принимаются 24/7)</span>
           <span class="header-address">г.Москва, ул.Нижняя, дом.14, стр.1</span>
           <a href="tel:+74957227111" class="header-phone">+7 (495) 722-71-11</a>
-          <button class="js__call-order" onclick="yaCounter25663112.reachGoal('obr-zv'); return true;">Заказать звонок</button>
+          <button class="js__call-order" onclick="console.log('target: obr-zv');yaCounter25663112.reachGoal('obr-zv'); return true;">Заказать звонок</button>
         </div>
 
       </div>
@@ -444,7 +444,7 @@
         <div class="columns medium-3 large-3">
           <div class="contacts">
             <a href="tel:" class="footer-phone">+7 (495) 722-71-11</a><br/>
-            <button class="btn--clear js__call-order" onclick="yaCounter25663112.reachGoal('obr-zv'); return true;">Заказать звонок</button>
+            <button class="btn--clear js__call-order" onclick="console.log('target: obr-zv');yaCounter25663112.reachGoal('obr-zv'); return true;">Заказать звонок</button>
             <a class="mailto" href="mailto:info@brusvyanka.ru">info@brusvyanka.ru</a>
             
             <div class="social">
@@ -561,7 +561,7 @@
                 var goal = $(this).data('goal');
                 $.post('/order', data, function(response){
                     alert(response.result);
-                    console.log('recall ok');
+                    console.log('target: obr-zv-otpr');
                     yaCounter25663112.reachGoal('obr-zv-otpr'); 
                     $('.form_recall').find('input[type="text"]').val("");
                     $('.form_recall').find('input[type="email"]').val("");
@@ -590,8 +590,8 @@
                   var data = $(this).serializeArray();
                 var goal = $(this).data('goal');
                 $.post('/order', data, function(response){
-                    alert(response.result);
-                    console.log('order ok');
+                    alert(response.result);       
+                    console.log('target: otpravit-zayavky');
                     yaCounter25663112.reachGoal('otpravit-zayavky'); 
                     $('.form_order').find('input[type="text"]').val("");
                     $('.form_order').find('input[type="email"]').val("");
