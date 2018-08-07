@@ -30,23 +30,18 @@
              
             {% feedback_list '' as feedbacks %}
             <div class="row" style="margin-top:15px;">
-            {% for feedback in feedbacks %}
-            
-                <div style="display:none" class="columns small-4 medium-2">
-                    {% thumbnail feedback.img '130x130' crop="center" as thumb%}
-                       <img src="{{ thumb.url }}" alt style="max-width: 99%;padding-bottom: 15px;"/>
-                    {% endthumbnail %}
-                  </div>
-            <div class="columns small-12 medium-4">
-
-              <div class="item-otzyv" style="border: 5px solid #efefef;margin: 5px;padding: 30px;"> 
-                <div class="title" style="padding-top:0;"><span style="font-size: 18px;">{{ feedback.video_url }}</span><br/> <span style="font-weight: normal; font-size: 14px;font-style:italic;">{{ feedback.date }}</span><br><br></div>            
-                <div class="title">{{ feedback.title }}</div>
+            {% for feedback in feedbacks %}            
+              <div style="display:none" class="columns small-4 medium-2">
+                {% thumbnail feedback.img '130x130' crop="center" as thumb%}
+                   <img src="{{ thumb.url }}" alt style="max-width: 99%;padding-bottom: 15px;"/>
+                {% endthumbnail %}
               </div>
-
-
-            </div>
-            
+              <div class="columns small-12 medium-4">
+                <div class="item-otzyv" style="border: 5px solid #efefef;margin: 5px;padding: 30px;"> 
+                  <div class="title" style="padding-top:0;"><span style="font-size: 18px;">{{ feedback.video_url }}</span><br/> <span style="font-weight: normal; font-size: 14px;font-style:italic;">{{ feedback.date }}</span><br><br></div>            
+                  <div class="title">{{ feedback.title }}</div>
+                </div>
+              </div>            
             {% endfor %}
             </div>
             </div>
