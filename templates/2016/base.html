@@ -619,6 +619,8 @@
                   var goal = $(this).data('goal');
                   $.post('/order', data, function(response){
                       alert(response.result);
+                    console.log('%c target: otpravit-zayavky ', 'background: #80C462; color: #fff'); 
+                    yaCounter25663112.reachGoal('otpravit-zayavky'); 
                       $('.form_order').find('input[type="text"]').val("");
                       $('.form_order').find('input[type="email"]').val("");
                                 console.log('response:');
