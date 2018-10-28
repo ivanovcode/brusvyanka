@@ -249,7 +249,7 @@
             <li class="has-child">
                 <a href="{% url 'projects' %}">Проекты домов</a>
                 <ul>
-                    <li {% class_active page.url 'proekty-domov' %}><a {% href_active page.url '/proekty-domov/iz-ozilindrovannogo-brevna/' %}>Из оцилиндрованного бревна</a></li>
+                    <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-ozilindrovannogo-brevna/">Из оцилиндрованного бревна</a></li>
                  </ul>
             </li>
             <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>
