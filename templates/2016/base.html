@@ -249,7 +249,25 @@
             <li class="has-child">
                 <a href="{% url 'projects' %}">Проекты домов</a>
                 <ul>
-                    <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-ozilindrovannogo-brevna/">Из оцилиндрованного бревна</a></li>
+                    <div class="top-menu-col top-menu-left">
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-ozilindrovannogo-brevna/">Из оцилиндрованного бревна</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-kleenogo-brusa/">Из клееного бруса</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/karkasnie/">Каркасные</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-gazobetona/">Из газобетона</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-rublennogo-lesa/">Из рубленного леса</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-blokov/">Из блоков</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/derevyannie/">Деревянные</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-penoblokov/">Из пеноблоков</a></li>
+                    </div>
+                    <div class="top-menu-col top-menu-right">
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-brusa/">Из бруса</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/dvuhetazhnie/">Двухэтажные</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/zagorodnie/">Загородные</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/chastnie/">Частные</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-bbrevna/">Из бревна</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/iz-profilirovannogo-brusa/">Из профилированного бруса</a></li>
+                        <li {% class_active page.url 'proekty-domov' %}><a href="/proekty-domov/nebolshie/">Небольшие</a></li>
+                    </div>
                  </ul>
             </li>
             <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>
