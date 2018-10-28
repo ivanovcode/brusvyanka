@@ -271,12 +271,16 @@
                  </ul>
             </li>
             <style>
+                .top-menu-list{
+                    width: 515px;
+                }
                 .top-menu-col {
                 }
                 .top-menu-left{
+                    float:left;
                 }
                 .top-menu-right{
-
+                    float:right;
                 }
             </style>
             <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>
