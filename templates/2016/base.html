@@ -229,73 +229,78 @@
 
       </div>
     </div>
-    
+
+
     <div class="top-menu">
       <div class="wrapper">
         
         <ul>
           <!--<li в{% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>-->
 
-          <li class="has-child">
-            <a href="#" onclick="return false;">Услуги и цены</a>
-            <ul>
-              <li {% class_active page.url 'proektirovanie-domov' %}><a {% href_active page.url '/proektirovanie-domov/' %}>Архитектурное проектирование</a></li>
-              <li {% class_active page.url 'stroitelstvo' %}><a {% href_active page.url '/stroitelstvo/' %}>Строительство</a></li>
-              <li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
-
-            </ul>
-          </li> 
-          <li {% if page_projects %}class="active"{% endif %} ><a href="{% url 'projects' %}">Проекты домов</a></li>
-          <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>         
-          <li class="has-child">
-            <a href="/why-we/">Почему мы</a>
-            <ul>
-              <li {% class_active page.url 'guarantees' %}><a {% href_active page.url '/guarantees/' %}>Гарантии</a></li>
-              <li {% class_active page.url 'certificates' %}><a {% href_active page.url '/certificates/' %}>Сертификаты</a></li>
-              <li {% class_active page.url 'otzyvi' %}><a {% href_active page.url '/otzyvi/' %}>Отзывы</a></li>
-              <li {% class_active page.url 'video' %}><a {% href_active page.url '/video/' %}>Видео</a></li>
-
-            </ul>
-          </li>
-          <li><a href="/akcii/">Акции</a></li>
-          <li class="has-child">
-              <a href="#" onclick="return false;">Портфолио</a>
+            <li class="has-child">
+                <a href="#" onclick="return false;">Услуги и цены</a>
+                <ul>
+                    <li {% class_active page.url 'proektirovanie-domov' %}><a {% href_active page.url '/proektirovanie-domov/' %}>Архитектурное проектирование</a></li>
+                    <li {% class_active page.url 'stroitelstvo' %}><a {% href_active page.url '/stroitelstvo/' %}>Строительство</a></li>
+                    <li {% class_active page.url 'rekonstrukciya' %}><a {% href_active page.url '/rekonstrukciya/' %}>Реконструкция</a></li>
+                </ul>
+            </li>
+            <!--<li {% if page_projects %}class="active"{% endif %} ><a href="{% url 'projects' %}">Проекты домов</a></li>-->
+            <li class="has-child">
+                <a href="{% url 'projects' %}">Проекты домов</a>
+                <ul>
+                    <li {% class_active page.url 'proekty-domov' %}><a {% href_active page.url '/proekty-domov/iz-ozilindrovannogo-brevna/' %}>Из оцилиндрованного бревна</a></li>
+                 </ul>
+            </li>
+            <li {% if page_builds %}class="active"{% endif %}><a href="{% url 'builds' %}">Строительство домов</a></li>
+            <li class="has-child">
+              <a href="/why-we/">Почему мы</a>
               <ul>
-                
-                
-                <li {% if page_interior %}class="active"{% endif %}><a href="{% url 'interior' %}">Реконструкция домов</a></li>
+                <li {% class_active page.url 'guarantees' %}><a {% href_active page.url '/guarantees/' %}>Гарантии</a></li>
+                <li {% class_active page.url 'certificates' %}><a {% href_active page.url '/certificates/' %}>Сертификаты</a></li>
+                <li {% class_active page.url 'otzyvi' %}><a {% href_active page.url '/otzyvi/' %}>Отзывы</a></li>
+                <li {% class_active page.url 'video' %}><a {% href_active page.url '/video/' %}>Видео</a></li>
               </ul>
-          </li>
-         
-          <li {% if page_contacts %}class="active"{% endif %}><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
-        </ul>
-        
-{% comment %}
-        <ul>
-        <li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
-        <li {% if page.url == 'ceny' %}class='active'{% endif %}><a {% if not page.url == 'ceny' %}href="/ceny/"{% endif %}>Услуги и цены</a></li>
-        <li ><a href="#">Почему мы</a></li>
-        <li {% if page_projects %}class="active"{% endif %}><a {% if not 'proekty-domov' == page.url %}href="{% url 'projects' %}"{% endif %}>Портфолио</a></li>
-        <li {% if page_contacts %}class="active"{% endif %}><a {% if not page.url == 'kontakty' %}href="/kontakty/"{% endif %}>Контакты</a></li>
-        </ul>
-{% endcomment %}
-        
-        <div class="search">
-          <form action="/search" method="post">{% csrf_token %}
-            <input type="submit" value=""/>
-            <input type="text" placeholder="Поиск" name="art"/>
-          </form>
-          <span class="close"></span>
+            </li>
+            <li><a href="/akcii/">Акции</a></li>
+            <li class="has-child">
+                <a href="#" onclick="return false;">Портфолио</a>
+                <ul>
+
+
+                  <li {% if page_interior %}class="active"{% endif %}><a href="{% url 'interior' %}">Реконструкция домов</a></li>
+                </ul>
+            </li>
+
+            <li {% if page_contacts %}class="active"{% endif %}><a {% if not page_contacts %}href="/kontakty/"{% endif %}>Контакты</a></li>
+          </ul>
+
+  {% comment %}
+          <ul>
+          <li {% if page.url == "/" %}{% if not page.404 %}class="active"{% endif %}{% endif %}><a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %}>Главная</a></li>
+          <li {% if page.url == 'ceny' %}class='active'{% endif %}><a {% if not page.url == 'ceny' %}href="/ceny/"{% endif %}>Услуги и цены</a></li>
+          <li ><a href="#">Почему мы</a></li>
+          <li {% if page_projects %}class="active"{% endif %}><a {% if not 'proekty-domov' == page.url %}href="{% url 'projects' %}"{% endif %}>Портфолио</a></li>
+          <li {% if page_contacts %}class="active"{% endif %}><a {% if not page.url == 'kontakty' %}href="/kontakty/"{% endif %}>Контакты</a></li>
+          </ul>
+  {% endcomment %}
+
+          <div class="search">
+            <form action="/search" method="post">{% csrf_token %}
+              <input type="submit" value=""/>
+              <input type="text" placeholder="Поиск" name="art"/>
+            </form>
+            <span class="close"></span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="content-inner">
-    
-      
-        {% block content %}
-        {% endblock %}
-<!--noindex-->
+      <div class="content-inner">
+
+
+          {% block content %}
+          {% endblock %}
+  <!--noindex-->
 	<!--Partners List-->
 	<div class="block" style="margin-bottom:0px;">
 		<div class="row">
