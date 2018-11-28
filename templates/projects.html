@@ -1,0 +1,245 @@
+{% extends "2016/base.html" %}
+
+{% load thumbnail %}
+{% load banner_list %}
+
+{% block content %}
+
+<div class="breadcrumbs">
+  <div class="row">
+    <ul>
+      <li><a href="/">Главная</a></li>
+			<li class="current"><span>{{ page.name }}</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="content row">
+
+	<div class="orbit_cats_wrap">
+		<ul class="orbit_cats" style="list-style:none;margin-left:0;margin-left:-10px;">
+      {% for tag in tags %}
+        <li  class="item {% if page.url == tag.url %} current {% endif %}">
+					<a href="{{ tag.get_absolute_url }}" >
+            {% thumbnail tag.img "130x130"  crop="center" as thumb  %}
+					    <img src="{{ thumb.url }}" alt="{{ tag.h1 }}" />
+            {% empty %}
+              <img src="http://dummyimage.com/130x130/000/00ffd5.png" alt="" />
+            {% endthumbnail %}
+          </a>
+					<a href="{{ tag.get_absolute_url }}" >
+						<span class="item-name">{{ tag.name }}</span>
+					</a>
+				</li>
+      {% endfor %}
+		</ul>
+		<a id="prev" style="display:none;"></a>
+		<a id="next" style="display:none;"></a>
+	</div>
+
+	<div class="orbit-mobile_cats_wrap show-for-small-only">
+		<select name="project_cats" onchange="window.location.href=this.value">
+  		{% with has_selected=false %}
+    		{% for tag in tags %}
+    		  {% if page.url == tag.url %}
+    		    {% with has_selected=true %}{% endwith %}
+    		  {% endif %}
+        {% endfor %}
+
+
+        {% if has_selected == true %}
+  		    <option value="/proekty-domov/">Все типы</option>
+  		  {% else %}
+  		    <option value="/proekty-domov/" selected="selected">Все типы</option>
+  		  {% endif %}
+
+  			{% for tag in tags %}
+  				<option {% if page.url == tag.url %}selected="selected"{% endif %} value="{{ tag.get_absolute_url }}">{{ tag.name }}</option>
+  			{% endfor %}
+			{% endwith %}
+		</select>
+	</div>
+
+  <div class="soda-grid_row projects-cont row">
+    <div class="col1 col1-fix">
+      <div class="block block--port">
+        <div class="row">
+          <h1 class="listing_title">{{ page.h1 }}</h1>
+          <div class="modal modal-calc" id="calc-order">
+              <div class="modal_content">
+                  <button class="modal_close">&nbsp;</button>
+                  <iframe id="calc-order-iframe" src="http://calc.brusvyanka.ru" style="border: 0; width: 100%; height:374px;">Your browser doesn't support iFrames.</iframe>
+              </div>
+          </div>
+          <style>
+            .modal-calc .modal_content {
+              padding: 0px;
+            }
+            .modal-calc iframe {
+              display:block;
+              min-height:220px;
+              border: none;
+            }
+            @media all and (max-width: 415px) {
+              .modal_content{
+                margin-left: 15px;
+                margin-right: 15px;
+              }
+            }
+          </style>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+          <script>var jquery_2_1_4 = jQuery;</script>
+          <script type="text/javascript">
+          $(function() {
+              var $ = jQuery = jquery_2_1_4;
+              $(document).ready(function(){
+                  $(".js__calc-order").click(function() {
+                      var href = $(this).attr('data-href');
+                      $('#calc-order-iframe').attr('src', href);
+                      $("body").addClass("opened-modal");
+                      $("#calc-order").fadeIn();
+                      $("#calc-order").fadeIn("slow", function() {
+                          console.log('fadeInComplete');
+                      });
+                  });
+              });
+          });
+          </script>
+          <div class="row">
+            {% for project in projects %}
+            <div class="item columns small-12 medium-3-fix large-3-fix">
+                {% thumbnail project.mainphoto "271x192" quality=70 crop="center" as photo %}
+                <a href="{{ project.get_absolute_url }}" class="img" style="background: url({{ photo.url }}) center center no-repeat;" title="{{ project.title }}"></a>
+                {% endthumbnail %}
+                <a href="{{ project.get_absolute_url }}" class="title" style="min-height:55px;">{{ project.title }}</a>
+                <div class="desc">{{ project.sq|floatformat }}м² | Артикул: {{ project.articul }}<span style="float:right"><a class="js__calc-order btn-order" data-href="http://calc.brusvyanka.ru/?referer=http://brusvyanka.ru{{ project.get_absolute_url }}" href="javascript:void(0)"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;узнать цену</a></span></div>
+                <style>
+                    .item:hover .btn-order {
+                      animation: bounce 1s;
+                    }
+                    @keyframes bounce {
+                      0%, 20%, 60%, 100% {
+                        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                      }
+
+                      40% {
+                        -webkit-transform: translateY(-6px);
+                        transform: translateY(-6px);
+                      }
+
+                      80% {
+                        -webkit-transform: translateY(-3px);
+                        transform: translateY(-3px);
+                      }
+                    }
+                    .btn-order {
+                      position: relative;
+                      top: -2px;
+                      font-size: 11px;
+                      color: #6a6a6a;
+                      border: 1px solid #80c462;
+                      text-decoration: none;
+                      height: 20px;
+                      line-height: 19px;
+                      display: inline-block;
+                      padding: 0 10px;
+                      transition: all .2s ease-out 0s;
+                      text-transform: uppercase;
+                      font-weight: bold;
+                      color: #80c462;
+                      border-radius:3px;
+                      padding-left:7px;
+                    }
+                    .btn-order:hover{
+                    background: #80c462;
+                    color: #fff;
+                    }
+                    .item.hovered .btn-order {
+                      color: #80c462!important;
+                    }
+                </style>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+        <div class="block block--scheme block--parralax" style="background-image: url({{ parralaxs.index4.img.url }});" {% include "2016/_parralax_settings.html" %}>
+        <div class="row">
+            <h2 class="block_title">Схема сотрудничества</h2>
+
+            <div class="row">
+                <div class="item columns small-12 medium-2 medium-offset-1">
+                    <div class="content"><a href="#" class="js__project-order"><img src="{% static '2016/images/icon--scheme-1.png' %}"/></a>
+                        Заявка<br/>клиента</div>
+                </div>
+                <div class="item columns small-12 medium-2">
+                    <div class="content"><img src="{% static '2016/images/icon--scheme-2.png' %}" />
+                        Связь с менеджером.<br/>Выявление<br/>предпочтений.</div>
+                </div>
+                <div class="item columns small-12 medium-2">
+                    <div class="content"><img src="{% static '2016/images/icon--scheme-3.png' %}" alt="" />
+                        Личная встеча.<br/>Обсуждение нюансов.<br/>Согласование бюджета.</div>
+                </div>
+                <div class="item columns small-12 medium-2">
+                    <div class="content"><img src="{% static '2016/images/icon--scheme-4.png' %}" />
+                        Внесение предоплаты<br/>и начало<br/>реализации проекта.</div>
+                </div>
+                <div class="item columns small-12 medium-2 end">
+                    <div class="content"><img src="{% static '2016/images/icon--scheme-5.png' %}" />
+                        Получение<br/>дома мечты.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <hr />
+      <br/><br/>
+
+      <div class="soda-grid_row projects-cont row">
+
+
+        <div class="col1-fix2">
+          <div class="post-item">
+            <div class="post-item_body">
+              <div class="post-item_ext" style="margin-top: 3px;">
+                {{ page.body|safe }}
+              </div>
+            </div>
+          </div><!-- post-item -->
+        </div><!-- col1 -->
+
+
+      </div>
+
+
+    </div><!-- col1 -->
+
+    <div class="col2">
+        <div class="order-form">
+        <h3>Заказать звонок</h3>
+        <p>оставьте заявку и мы перезвоним вам в ближайшее время</p>
+        <form action="" class="form_recall" data-goal="projects_goal">{% csrf_token %}
+          <div class="field">
+            <input type="text" placeholder="Как к Вам обращаться" name="name"/>
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Контактный телефон" name="phone"/>
+          </div>
+          <div class="field field-submit">
+            <input class="button" type="submit" value="Оставить заявку" />
+          </div>
+        </form>
+      </div>
+    </div><!-- col2 -->
+  </div>
+
+
+
+
+</div><!-- content -->
+
+{% endblock %}
+
+{% block head_title %}{{ page.title }}{% endblock %}
