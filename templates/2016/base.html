@@ -118,8 +118,15 @@
 						</svg>
 					</a>
 				</section>
-			
-				<section class="middle tab-bar-section">
+
+                <style>
+                    .mobile img {
+                        position: absolute;
+                        left: 25px;
+                        height: 41px;
+                    }
+                </style>
+				<section class="middle tab-bar-section mobile">
 					<a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %} class="logo" title="Брусвянка">
 						<img src="{% static 'images/logo.png' %}" alt="Брусвянка">
 					</a>
