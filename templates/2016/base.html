@@ -125,8 +125,37 @@
                         left: 25px;
                         height: 41px;
                     }
+
+                    .mobile-time{
+                        position: absolute;
+                        top: 14px;
+                        right: 0px;
+                        font-size: 10px;
+                        white-space: nowrap;
+                        font-style: italic;
+                    }
+                    .mobile-address{
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        font-size: 11px;
+                        white-space: nowrap;
+                    }
+                    .mobile-phone{
+                        position: absolute;
+                        top: 24px;
+                        right: 0px;
+                        white-space: nowrap;
+                        font-size: 21px;
+                    }
                 </style>
 				<section class="middle tab-bar-section mobile">
+
+
+                        <span class="mobile-time">Пн-Вс с 10 до 19:00 (Заявки принимаются 24/7)</span>
+                        <span class="mobile-address">г.Москва, ул.Нижняя, дом.14, стр.1</span>
+                        <a href="tel:+74957227111" class="mobile-phone">+7 (495) 722-71-11</a>
+
 					<a {% if not page.url == "/" %}href="/"{% else %}{% if page.404 %}href="/" {% else %}{% endif %}{% endif %} class="logo" title="Брусвянка">
 						<img src="{% static 'images/logo.png' %}" alt="Брусвянка">
 					</a>
